@@ -1,36 +1,32 @@
-name: Keyword Data Automation
+name: Keyword Analysis Engine
 
 on:
   schedule:
-    - cron: '0 15 * * *' # 매일 한국 시간 0시(UTC 15:00)에 실행
-  workflow_dispatch: # 직접 실행 버튼 활성화
+    - cron: '0 15 * * *' # 매일 한국 시간 0시
+  workflow_dispatch: # 수동 실행 버튼
 
 jobs:
-  build:
+  run-analysis:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Run script
+      - name: Install Packages
+        run: pip install requests
+      - name: Execute Script
         env:
           CUSTOMER_ID: ${{ secrets.NAVER_CUSTOMER_ID }}
           ACCESS_LICENSE: ${{ secrets.NAVER_ACCESS_LICENSE }}
           SECRET_KEY: ${{ secrets.NAVER_SECRET_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: python update_data.py
-
-      - name: Commit and Push
+      - name: Update Data File
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "Bot"
+          git config --global user.email "bot@github.com"
           git add data.json
           git commit -m "Update keyword data" || exit 0
           git push
