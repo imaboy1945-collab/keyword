@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>키워드 연구소 [Bestwellth]</title>
+    <title>키워드 전략 연구소</title>
     <style>
-        body { font-family: sans-serif; background-color: #f9fafb; margin: 0; padding: 20px; }
-        .container { max-width: 1200px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h1 { font-size: 22px; color: #1a202c; margin-bottom: 25px; border-left: 5px solid #3182ce; padding-left: 15px; }
-        table { width: 100%; border-collapse: collapse; min-width: 900px; }
-        th, td { padding: 14px; text-align: center; border-bottom: 1px solid #edf2f7; font-size: 14px; }
-        th { background-color: #f7fafc; color: #4a5568; font-weight: 600; }
-        .keyword-cell { text-align: left; color: #2b6cb0; font-weight: 500; }
-        .grade-S { color: #e53e3e; font-weight: bold; }
-        .grade-A { color: #dd6b20; font-weight: bold; }
-        .scroll-wrapper { overflow-x: auto; }
+        body { font-family: -apple-system, sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h1 { font-size: 20px; color: #333; border-left: 5px solid #007bff; padding-left: 12px; margin-bottom: 20px; }
+        .table-res { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; min-width: 700px; }
+        th, td { padding: 12px; border-bottom: 1px solid #eee; text-align: center; font-size: 13px; }
+        th { background: #f1f3f5; font-weight: 600; }
+        .kw { text-align: left; font-weight: bold; color: #0056b3; }
+        .S { color: #e03131; background: #fff5f5; font-weight: bold; padding: 3px 6px; border-radius: 4px; }
+        .A { color: #f08c00; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>키워드 대량분석 결과 리포트</h1>
-        <div class="scroll-wrapper">
+        <h1>통합 키워드 분석 결과</h1>
+        <div class="table-res">
             <table id="targetTable">
                 <thead>
                     <tr>
                         <th>No</th>
                         <th>키워드</th>
-                        <th>PC 검색량</th>
-                        <th>모바일 검색량</th>
-                        <th>일평균 검색</th>
-                        <th>등급 (경쟁률)</th>
-                        <th>전체 문서 수</th>
+                        <th>PC</th>
+                        <th>모바일</th>
+                        <th>일평균</th>
+                        <th>등급 (비율)</th>
+                        <th>총 문서수</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -44,14 +44,14 @@
                 const tbody = document.querySelector('#targetTable tbody');
                 data.forEach(item => {
                     const tr = document.createElement('tr');
-                    const gradeClass = (item.grade === 'S' || item.grade === 'A') ? `grade-${item.grade}` : '';
+                    const gradeSpan = `<span class="${item.grade}">${item.grade} (${item.ratio})</span>`;
                     tr.innerHTML = `
                         <td>${item.no}</td>
-                        <td class="keyword-cell">${item.keyword}</td>
+                        <td class="kw">${item.keyword}</td>
                         <td>${item.pc_search.toLocaleString()}</td>
                         <td>${item.mobile_search.toLocaleString()}</td>
                         <td>${item.daily_avg.toLocaleString()}</td>
-                        <td class="${gradeClass}">${item.grade} (${item.ratio})</td>
+                        <td>${gradeSpan}</td>
                         <td>${item.blog_total.toLocaleString()}</td>
                     `;
                     tbody.appendChild(tr);
