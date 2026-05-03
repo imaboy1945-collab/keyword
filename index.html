@@ -5,32 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>키워드 전략 연구소</title>
     <style>
-        body { font-family: -apple-system, sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; }
-        .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h1 { font-size: 20px; color: #333; border-left: 5px solid #007bff; padding-left: 12px; margin-bottom: 20px; }
-        .table-res { overflow-x: auto; }
-        table { width: 100%; border-collapse: collapse; min-width: 700px; }
-        th, td { padding: 12px; border-bottom: 1px solid #eee; text-align: center; font-size: 13px; }
-        th { background: #f1f3f5; font-weight: 600; }
-        .kw { text-align: left; font-weight: bold; color: #0056b3; }
-        .S { color: #e03131; background: #fff5f5; font-weight: bold; padding: 3px 6px; border-radius: 4px; }
-        .A { color: #f08c00; font-weight: bold; }
+        body { font-family: -apple-system, sans-serif; background-color: #f1f3f5; margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        h1 { font-size: 22px; color: #212529; margin-bottom: 25px; border-left: 6px solid #007bff; padding-left: 15px; }
+        
+        /* 스크롤 영역 설정 */
+        .table-wrapper { 
+            overflow: auto; 
+            max-height: 80vh; /* 화면 높이에 맞춰 세로 스크롤 생성 */
+            border: 1px solid #dee2e6;
+        }
+        
+        table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 1000px; }
+        th, td { padding: 15px 10px; text-align: center; border-bottom: 1px solid #dee2e6; border-right: 1px solid #eee; font-size: 14px; white-space: nowrap; }
+        
+        /* 1. 상단 행(1행) 고정 */
+        thead th { 
+            position: sticky; 
+            top: 0; 
+            z-index: 10; 
+            background-color: #f8f9fa; 
+            color: #495057; 
+            font-weight: 600;
+        }
+
+        /* 2. 좌측 열(1, 2열) 고정 설정 */
+        /* 1열 (No) */
+        th:nth-child(1), td:nth-child(1) {
+            position: sticky;
+            left: 0;
+            width: 50px;
+            min-width: 50px;
+            background-color: #fff;
+            z-index: 5;
+        }
+        /* 2열 (연관 키워드) */
+        th:nth-child(2), td:nth-child(2) {
+            position: sticky;
+            left: 50px; /* 1열 너비만큼 띄움 */
+            width: 150px;
+            min-width: 150px;
+            background-color: #fff;
+            z-index: 5;
+            text-align: left;
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        /* 3. 고정된 행과 열이 만나는 모서리 부분 처리 */
+        thead th:nth-child(1), thead th:nth-child(2) {
+            z-index: 15; /* 헤더보다 더 위에 위치 */
+            background-color: #f8f9fa;
+        }
+
+        /* 등급별 강조 색상 */
+        .grade-S { color: #d9480f; background-color: #fff4e6; font-weight: bold; border-radius: 4px; padding: 4px 8px; }
+        .grade-A { color: #f08c00; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>통합 키워드 분석 결과</h1>
-        <div class="table-res">
-            <table id="targetTable">
+        <h1>통합 키워드 분석 리포트 [Column]</h1>
+        <div class="table-wrapper">
+            <table id="resultTable">
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>키워드</th>
-                        <th>PC</th>
-                        <th>모바일</th>
+                        <th>연관 키워드</th>
+                        <th>PC 검색량</th>
+                        <th>모바일 검색량</th>
                         <th>일평균</th>
-                        <th>등급 (비율)</th>
-                        <th>총 문서수</th>
+                        <th>등급 (경쟁률)</th>
+                        <th>총 문서 수</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -41,17 +87,18 @@
         fetch('data.json')
             .then(res => res.json())
             .then(data => {
-                const tbody = document.querySelector('#targetTable tbody');
+                const tbody = document.querySelector('#resultTable tbody');
                 data.forEach(item => {
                     const tr = document.createElement('tr');
-                    const gradeSpan = `<span class="${item.grade}">${item.grade} (${item.ratio})</span>`;
+                    const gradeClass = (item.grade === 'S') ? 'grade-S' : (item.grade === 'A' ? 'grade-A' : '');
+                    
                     tr.innerHTML = `
                         <td>${item.no}</td>
-                        <td class="kw">${item.keyword}</td>
+                        <td>${item.keyword}</td>
                         <td>${item.pc_search.toLocaleString()}</td>
                         <td>${item.mobile_search.toLocaleString()}</td>
                         <td>${item.daily_avg.toLocaleString()}</td>
-                        <td>${gradeSpan}</td>
+                        <td><span class="${gradeClass}">${item.grade} (${item.ratio})</span></td>
                         <td>${item.blog_total.toLocaleString()}</td>
                     `;
                     tbody.appendChild(tr);
