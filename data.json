@@ -7,250 +7,80 @@
         "daily_avg": 780590.0,
         "grade": "S",
         "ratio": 0.04,
-        "blog_total": 989298
+        "blog_total": 989316
     },
     {
         "no": 2,
-        "keyword": "환율",
-        "pc_search": 3966000,
-        "mobile_search": 13733400,
-        "daily_avg": 589980.0,
-        "grade": "S",
-        "ratio": 0.2,
-        "blog_total": 3616233
-    },
-    {
-        "no": 3,
-        "keyword": "미국증시",
-        "pc_search": 76900,
-        "mobile_search": 4274100,
-        "daily_avg": 145033.33,
-        "grade": "S",
-        "ratio": 0.45,
-        "blog_total": 1936550
-    },
-    {
-        "no": 4,
-        "keyword": "SK하이닉스주가",
-        "pc_search": 376000,
-        "mobile_search": 3901500,
-        "daily_avg": 142583.33,
-        "grade": "S",
-        "ratio": 0.11,
-        "blog_total": 469055
-    },
-    {
-        "no": 5,
-        "keyword": "달러환율",
-        "pc_search": 547200,
-        "mobile_search": 3523100,
-        "daily_avg": 135676.67,
-        "grade": "S",
-        "ratio": 0.36,
-        "blog_total": 1474515
-    },
-    {
-        "no": 6,
-        "keyword": "국제유가",
-        "pc_search": 189000,
-        "mobile_search": 3220800,
-        "daily_avg": 113660.0,
-        "grade": "S",
-        "ratio": 0.24,
-        "blog_total": 816156
-    },
-    {
-        "no": 7,
-        "keyword": "엔화환율",
-        "pc_search": 287800,
-        "mobile_search": 2109700,
-        "daily_avg": 79916.67,
-        "grade": "S",
-        "ratio": 0.13,
-        "blog_total": 313987
-    },
-    {
-        "no": 8,
-        "keyword": "미국환율",
-        "pc_search": 232400,
-        "mobile_search": 1978100,
-        "daily_avg": 73683.33,
-        "grade": "A",
-        "ratio": 0.72,
-        "blog_total": 1601279
-    },
-    {
-        "no": 9,
-        "keyword": "이란",
-        "pc_search": 316600,
-        "mobile_search": 1748800,
-        "daily_avg": 68846.67,
-        "grade": "B",
-        "ratio": 3.4,
-        "blog_total": 7024517
-    },
-    {
-        "no": 10,
         "keyword": "나스닥",
         "pc_search": 214900,
         "mobile_search": 1807000,
         "daily_avg": 67396.67,
         "grade": "A",
         "ratio": 0.72,
-        "blog_total": 1463808
+        "blog_total": 1463792
     },
     {
-        "no": 11,
-        "keyword": "달러",
-        "pc_search": 524800,
-        "mobile_search": 1182300,
-        "daily_avg": 56903.33,
-        "grade": "B",
-        "ratio": 2.23,
-        "blog_total": 3806881
-    },
-    {
-        "no": 12,
+        "no": 3,
         "keyword": "검색상위종목",
         "pc_search": 11000,
         "mobile_search": 1427900,
         "daily_avg": 47963.33,
         "grade": "S",
         "ratio": 0.03,
-        "blog_total": 39419
+        "blog_total": 39420
     },
     {
-        "no": 13,
-        "keyword": "엔화",
-        "pc_search": 437000,
-        "mobile_search": 928700,
-        "daily_avg": 45523.33,
-        "grade": "A",
-        "ratio": 0.5,
-        "blog_total": 683082
-    },
-    {
-        "no": 14,
-        "keyword": "환율계산기",
-        "pc_search": 231400,
-        "mobile_search": 991100,
-        "daily_avg": 40750.0,
-        "grade": "S",
-        "ratio": 0.01,
-        "blog_total": 12325
-    },
-    {
-        "no": 15,
+        "no": 4,
         "keyword": "주식",
         "pc_search": 98900,
         "mobile_search": 974800,
         "daily_avg": 35790.0,
         "grade": "D",
         "ratio": 13.16,
-        "blog_total": 14126490
+        "blog_total": 14126548
     },
     {
-        "no": 16,
-        "keyword": "원달러환율",
-        "pc_search": 114900,
-        "mobile_search": 957400,
-        "daily_avg": 35743.33,
-        "grade": "S",
-        "ratio": 0.24,
-        "blog_total": 261942
-    },
-    {
-        "no": 17,
-        "keyword": "테슬라주가",
-        "pc_search": 79800,
-        "mobile_search": 900600,
-        "daily_avg": 32680.0,
-        "grade": "A",
-        "ratio": 0.59,
-        "blog_total": 576213
-    },
-    {
-        "no": 18,
+        "no": 5,
         "keyword": "주식시세",
         "pc_search": 24100,
         "mobile_search": 940600,
         "daily_avg": 32156.67,
         "grade": "S",
         "ratio": 0.12,
-        "blog_total": 119394
+        "blog_total": 119393
     },
     {
-        "no": 19,
+        "no": 6,
         "keyword": "주가지수",
         "pc_search": 50800,
         "mobile_search": 894500,
         "daily_avg": 31510.0,
         "grade": "A",
         "ratio": 1.74,
-        "blog_total": 1648358
+        "blog_total": 1648360
     },
     {
-        "no": 20,
+        "no": 7,
         "keyword": "증시",
         "pc_search": 56800,
         "mobile_search": 848200,
         "daily_avg": 30166.67,
         "grade": "B",
         "ratio": 3.22,
-        "blog_total": 2913449
+        "blog_total": 2913455
     },
     {
-        "no": 21,
-        "keyword": "유럽증시",
-        "pc_search": 10200,
-        "mobile_search": 858000,
-        "daily_avg": 28940.0,
-        "grade": "A",
-        "ratio": 0.65,
-        "blog_total": 566682
+        "no": 8,
+        "keyword": "어버이날",
+        "pc_search": 72000,
+        "mobile_search": 538300,
+        "daily_avg": 20343.33,
+        "grade": "B",
+        "ratio": 3.44,
+        "blog_total": 2098727
     },
     {
-        "no": 22,
-        "keyword": "일본환율",
-        "pc_search": 82400,
-        "mobile_search": 681700,
-        "daily_avg": 25470.0,
-        "grade": "A",
-        "ratio": 0.93,
-        "blog_total": 711564
-    },
-    {
-        "no": 23,
-        "keyword": "엔비디아주가",
-        "pc_search": 61500,
-        "mobile_search": 660900,
-        "daily_avg": 24080.0,
-        "grade": "A",
-        "ratio": 0.75,
-        "blog_total": 543665
-    },
-    {
-        "no": 24,
-        "keyword": "유로환율",
-        "pc_search": 142100,
-        "mobile_search": 508700,
-        "daily_avg": 21693.33,
-        "grade": "S",
-        "ratio": 0.34,
-        "blog_total": 218900
-    },
-    {
-        "no": 25,
-        "keyword": "환율조회",
-        "pc_search": 107100,
-        "mobile_search": 541900,
-        "daily_avg": 21633.33,
-        "grade": "S",
-        "ratio": 0.03,
-        "blog_total": 16391
-    },
-    {
-        "no": 26,
+        "no": 9,
         "keyword": "종합주가지수",
         "pc_search": 22100,
         "mobile_search": 548900,
@@ -260,87 +90,47 @@
         "blog_total": 52129
     },
     {
-        "no": 27,
+        "no": 10,
         "keyword": "국내증시",
         "pc_search": 25000,
         "mobile_search": 528500,
         "daily_avg": 18450.0,
         "grade": "B",
         "ratio": 2.25,
-        "blog_total": 1243474
+        "blog_total": 1243478
     },
     {
-        "no": 28,
-        "keyword": "중국환율",
-        "pc_search": 90900,
-        "mobile_search": 456800,
-        "daily_avg": 18256.67,
-        "grade": "A",
-        "ratio": 1.47,
-        "blog_total": 804615
-    },
-    {
-        "no": 29,
+        "no": 11,
         "keyword": "증권",
         "pc_search": 27900,
         "mobile_search": 511900,
         "daily_avg": 17993.33,
         "grade": "C",
         "ratio": 9.64,
-        "blog_total": 5203573
+        "blog_total": 5203613
     },
     {
-        "no": 30,
-        "keyword": "베트남환율",
-        "pc_search": 72500,
-        "mobile_search": 454400,
-        "daily_avg": 17563.33,
-        "grade": "S",
-        "ratio": 0.35,
-        "blog_total": 185662
-    },
-    {
-        "no": 31,
+        "no": 12,
         "keyword": "주요증시",
         "pc_search": 10700,
         "mobile_search": 494600,
         "daily_avg": 16843.33,
         "grade": "B",
         "ratio": 2.13,
-        "blog_total": 1077608
+        "blog_total": 1077611
     },
     {
-        "no": 32,
-        "keyword": "S&P500",
-        "pc_search": 54300,
-        "mobile_search": 390800,
-        "daily_avg": 14836.67,
-        "grade": "D",
-        "ratio": 31.62,
-        "blog_total": 14073786
+        "no": 13,
+        "keyword": "근로자의날",
+        "pc_search": 100400,
+        "mobile_search": 310200,
+        "daily_avg": 13686.67,
+        "grade": "B",
+        "ratio": 2.09,
+        "blog_total": 857225
     },
     {
-        "no": 33,
-        "keyword": "WTI",
-        "pc_search": 119200,
-        "mobile_search": 288100,
-        "daily_avg": 13576.67,
-        "grade": "A",
-        "ratio": 1.03,
-        "blog_total": 421209
-    },
-    {
-        "no": 34,
-        "keyword": "아시아증시",
-        "pc_search": 9740,
-        "mobile_search": 368400,
-        "daily_avg": 12604.67,
-        "grade": "A",
-        "ratio": 0.86,
-        "blog_total": 325824
-    },
-    {
-        "no": 35,
+        "no": 14,
         "keyword": "코덱스200",
         "pc_search": 53400,
         "mobile_search": 288200,
@@ -350,153 +140,363 @@
         "blog_total": 4983
     },
     {
-        "no": 36,
-        "keyword": "호주환율",
-        "pc_search": 33200,
-        "mobile_search": 247700,
-        "daily_avg": 9363.33,
-        "grade": "A",
-        "ratio": 0.51,
-        "blog_total": 144015
+        "no": 15,
+        "keyword": "삼성",
+        "pc_search": 66300,
+        "mobile_search": 216500,
+        "daily_avg": 9426.67,
+        "grade": "D",
+        "ratio": 62.71,
+        "blog_total": 17733185
     },
     {
-        "no": 37,
-        "keyword": "캐나다환율",
-        "pc_search": 28600,
-        "mobile_search": 237800,
-        "daily_avg": 8880.0,
-        "grade": "S",
-        "ratio": 0.47,
-        "blog_total": 125440
-    },
-    {
-        "no": 38,
+        "no": 16,
         "keyword": "코스피200",
         "pc_search": 29000,
         "mobile_search": 235700,
         "daily_avg": 8823.33,
         "grade": "A",
         "ratio": 1.12,
-        "blog_total": 296321
+        "blog_total": 296320
     },
     {
-        "no": 39,
-        "keyword": "미국주식",
-        "pc_search": 12300,
-        "mobile_search": 234100,
-        "daily_avg": 8213.33,
-        "grade": "D",
-        "ratio": 16.32,
-        "blog_total": 4022109
+        "no": 17,
+        "keyword": "스승의날",
+        "pc_search": 22700,
+        "mobile_search": 222800,
+        "daily_avg": 8183.33,
+        "grade": "C",
+        "ratio": 5.67,
+        "blog_total": 1392472
     },
     {
-        "no": 40,
-        "keyword": "브라질환율",
-        "pc_search": 13000,
-        "mobile_search": 218100,
-        "daily_avg": 7703.33,
-        "grade": "S",
-        "ratio": 0.36,
-        "blog_total": 82897
+        "no": 18,
+        "keyword": "어버이날선물",
+        "pc_search": 43400,
+        "mobile_search": 171800,
+        "daily_avg": 7173.33,
+        "grade": "C",
+        "ratio": 5.23,
+        "blog_total": 1125676
     },
     {
-        "no": 41,
-        "keyword": "위안화환율",
-        "pc_search": 38900,
-        "mobile_search": 188300,
-        "daily_avg": 7573.33,
-        "grade": "A",
-        "ratio": 0.65,
-        "blog_total": 147651
-    },
-    {
-        "no": 42,
+        "no": 19,
         "keyword": "삼성전자배당금",
         "pc_search": 31100,
         "mobile_search": 172800,
         "daily_avg": 6796.67,
         "grade": "A",
         "ratio": 0.66,
-        "blog_total": 134231
+        "blog_total": 134233
     },
     {
-        "no": 43,
-        "keyword": "적금계산기",
-        "pc_search": 41800,
-        "mobile_search": 151700,
-        "daily_avg": 6450.0,
-        "grade": "S",
-        "ratio": 0.14,
-        "blog_total": 27776
-    },
-    {
-        "no": 44,
+        "no": 20,
         "keyword": "ETF",
         "pc_search": 53400,
         "mobile_search": 134800,
         "daily_avg": 6273.33,
         "grade": "C",
         "ratio": 9.35,
-        "blog_total": 1760463
+        "blog_total": 1760432
     },
     {
-        "no": 45,
-        "keyword": "태국환율",
-        "pc_search": 25400,
-        "mobile_search": 151900,
-        "daily_avg": 5910.0,
-        "grade": "A",
-        "ratio": 0.6,
-        "blog_total": 106205
-    },
-    {
-        "no": 46,
-        "keyword": "달러인덱스",
-        "pc_search": 30900,
-        "mobile_search": 142700,
-        "daily_avg": 5786.67,
-        "grade": "A",
-        "ratio": 1.48,
-        "blog_total": 256887
-    },
-    {
-        "no": 47,
-        "keyword": "미국",
-        "pc_search": 31600,
-        "mobile_search": 132500,
-        "daily_avg": 5470.0,
+        "no": 21,
+        "keyword": "경주가볼만한곳",
+        "pc_search": 18900,
+        "mobile_search": 163300,
+        "daily_avg": 6073.33,
         "grade": "D",
-        "ratio": 213.18,
-        "blog_total": 34982257
+        "ratio": 66.76,
+        "blog_total": 12163166
     },
     {
-        "no": 48,
+        "no": 22,
+        "keyword": "키보드",
+        "pc_search": 101100,
+        "mobile_search": 67300,
+        "daily_avg": 5613.33,
+        "grade": "D",
+        "ratio": 17.01,
+        "blog_total": 2863885
+    },
+    {
+        "no": 23,
         "keyword": "국내주식",
         "pc_search": 9040,
         "mobile_search": 144200,
         "daily_avg": 5108.0,
         "grade": "D",
         "ratio": 19.07,
-        "blog_total": 2921955
+        "blog_total": 2921972
+    },
+    {
+        "no": 24,
+        "keyword": "삼성닷컴",
+        "pc_search": 49900,
+        "mobile_search": 88700,
+        "daily_avg": 4620.0,
+        "grade": "B",
+        "ratio": 2.19,
+        "blog_total": 303123
+    },
+    {
+        "no": 25,
+        "keyword": "오늘코스피지수",
+        "pc_search": 2030,
+        "mobile_search": 121600,
+        "daily_avg": 4121.0,
+        "grade": "B",
+        "ratio": 3.79,
+        "blog_total": 468300
+    },
+    {
+        "no": 26,
+        "keyword": "어린이날선물",
+        "pc_search": 22700,
+        "mobile_search": 94800,
+        "daily_avg": 3916.67,
+        "grade": "C",
+        "ratio": 6.18,
+        "blog_total": 726461
+    },
+    {
+        "no": 27,
+        "keyword": "경주황리단길",
+        "pc_search": 12400,
+        "mobile_search": 80600,
+        "daily_avg": 3100.0,
+        "grade": "C",
+        "ratio": 9.04,
+        "blog_total": 840417
+    },
+    {
+        "no": 28,
+        "keyword": "코스피코스닥",
+        "pc_search": 16100,
+        "mobile_search": 74500,
+        "daily_avg": 3020.0,
+        "grade": "D",
+        "ratio": 11.82,
+        "blog_total": 1071090
+    },
+    {
+        "no": 29,
+        "keyword": "한국증시",
+        "pc_search": 7750,
+        "mobile_search": 80700,
+        "daily_avg": 2948.33,
+        "grade": "D",
+        "ratio": 14.48,
+        "blog_total": 1280774
+    },
+    {
+        "no": 30,
+        "keyword": "파주가볼만한곳",
+        "pc_search": 7620,
+        "mobile_search": 80700,
+        "daily_avg": 2944.0,
+        "grade": "D",
+        "ratio": 135.29,
+        "blog_total": 11948812
+    },
+    {
+        "no": 31,
+        "keyword": "어린이날행사",
+        "pc_search": 15800,
+        "mobile_search": 71000,
+        "daily_avg": 2893.33,
+        "grade": "B",
+        "ratio": 4.74,
+        "blog_total": 411530
+    },
+    {
+        "no": 32,
+        "keyword": "ETF투자방법",
+        "pc_search": 14100,
+        "mobile_search": 71700,
+        "daily_avg": 2860.0,
+        "grade": "C",
+        "ratio": 5.22,
+        "blog_total": 447551
+    },
+    {
+        "no": 33,
+        "keyword": "어린이날",
+        "pc_search": 29100,
+        "mobile_search": 52800,
+        "daily_avg": 2730.0,
+        "grade": "D",
+        "ratio": 23.52,
+        "blog_total": 1926492
+    },
+    {
+        "no": 34,
+        "keyword": "트레이딩뷰",
+        "pc_search": 60800,
+        "mobile_search": 20700,
+        "daily_avg": 2716.67,
+        "grade": "A",
+        "ratio": 0.54,
+        "blog_total": 44278
+    },
+    {
+        "no": 35,
+        "keyword": "지구의날",
+        "pc_search": 26900,
+        "mobile_search": 53100,
+        "daily_avg": 2666.67,
+        "grade": "A",
+        "ratio": 0.86,
+        "blog_total": 68533
+    },
+    {
+        "no": 36,
+        "keyword": "증시현황",
+        "pc_search": 1450,
+        "mobile_search": 71500,
+        "daily_avg": 2431.67,
+        "grade": "B",
+        "ratio": 3.2,
+        "blog_total": 233268
+    },
+    {
+        "no": 37,
+        "keyword": "증권시세",
+        "pc_search": 1200,
+        "mobile_search": 69800,
+        "daily_avg": 2366.67,
+        "grade": "S",
+        "ratio": 0.3,
+        "blog_total": 21029
+    },
+    {
+        "no": 38,
+        "keyword": "2차전지관련주",
+        "pc_search": 9730,
+        "mobile_search": 61200,
+        "daily_avg": 2364.33,
+        "grade": "C",
+        "ratio": 5.2,
+        "blog_total": 368896
+    },
+    {
+        "no": 39,
+        "keyword": "공연",
+        "pc_search": 16600,
+        "mobile_search": 47500,
+        "daily_avg": 2136.67,
+        "grade": "D",
+        "ratio": 230.01,
+        "blog_total": 14743431
+    },
+    {
+        "no": 40,
+        "keyword": "스승의날선물",
+        "pc_search": 8480,
+        "mobile_search": 53000,
+        "daily_avg": 2049.33,
+        "grade": "C",
+        "ratio": 9.73,
+        "blog_total": 597913
+    },
+    {
+        "no": 41,
+        "keyword": "오늘종합주가지수",
+        "pc_search": 1000,
+        "mobile_search": 59300,
+        "daily_avg": 2010.0,
+        "grade": "S",
+        "ratio": 0.27,
+        "blog_total": 16229
+    },
+    {
+        "no": 42,
+        "keyword": "집들이선물",
+        "pc_search": 13200,
+        "mobile_search": 43400,
+        "daily_avg": 1886.67,
+        "grade": "D",
+        "ratio": 32.36,
+        "blog_total": 1831732
+    },
+    {
+        "no": 43,
+        "keyword": "보드게임",
+        "pc_search": 9220,
+        "mobile_search": 42900,
+        "daily_avg": 1737.33,
+        "grade": "D",
+        "ratio": 34.94,
+        "blog_total": 1821147
+    },
+    {
+        "no": 44,
+        "keyword": "서울놀거리",
+        "pc_search": 7980,
+        "mobile_search": 44100,
+        "daily_avg": 1736.0,
+        "grade": "C",
+        "ratio": 9.0,
+        "blog_total": 468557
+    },
+    {
+        "no": 45,
+        "keyword": "주식사는법",
+        "pc_search": 4840,
+        "mobile_search": 44200,
+        "daily_avg": 1634.67,
+        "grade": "A",
+        "ratio": 0.91,
+        "blog_total": 44441
+    },
+    {
+        "no": 46,
+        "keyword": "코스피시총순위",
+        "pc_search": 6760,
+        "mobile_search": 40900,
+        "daily_avg": 1588.67,
+        "grade": "A",
+        "ratio": 0.61,
+        "blog_total": 29111
+    },
+    {
+        "no": 47,
+        "keyword": "꽃다발",
+        "pc_search": 5440,
+        "mobile_search": 38500,
+        "daily_avg": 1464.67,
+        "grade": "D",
+        "ratio": 91.62,
+        "blog_total": 4025811
+    },
+    {
+        "no": 48,
+        "keyword": "코스닥시총순위",
+        "pc_search": 9090,
+        "mobile_search": 33200,
+        "daily_avg": 1409.67,
+        "grade": "A",
+        "ratio": 0.6,
+        "blog_total": 25307
     },
     {
         "no": 49,
-        "keyword": "홍콩환율",
-        "pc_search": 20200,
-        "mobile_search": 131900,
-        "daily_avg": 5070.0,
-        "grade": "A",
-        "ratio": 1.06,
-        "blog_total": 161812
+        "keyword": "카카오주식",
+        "pc_search": 4770,
+        "mobile_search": 37300,
+        "daily_avg": 1402.33,
+        "grade": "D",
+        "ratio": 16.46,
+        "blog_total": 692605
     },
     {
         "no": 50,
-        "keyword": "오늘의환율",
-        "pc_search": 18400,
-        "mobile_search": 132800,
-        "daily_avg": 5040.0,
-        "grade": "C",
-        "ratio": 7.68,
-        "blog_total": 1161348
+        "keyword": "정기예금금리",
+        "pc_search": 8230,
+        "mobile_search": 33600,
+        "daily_avg": 1394.33,
+        "grade": "B",
+        "ratio": 4.11,
+        "blog_total": 171955
     }
 ]
