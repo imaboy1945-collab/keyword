@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>키워드 전략 연구소</title>
     <style>
-        body { font-family: -apple-system, sans-serif; background-color: #f1f3f5; margin: 0; padding: 20px; }
-        .container { max-width: 1100px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        h1 { font-size: 22px; color: #212529; margin-bottom: 25px; border-left: 6px solid #007bff; padding-left: 15px; }
+        body { font-family: -apple-system, sans-serif; background-color: #f1f3f5; margin: 0; padding: 15px; }
+        .container { max-width: 1100px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
         
-        /* 스크롤 영역 설정 */
+        /* 제목 글자 크기 1pt 축소 (22px -> 21px) */
+        h1 { font-size: 21px; color: #212529; margin-bottom: 20px; border-left: 6px solid #007bff; padding-left: 15px; }
+        
         .table-wrapper { 
             overflow: auto; 
-            max-height: 80vh; /* 화면 높이에 맞춰 세로 스크롤 생성 */
+            max-height: 80vh; 
             border: 1px solid #dee2e6;
         }
         
-        table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 1000px; }
-        th, td { padding: 15px 10px; text-align: center; border-bottom: 1px solid #dee2e6; border-right: 1px solid #eee; font-size: 14px; white-space: nowrap; }
+        table { width: 100%; border-collapse: separate; border-spacing: 0; }
+        
+        /* 전체 표 글자 크기 1pt 축소 (14px -> 13px) */
+        th, td { padding: 12px 10px; text-align: center; border-bottom: 1px solid #dee2e6; border-right: 1px solid #eee; font-size: 13px; white-space: nowrap; }
         
         /* 1. 상단 행(1행) 고정 */
         thead th { 
@@ -30,36 +33,36 @@
         }
 
         /* 2. 좌측 열(1, 2열) 고정 설정 */
-        /* 1열 (No) */
+        /* 1열 (No) 너비 최적화 */
         th:nth-child(1), td:nth-child(1) {
             position: sticky;
             left: 0;
-            width: 50px;
-            min-width: 50px;
+            width: 40px;
+            min-width: 40px;
             background-color: #fff;
             z-index: 5;
         }
-        /* 2열 (연관 키워드) */
+        /* 2열 (연관 키워드) 유동적 너비 설정 */
         th:nth-child(2), td:nth-child(2) {
             position: sticky;
-            left: 50px; /* 1열 너비만큼 띄움 */
-            width: 150px;
-            min-width: 150px;
+            left: 40px; /* 1열 너비만큼 띄움 */
             background-color: #fff;
             z-index: 5;
             text-align: left;
             color: #007bff;
             font-weight: 600;
+            /* 글자 길이에 맞춰 유동적으로 확장 */
+            width: auto;
+            min-width: max-content;
         }
 
-        /* 3. 고정된 행과 열이 만나는 모서리 부분 처리 */
+        /* 고정된 행과 열이 만나는 모서리 */
         thead th:nth-child(1), thead th:nth-child(2) {
-            z-index: 15; /* 헤더보다 더 위에 위치 */
+            z-index: 15;
             background-color: #f8f9fa;
         }
 
-        /* 등급별 강조 색상 */
-        .grade-S { color: #d9480f; background-color: #fff4e6; font-weight: bold; border-radius: 4px; padding: 4px 8px; }
+        .grade-S { color: #d9480f; background-color: #fff4e6; font-weight: bold; border-radius: 4px; padding: 3px 6px; }
         .grade-A { color: #f08c00; font-weight: bold; }
     </style>
 </head>
