@@ -1,502 +1,502 @@
 [
     {
         "no": 1,
-        "keyword": "밴드",
-        "pc_search": 437300,
-        "mobile_search": 100200,
-        "daily_avg": 17916.67,
-        "grade": "D",
-        "ratio": 16.7,
-        "blog_total": 8975049
-    },
-    {
-        "no": 2,
-        "keyword": "축제",
-        "pc_search": 53700,
-        "mobile_search": 228900,
-        "daily_avg": 9420.0,
-        "grade": "D",
-        "ratio": 39.72,
-        "blog_total": 11225867
-    },
-    {
-        "no": 3,
-        "keyword": "뮤지컬",
-        "pc_search": 58100,
-        "mobile_search": 176700,
-        "daily_avg": 7826.67,
-        "grade": "D",
-        "ratio": 16.07,
-        "blog_total": 3773682
-    },
-    {
-        "no": 4,
         "keyword": "경주가볼만한곳",
         "pc_search": 18900,
         "mobile_search": 163300,
         "daily_avg": 6073.33,
         "grade": "D",
-        "ratio": 66.76,
-        "blog_total": 12163424
+        "ratio": 66.81,
+        "blog_total": 12172238
     },
     {
-        "no": 5,
-        "keyword": "서울가볼만한곳",
-        "pc_search": 18100,
-        "mobile_search": 135400,
-        "daily_avg": 5116.67,
-        "grade": "D",
-        "ratio": 101.6,
-        "blog_total": 15596189
-    },
-    {
-        "no": 6,
-        "keyword": "강릉가볼만한곳",
-        "pc_search": 16600,
-        "mobile_search": 124900,
-        "daily_avg": 4716.67,
-        "grade": "D",
-        "ratio": 85.14,
-        "blog_total": 12046845
-    },
-    {
-        "no": 7,
-        "keyword": "대한민국구석구석",
-        "pc_search": 41800,
-        "mobile_search": 89900,
-        "daily_avg": 4390.0,
-        "grade": "A",
-        "ratio": 1.0,
-        "blog_total": 131807
-    },
-    {
-        "no": 8,
+        "no": 2,
         "keyword": "위고비",
         "pc_search": 19900,
         "mobile_search": 106600,
         "daily_avg": 4216.67,
         "grade": "A",
         "ratio": 1.1,
-        "blog_total": 139137
+        "blog_total": 138614
     },
     {
-        "no": 9,
+        "no": 3,
         "keyword": "건강보험",
         "pc_search": 85600,
         "mobile_search": 34400,
         "daily_avg": 4000.0,
         "grade": "D",
-        "ratio": 41.64,
-        "blog_total": 4996898
+        "ratio": 41.67,
+        "blog_total": 5000605
     },
     {
-        "no": 10,
-        "keyword": "속초가볼만한곳",
-        "pc_search": 12900,
-        "mobile_search": 104700,
-        "daily_avg": 3920.0,
-        "grade": "D",
-        "ratio": 101.46,
-        "blog_total": 11932208
-    },
-    {
-        "no": 11,
-        "keyword": "4월축제",
-        "pc_search": 21300,
-        "mobile_search": 94500,
-        "daily_avg": 3860.0,
-        "grade": "C",
-        "ratio": 8.44,
-        "blog_total": 977247
-    },
-    {
-        "no": 12,
-        "keyword": "5월축제",
-        "pc_search": 32900,
-        "mobile_search": 81400,
-        "daily_avg": 3810.0,
-        "grade": "C",
-        "ratio": 8.7,
-        "blog_total": 994747
-    },
-    {
-        "no": 13,
-        "keyword": "벚꽃축제",
-        "pc_search": 14900,
-        "mobile_search": 95300,
-        "daily_avg": 3673.33,
-        "grade": "B",
-        "ratio": 4.78,
-        "blog_total": 526264
-    },
-    {
-        "no": 14,
+        "no": 4,
         "keyword": "경주황리단길",
         "pc_search": 12400,
         "mobile_search": 80600,
         "daily_avg": 3100.0,
         "grade": "C",
         "ratio": 9.04,
-        "blog_total": 840425
+        "blog_total": 840833
     },
     {
-        "no": 15,
-        "keyword": "어린이날행사",
-        "pc_search": 15800,
-        "mobile_search": 71000,
-        "daily_avg": 2893.33,
-        "grade": "B",
-        "ratio": 4.74,
-        "blog_total": 411571
-    },
-    {
-        "no": 16,
+        "no": 5,
         "keyword": "강화도맛집",
         "pc_search": 8590,
         "mobile_search": 77500,
         "daily_avg": 2869.67,
         "grade": "B",
         "ratio": 3.14,
-        "blog_total": 270369
+        "blog_total": 270440
     },
     {
-        "no": 17,
+        "no": 6,
         "keyword": "어린이날",
         "pc_search": 29100,
         "mobile_search": 52800,
         "daily_avg": 2730.0,
         "grade": "D",
-        "ratio": 23.52,
-        "blog_total": 1926662
+        "ratio": 23.66,
+        "blog_total": 1937634
     },
     {
-        "no": 18,
+        "no": 7,
         "keyword": "인천가볼만한곳",
         "pc_search": 7550,
         "mobile_search": 73100,
         "daily_avg": 2688.33,
         "grade": "D",
-        "ratio": 158.78,
-        "blog_total": 12805702
+        "ratio": 158.9,
+        "blog_total": 12814903
     },
     {
-        "no": 19,
-        "keyword": "원주맛집",
-        "pc_search": 8670,
-        "mobile_search": 71400,
-        "daily_avg": 2669.0,
-        "grade": "B",
-        "ratio": 4.28,
-        "blog_total": 342835
-    },
-    {
-        "no": 20,
+        "no": 8,
         "keyword": "근처가볼만한곳",
         "pc_search": 790,
         "mobile_search": 76700,
         "daily_avg": 2583.0,
         "grade": "D",
-        "ratio": 214.15,
-        "blog_total": 16594241
+        "ratio": 214.29,
+        "blog_total": 16605532
     },
     {
-        "no": 21,
+        "no": 9,
         "keyword": "경기도가볼만한곳",
         "pc_search": 8130,
         "mobile_search": 69300,
         "daily_avg": 2581.0,
         "grade": "A",
         "ratio": 1.95,
-        "blog_total": 150872
+        "blog_total": 150985
     },
     {
-        "no": 22,
+        "no": 10,
+        "keyword": "고유가",
+        "pc_search": 15200,
+        "mobile_search": 61000,
+        "daily_avg": 2540.0,
+        "grade": "B",
+        "ratio": 3.27,
+        "blog_total": 249264
+    },
+    {
+        "no": 11,
         "keyword": "펜션",
         "pc_search": 15000,
         "mobile_search": 59600,
         "daily_avg": 2486.67,
         "grade": "D",
-        "ratio": 76.22,
-        "blog_total": 5685969
+        "ratio": 76.24,
+        "blog_total": 5687591
     },
     {
-        "no": 23,
+        "no": 12,
         "keyword": "제천가볼만한곳",
         "pc_search": 8200,
         "mobile_search": 66200,
         "daily_avg": 2480.0,
         "grade": "D",
-        "ratio": 158.15,
-        "blog_total": 11766357
+        "ratio": 158.27,
+        "blog_total": 11775057
     },
     {
-        "no": 24,
-        "keyword": "공주가볼만한곳",
-        "pc_search": 8060,
-        "mobile_search": 63400,
-        "daily_avg": 2382.0,
-        "grade": "D",
-        "ratio": 170.04,
-        "blog_total": 12151307
-    },
-    {
-        "no": 25,
+        "no": 13,
         "keyword": "강화도갈만한곳",
         "pc_search": 7230,
         "mobile_search": 60900,
         "daily_avg": 2271.0,
         "grade": "A",
         "ratio": 0.96,
-        "blog_total": 65417
+        "blog_total": 65450
     },
     {
-        "no": 26,
-        "keyword": "공연",
-        "pc_search": 16600,
-        "mobile_search": 47500,
-        "daily_avg": 2136.67,
-        "grade": "D",
-        "ratio": 230.01,
-        "blog_total": 14743621
-    },
-    {
-        "no": 27,
-        "keyword": "안동가볼만한곳",
-        "pc_search": 7470,
-        "mobile_search": 55400,
-        "daily_avg": 2095.67,
-        "grade": "D",
-        "ratio": 188.0,
-        "blog_total": 11819707
-    },
-    {
-        "no": 28,
+        "no": 14,
         "keyword": "건강검진",
         "pc_search": 14900,
         "mobile_search": 47400,
         "daily_avg": 2076.67,
         "grade": "D",
-        "ratio": 56.15,
-        "blog_total": 3498083
+        "ratio": 56.19,
+        "blog_total": 3500511
     },
     {
-        "no": 29,
+        "no": 15,
         "keyword": "다이어트식단",
         "pc_search": 13500,
         "mobile_search": 48100,
         "daily_avg": 2053.33,
         "grade": "D",
-        "ratio": 29.09,
-        "blog_total": 1791829
+        "ratio": 29.1,
+        "blog_total": 1792806
     },
     {
-        "no": 30,
-        "keyword": "벚꽃명소",
-        "pc_search": 5720,
-        "mobile_search": 55400,
-        "daily_avg": 2037.33,
-        "grade": "D",
-        "ratio": 11.83,
-        "blog_total": 723196
-    },
-    {
-        "no": 31,
+        "no": 16,
         "keyword": "강원도가볼만한곳",
         "pc_search": 7020,
         "mobile_search": 53700,
         "daily_avg": 2024.0,
         "grade": "D",
-        "ratio": 200.7,
-        "blog_total": 12186732
+        "ratio": 200.85,
+        "blog_total": 12195514
     },
     {
-        "no": 32,
+        "no": 17,
         "keyword": "여행가는달",
         "pc_search": 9310,
         "mobile_search": 48800,
         "daily_avg": 1937.0,
         "grade": "D",
-        "ratio": 20.43,
-        "blog_total": 1187143
+        "ratio": 20.44,
+        "blog_total": 1187771
     },
     {
-        "no": 33,
+        "no": 18,
         "keyword": "맞춤형복지",
         "pc_search": 30600,
         "mobile_search": 26900,
         "daily_avg": 1916.67,
         "grade": "D",
-        "ratio": 10.73,
-        "blog_total": 616996
+        "ratio": 10.74,
+        "blog_total": 617672
     },
     {
-        "no": 34,
+        "no": 19,
         "keyword": "국내여행지추천",
         "pc_search": 8890,
         "mobile_search": 47500,
         "daily_avg": 1879.67,
         "grade": "B",
         "ratio": 3.56,
-        "blog_total": 200698
+        "blog_total": 201027
     },
     {
-        "no": 35,
+        "no": 20,
         "keyword": "크루즈여행",
         "pc_search": 8120,
         "mobile_search": 42800,
         "daily_avg": 1697.33,
         "grade": "B",
         "ratio": 3.84,
-        "blog_total": 195311
+        "blog_total": 195439
     },
     {
-        "no": 36,
+        "no": 21,
         "keyword": "사회복지사2급",
         "pc_search": 12900,
         "mobile_search": 37800,
         "daily_avg": 1690.0,
         "grade": "C",
-        "ratio": 6.51,
-        "blog_total": 330245
+        "ratio": 6.52,
+        "blog_total": 330410
     },
     {
-        "no": 37,
-        "keyword": "뮤직페스티벌",
-        "pc_search": 17800,
-        "mobile_search": 29900,
-        "daily_avg": 1590.0,
-        "grade": "B",
-        "ratio": 3.33,
-        "blog_total": 158930
-    },
-    {
-        "no": 38,
+        "no": 22,
         "keyword": "강화도",
         "pc_search": 9910,
         "mobile_search": 36000,
         "daily_avg": 1530.33,
         "grade": "D",
-        "ratio": 29.62,
-        "blog_total": 1359807
+        "ratio": 29.63,
+        "blog_total": 1360266
     },
     {
-        "no": 39,
+        "no": 23,
         "keyword": "여행",
         "pc_search": 13400,
         "mobile_search": 32200,
         "daily_avg": 1520.0,
         "grade": "D",
-        "ratio": 1734.54,
-        "blog_total": 79094851
+        "ratio": 1735.24,
+        "blog_total": 79126893
     },
     {
-        "no": 40,
-        "keyword": "가평펜션",
-        "pc_search": 8750,
-        "mobile_search": 36400,
-        "daily_avg": 1505.0,
-        "grade": "B",
-        "ratio": 3.68,
-        "blog_total": 166258
-    },
-    {
-        "no": 41,
+        "no": 24,
         "keyword": "강화가볼만한곳",
         "pc_search": 2480,
         "mobile_search": 41500,
         "daily_avg": 1466.0,
         "grade": "D",
-        "ratio": 282.03,
-        "blog_total": 12403553
+        "ratio": 282.23,
+        "blog_total": 12412677
     },
     {
-        "no": 42,
+        "no": 25,
         "keyword": "캠핑",
         "pc_search": 8910,
         "mobile_search": 34500,
         "daily_avg": 1447.0,
         "grade": "D",
-        "ratio": 212.82,
-        "blog_total": 9238376
+        "ratio": 212.95,
+        "blog_total": 9243978
     },
     {
-        "no": 43,
+        "no": 26,
         "keyword": "하나투어패키지",
         "pc_search": 6900,
         "mobile_search": 35900,
         "daily_avg": 1426.67,
         "grade": "B",
         "ratio": 2.86,
-        "blog_total": 122362
+        "blog_total": 122422
     },
     {
-        "no": 44,
-        "keyword": "보령가볼만한곳",
-        "pc_search": 4270,
-        "mobile_search": 38500,
-        "daily_avg": 1425.67,
-        "grade": "D",
-        "ratio": 274.38,
-        "blog_total": 11735110
-    },
-    {
-        "no": 45,
-        "keyword": "부산여행",
-        "pc_search": 12500,
-        "mobile_search": 28800,
-        "daily_avg": 1376.67,
-        "grade": "D",
-        "ratio": 48.54,
-        "blog_total": 2004496
-    },
-    {
-        "no": 46,
+        "no": 27,
         "keyword": "평창가볼만한곳",
         "pc_search": 4980,
         "mobile_search": 36100,
         "daily_avg": 1369.33,
         "grade": "D",
-        "ratio": 286.88,
-        "blog_total": 11785085
+        "ratio": 287.09,
+        "blog_total": 11793752
     },
     {
-        "no": 47,
-        "keyword": "부산놀거리",
-        "pc_search": 6280,
+        "no": 28,
+        "keyword": "서울근교나들이",
+        "pc_search": 5390,
         "mobile_search": 31900,
-        "daily_avg": 1272.67,
-        "grade": "B",
-        "ratio": 4.37,
-        "blog_total": 166740
+        "daily_avg": 1243.0,
+        "grade": "C",
+        "ratio": 9.17,
+        "blog_total": 341804
     },
     {
-        "no": 48,
+        "no": 29,
         "keyword": "경남가볼만한곳",
         "pc_search": 3200,
         "mobile_search": 33400,
         "daily_avg": 1220.0,
         "grade": "D",
-        "ratio": 327.94,
-        "blog_total": 12002570
+        "ratio": 328.18,
+        "blog_total": 12011422
     },
     {
-        "no": 49,
+        "no": 30,
         "keyword": "국내여행",
         "pc_search": 10000,
         "mobile_search": 26300,
         "daily_avg": 1210.0,
         "grade": "D",
-        "ratio": 127.54,
-        "blog_total": 4629615
+        "ratio": 127.58,
+        "blog_total": 4631272
     },
     {
-        "no": 50,
+        "no": 31,
         "keyword": "청계산",
         "pc_search": 7600,
         "mobile_search": 28600,
         "daily_avg": 1206.67,
         "grade": "C",
         "ratio": 8.53,
-        "blog_total": 308720
+        "blog_total": 308755
+    },
+    {
+        "no": 32,
+        "keyword": "가볼만한곳",
+        "pc_search": 2430,
+        "mobile_search": 31300,
+        "daily_avg": 1124.33,
+        "grade": "D",
+        "ratio": 350.49,
+        "blog_total": 11822083
+    },
+    {
+        "no": 33,
+        "keyword": "경주여행",
+        "pc_search": 10500,
+        "mobile_search": 22500,
+        "daily_avg": 1100.0,
+        "grade": "D",
+        "ratio": 32.31,
+        "blog_total": 1066279
+    },
+    {
+        "no": 34,
+        "keyword": "국가건강검진",
+        "pc_search": 6870,
+        "mobile_search": 25400,
+        "daily_avg": 1075.67,
+        "grade": "C",
+        "ratio": 9.22,
+        "blog_total": 297383
+    },
+    {
+        "no": 35,
+        "keyword": "사회복지사",
+        "pc_search": 8220,
+        "mobile_search": 23800,
+        "daily_avg": 1067.33,
+        "grade": "D",
+        "ratio": 34.11,
+        "blog_total": 1092211
+    },
+    {
+        "no": 36,
+        "keyword": "갯벌체험",
+        "pc_search": 3960,
+        "mobile_search": 27000,
+        "daily_avg": 1032.0,
+        "grade": "D",
+        "ratio": 12.54,
+        "blog_total": 388264
+    },
+    {
+        "no": 37,
+        "keyword": "경주벚꽃",
+        "pc_search": 2970,
+        "mobile_search": 26600,
+        "daily_avg": 985.67,
+        "grade": "C",
+        "ratio": 8.48,
+        "blog_total": 250811
+    },
+    {
+        "no": 38,
+        "keyword": "충남가볼만한곳",
+        "pc_search": 2760,
+        "mobile_search": 26600,
+        "daily_avg": 978.67,
+        "grade": "D",
+        "ratio": 405.85,
+        "blog_total": 11915777
+    },
+    {
+        "no": 39,
+        "keyword": "독감",
+        "pc_search": 4660,
+        "mobile_search": 22000,
+        "daily_avg": 888.67,
+        "grade": "D",
+        "ratio": 72.33,
+        "blog_total": 1928395
+    },
+    {
+        "no": 40,
+        "keyword": "1박2일여행지",
+        "pc_search": 3330,
+        "mobile_search": 23300,
+        "daily_avg": 887.67,
+        "grade": "D",
+        "ratio": 13.76,
+        "blog_total": 366385
+    },
+    {
+        "no": 41,
+        "keyword": "박물관",
+        "pc_search": 3600,
+        "mobile_search": 22100,
+        "daily_avg": 856.67,
+        "grade": "D",
+        "ratio": 297.36,
+        "blog_total": 7642124
+    },
+    {
+        "no": 42,
+        "keyword": "전남가볼만한곳",
+        "pc_search": 2380,
+        "mobile_search": 23300,
+        "daily_avg": 856.0,
+        "grade": "D",
+        "ratio": 463.6,
+        "blog_total": 11905133
+    },
+    {
+        "no": 43,
+        "keyword": "영양제",
+        "pc_search": 5150,
+        "mobile_search": 18900,
+        "daily_avg": 801.67,
+        "grade": "D",
+        "ratio": 208.27,
+        "blog_total": 5008838
+    },
+    {
+        "no": 44,
+        "keyword": "뱃살빼는법",
+        "pc_search": 2940,
+        "mobile_search": 20100,
+        "daily_avg": 768.0,
+        "grade": "B",
+        "ratio": 4.32,
+        "blog_total": 99463
+    },
+    {
+        "no": 45,
+        "keyword": "강릉여행",
+        "pc_search": 7310,
+        "mobile_search": 15400,
+        "daily_avg": 757.0,
+        "grade": "D",
+        "ratio": 41.94,
+        "blog_total": 952412
+    },
+    {
+        "no": 46,
+        "keyword": "국내당일치기여행",
+        "pc_search": 3790,
+        "mobile_search": 18900,
+        "daily_avg": 756.33,
+        "grade": "C",
+        "ratio": 7.64,
+        "blog_total": 173270
+    },
+    {
+        "no": 47,
+        "keyword": "패키지여행",
+        "pc_search": 4820,
+        "mobile_search": 17800,
+        "daily_avg": 754.0,
+        "grade": "D",
+        "ratio": 131.86,
+        "blog_total": 2982601
+    },
+    {
+        "no": 48,
+        "keyword": "평생교육원",
+        "pc_search": 8060,
+        "mobile_search": 14000,
+        "daily_avg": 735.33,
+        "grade": "D",
+        "ratio": 29.97,
+        "blog_total": 661178
+    },
+    {
+        "no": 49,
+        "keyword": "사회복지사자격증",
+        "pc_search": 5230,
+        "mobile_search": 16800,
+        "daily_avg": 734.33,
+        "grade": "D",
+        "ratio": 19.93,
+        "blog_total": 438995
+    },
+    {
+        "no": 50,
+        "keyword": "국내기차여행",
+        "pc_search": 3230,
+        "mobile_search": 18500,
+        "daily_avg": 724.33,
+        "grade": "B",
+        "ratio": 2.25,
+        "blog_total": 48886
     }
 ]
