@@ -64,6 +64,8 @@
 
         .grade-S { color: #d9480f; background-color: #fff4e6; font-weight: bold; border-radius: 4px; padding: 3px 6px; }
         .grade-A { color: #f08c00; font-weight: bold; }
+        .score { color: #087f5b; font-weight: 700; }
+        .muted { color: #868e96; font-size: 12px; }
     </style>
 </head>
 <body>
@@ -77,9 +79,14 @@
                         <th>연관 키워드</th>
                         <th>PC 검색량</th>
                         <th>모바일 검색량</th>
+                        <th>월검색량</th>
                         <th>일평균</th>
                         <th>등급 (경쟁률)</th>
-                        <th>총 문서 수</th>
+                        <th>기회점수</th>
+                        <th>블로그</th>
+                        <th>카페글</th>
+                        <th>뉴스</th>
+                        <th>시드</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -94,15 +101,25 @@
                 data.forEach(item => {
                     const tr = document.createElement('tr');
                     const gradeClass = (item.grade === 'S') ? 'grade-S' : (item.grade === 'A' ? 'grade-A' : '');
+                    const monthlyTotal = item.monthly_total ?? (item.pc_search + item.mobile_search);
+                    const opportunityScore = item.opportunity_score ?? 0;
+                    const cafeTotal = item.cafe_total ?? 0;
+                    const newsTotal = item.news_total ?? 0;
+                    const seed = item.seed ?? '-';
                     
                     tr.innerHTML = `
                         <td>${item.no}</td>
                         <td>${item.keyword}</td>
                         <td>${item.pc_search.toLocaleString()}</td>
                         <td>${item.mobile_search.toLocaleString()}</td>
+                        <td>${monthlyTotal.toLocaleString()}</td>
                         <td>${item.daily_avg.toLocaleString()}</td>
                         <td><span class="${gradeClass}">${item.grade} (${item.ratio})</span></td>
+                        <td class="score">${opportunityScore.toLocaleString()}</td>
                         <td>${item.blog_total.toLocaleString()}</td>
+                        <td>${cafeTotal.toLocaleString()}</td>
+                        <td>${newsTotal.toLocaleString()}</td>
+                        <td class="muted">${seed}</td>
                     `;
                     tbody.appendChild(tr);
                 });
