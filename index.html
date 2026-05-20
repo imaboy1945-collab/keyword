@@ -9,7 +9,50 @@
         .container { max-width: 1100px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
         
         /* 제목 글자 크기 1pt 축소 (22px -> 21px) */
-        h1 { font-size: 21px; color: #212529; margin-bottom: 20px; border-left: 6px solid #007bff; padding-left: 15px; }
+        h1 { font-size: 21px; color: #212529; margin-bottom: 16px; border-left: 6px solid #007bff; padding-left: 15px; }
+        .search-panel {
+            display: grid;
+            grid-template-columns: minmax(180px, 1fr) auto;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        .search-input {
+            height: 42px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            padding: 0 14px;
+            font-size: 15px;
+            outline: none;
+        }
+        .search-input:focus {
+            border-color: #339af0;
+            box-shadow: 0 0 0 3px rgba(51, 154, 240, 0.14);
+        }
+        .clear-button {
+            height: 42px;
+            min-width: 78px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            background: #fff;
+            color: #495057;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(120px, 1fr));
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .metric {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 10px 12px;
+            background: #fbfcfd;
+        }
+        .metric-label { color: #868e96; font-size: 12px; margin-bottom: 4px; }
+        .metric-value { color: #212529; font-size: 18px; font-weight: 700; }
         
         .table-wrapper { 
             overflow: auto; 
@@ -66,11 +109,51 @@
         .grade-A { color: #f08c00; font-weight: bold; }
         .score { color: #087f5b; font-weight: 700; }
         .muted { color: #868e96; font-size: 12px; }
+        .empty-row td {
+            position: static !important;
+            color: #868e96;
+            text-align: center;
+            padding: 26px 10px;
+        }
+        mark {
+            background: #fff3bf;
+            color: inherit;
+            padding: 0 2px;
+            border-radius: 3px;
+        }
+        @media (max-width: 720px) {
+            .container { padding: 14px; }
+            .search-panel { grid-template-columns: 1fr; }
+            .clear-button { width: 100%; }
+            .summary { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>통합 키워드 분석 리포트 [Column]</h1>
+        <div class="search-panel">
+            <input id="keywordSearch" class="search-input" type="search" placeholder="검색어 입력" autocomplete="off">
+            <button id="clearSearch" class="clear-button" type="button">초기화</button>
+        </div>
+        <div class="summary">
+            <div class="metric">
+                <div class="metric-label">관련 키워드</div>
+                <div id="matchedCount" class="metric-value">0</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">최고 점수</div>
+                <div id="bestScore" class="metric-value">0</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">S/A 등급</div>
+                <div id="topGradeCount" class="metric-value">0</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">총 월검색량</div>
+                <div id="totalMonthly" class="metric-value">0</div>
+            </div>
+        </div>
         <div class="table-wrapper">
             <table id="resultTable">
                 <thead>
@@ -94,35 +177,141 @@
         </div>
     </div>
     <script>
+        const state = {
+            rows: [],
+            query: ''
+        };
+
+        const numberFormat = new Intl.NumberFormat('ko-KR');
+        const tbody = document.querySelector('#resultTable tbody');
+        const searchInput = document.querySelector('#keywordSearch');
+        const clearButton = document.querySelector('#clearSearch');
+        const matchedCount = document.querySelector('#matchedCount');
+        const bestScore = document.querySelector('#bestScore');
+        const topGradeCount = document.querySelector('#topGradeCount');
+        const totalMonthly = document.querySelector('#totalMonthly');
+
+        function formatNumber(value) {
+            return numberFormat.format(Math.round(Number(value) || 0));
+        }
+
+        function getMonthlyTotal(item) {
+            return item.monthly_total ?? ((Number(item.pc_search) || 0) + (Number(item.mobile_search) || 0));
+        }
+
+        function getOpportunityScore(item) {
+            if (item.opportunity_score !== undefined) return Number(item.opportunity_score) || 0;
+            const monthlyTotal = getMonthlyTotal(item);
+            const blogTotal = Number(item.blog_total) || 0;
+            const cafeTotal = Number(item.cafe_total) || 0;
+            const newsTotal = Number(item.news_total) || 0;
+            const competition = Math.max(blogTotal + (cafeTotal * 0.35) + (newsTotal * 0.2), 1);
+            return Number((((monthlyTotal / 30) * 1000) / competition).toFixed(3));
+        }
+
+        function normalizeText(value) {
+            return String(value ?? '').replace(/\s+/g, '').toLowerCase();
+        }
+
+        function escapeHtml(value) {
+            return String(value).replace(/[&<>"']/g, char => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[char]));
+        }
+
+        function highlightKeyword(keyword, query) {
+            const safeKeyword = escapeHtml(keyword);
+            const trimmedQuery = query.trim();
+            if (!trimmedQuery) return safeKeyword;
+            const escapedQuery = trimmedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            return safeKeyword.replace(new RegExp(escapedQuery, 'gi'), match => `<mark>${match}</mark>`);
+        }
+
+        function getFilteredRows() {
+            const query = normalizeText(state.query);
+            const rows = state.rows.map(item => ({
+                ...item,
+                monthly_total: getMonthlyTotal(item),
+                opportunity_score: getOpportunityScore(item)
+            }));
+
+            if (!query) return rows;
+            return rows
+                .filter(item => {
+                    const keyword = normalizeText(item.keyword);
+                    const seed = normalizeText(item.seed);
+                    return keyword.includes(query) || seed.includes(query);
+                })
+                .sort((a, b) => {
+                    const exactA = normalizeText(a.keyword).startsWith(query) ? 1 : 0;
+                    const exactB = normalizeText(b.keyword).startsWith(query) ? 1 : 0;
+                    return exactB - exactA || b.opportunity_score - a.opportunity_score || b.monthly_total - a.monthly_total;
+                });
+        }
+
+        function updateSummary(rows) {
+            matchedCount.textContent = formatNumber(rows.length);
+            bestScore.textContent = formatNumber(Math.max(...rows.map(item => item.opportunity_score), 0));
+            topGradeCount.textContent = formatNumber(rows.filter(item => item.grade === 'S' || item.grade === 'A').length);
+            totalMonthly.textContent = formatNumber(rows.reduce((sum, item) => sum + item.monthly_total, 0));
+        }
+
+        function renderTable() {
+            const rows = getFilteredRows();
+            updateSummary(rows);
+            tbody.innerHTML = '';
+
+            if (rows.length === 0) {
+                tbody.innerHTML = '<tr class="empty-row"><td colspan="12">검색 결과 없음</td></tr>';
+                return;
+            }
+
+            rows.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                const gradeClass = (item.grade === 'S') ? 'grade-S' : (item.grade === 'A' ? 'grade-A' : '');
+                const cafeTotal = item.cafe_total ?? 0;
+                const newsTotal = item.news_total ?? 0;
+                const seed = item.seed ?? '-';
+
+                tr.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${highlightKeyword(item.keyword, state.query)}</td>
+                    <td>${formatNumber(item.pc_search)}</td>
+                    <td>${formatNumber(item.mobile_search)}</td>
+                    <td>${formatNumber(item.monthly_total)}</td>
+                    <td>${formatNumber(item.daily_avg)}</td>
+                    <td><span class="${gradeClass}">${item.grade} (${item.ratio})</span></td>
+                    <td class="score">${formatNumber(item.opportunity_score)}</td>
+                    <td>${formatNumber(item.blog_total)}</td>
+                    <td>${formatNumber(cafeTotal)}</td>
+                    <td>${formatNumber(newsTotal)}</td>
+                    <td class="muted">${escapeHtml(seed)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        searchInput.addEventListener('input', event => {
+            state.query = event.target.value;
+            renderTable();
+        });
+
+        clearButton.addEventListener('click', () => {
+            searchInput.value = '';
+            state.query = '';
+            searchInput.focus();
+            renderTable();
+        });
+
         fetch('data.json')
             .then(res => res.json())
             .then(data => {
-                const tbody = document.querySelector('#resultTable tbody');
-                data.forEach(item => {
-                    const tr = document.createElement('tr');
-                    const gradeClass = (item.grade === 'S') ? 'grade-S' : (item.grade === 'A' ? 'grade-A' : '');
-                    const monthlyTotal = item.monthly_total ?? (item.pc_search + item.mobile_search);
-                    const opportunityScore = item.opportunity_score ?? 0;
-                    const cafeTotal = item.cafe_total ?? 0;
-                    const newsTotal = item.news_total ?? 0;
-                    const seed = item.seed ?? '-';
-                    
-                    tr.innerHTML = `
-                        <td>${item.no}</td>
-                        <td>${item.keyword}</td>
-                        <td>${item.pc_search.toLocaleString()}</td>
-                        <td>${item.mobile_search.toLocaleString()}</td>
-                        <td>${monthlyTotal.toLocaleString()}</td>
-                        <td>${item.daily_avg.toLocaleString()}</td>
-                        <td><span class="${gradeClass}">${item.grade} (${item.ratio})</span></td>
-                        <td class="score">${opportunityScore.toLocaleString()}</td>
-                        <td>${item.blog_total.toLocaleString()}</td>
-                        <td>${cafeTotal.toLocaleString()}</td>
-                        <td>${newsTotal.toLocaleString()}</td>
-                        <td class="muted">${seed}</td>
-                    `;
-                    tbody.appendChild(tr);
-                });
+                state.rows = Array.isArray(data) ? data : [];
+                renderTable();
             });
     </script>
 </body>
