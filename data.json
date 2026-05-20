@@ -9,12 +9,12 @@
     "daily_avg": 15523.33,
     "mobile_share": 0.845,
     "grade": "S",
-    "opportunity_score": 2293.416,
+    "opportunity_score": 2293.298,
     "ratio": 0.01,
     "blog_total": 5179,
-    "cafe_total": 3647,
+    "cafe_total": 3648,
     "news_total": 1566,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 2,
@@ -26,12 +26,12 @@
     "daily_avg": 60990.0,
     "mobile_share": 0.992,
     "grade": "S",
-    "opportunity_score": 1305.878,
+    "opportunity_score": 1305.87,
     "ratio": 0.02,
-    "blog_total": 40405,
-    "cafe_total": 14924,
+    "blog_total": 40406,
+    "cafe_total": 14922,
     "news_total": 5379,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 3,
@@ -43,12 +43,12 @@
     "daily_avg": 39733.33,
     "mobile_share": 0.957,
     "grade": "S",
-    "opportunity_score": 789.616,
+    "opportunity_score": 789.585,
     "ratio": 0.03,
-    "blog_total": 41270,
+    "blog_total": 41271,
     "cafe_total": 5500,
-    "news_total": 35624,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "news_total": 35629,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 4,
@@ -60,12 +60,12 @@
     "daily_avg": 996646.67,
     "mobile_share": 0.933,
     "grade": "S",
-    "opportunity_score": 775.871,
+    "opportunity_score": 775.844,
     "ratio": 0.03,
-    "blog_total": 1035534,
-    "cafe_total": 336743,
-    "news_total": 655793,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1035573,
+    "cafe_total": 336745,
+    "news_total": 655814,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 5,
@@ -77,12 +77,12 @@
     "daily_avg": 213283.33,
     "mobile_share": 0.894,
     "grade": "S",
-    "opportunity_score": 353.473,
+    "opportunity_score": 353.453,
     "ratio": 0.08,
-    "blog_total": 504910,
-    "cafe_total": 123313,
-    "news_total": 276619,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 504942,
+    "cafe_total": 123314,
+    "news_total": 276629,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 6,
@@ -99,7 +99,7 @@
     "blog_total": 52403,
     "cafe_total": 29613,
     "news_total": 116864,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 7,
@@ -111,12 +111,12 @@
     "daily_avg": 6493.33,
     "mobile_share": 0.78,
     "grade": "S",
-    "opportunity_score": 197.464,
+    "opportunity_score": 197.471,
     "ratio": 0.14,
     "blog_total": 28243,
-    "cafe_total": 12249,
+    "cafe_total": 12246,
     "news_total": 1767,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 8,
@@ -128,12 +128,12 @@
     "daily_avg": 3936.67,
     "mobile_share": 0.832,
     "grade": "S",
-    "opportunity_score": 195.62,
+    "opportunity_score": 195.64,
     "ratio": 0.16,
     "blog_total": 18332,
-    "cafe_total": 4531,
+    "cafe_total": 4525,
     "news_total": 1031,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 9,
@@ -145,12 +145,12 @@
     "daily_avg": 112396.67,
     "mobile_share": 0.905,
     "grade": "S",
-    "opportunity_score": 191.146,
+    "opportunity_score": 191.142,
     "ratio": 0.13,
-    "blog_total": 450636,
-    "cafe_total": 174014,
-    "news_total": 382367,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 450648,
+    "cafe_total": 174015,
+    "news_total": 382373,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 10,
@@ -162,12 +162,12 @@
     "daily_avg": 39103.33,
     "mobile_share": 0.963,
     "grade": "S",
-    "opportunity_score": 173.589,
+    "opportunity_score": 173.586,
     "ratio": 0.16,
-    "blog_total": 186938,
-    "cafe_total": 57113,
-    "news_total": 91681,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 186940,
+    "cafe_total": 57114,
+    "news_total": 91687,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 11,
@@ -179,12 +179,12 @@
     "daily_avg": 11576.67,
     "mobile_share": 0.95,
     "grade": "S",
-    "opportunity_score": 153.67,
+    "opportunity_score": 153.666,
     "ratio": 0.18,
-    "blog_total": 61096,
-    "cafe_total": 18388,
-    "news_total": 39013,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 61097,
+    "cafe_total": 18389,
+    "news_total": 39017,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 12,
@@ -196,12 +196,12 @@
     "daily_avg": 37426.67,
     "mobile_share": 0.971,
     "grade": "S",
-    "opportunity_score": 125.088,
+    "opportunity_score": 125.087,
     "ratio": 0.11,
     "blog_total": 119938,
     "cafe_total": 51645,
-    "news_total": 805950,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "news_total": 805952,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 13,
@@ -218,7 +218,7 @@
     "blog_total": 5278,
     "cafe_total": 1642,
     "news_total": 893,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 14,
@@ -235,7 +235,7 @@
     "blog_total": 16401,
     "cafe_total": 7958,
     "news_total": 8809,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 15,
@@ -247,12 +247,12 @@
     "daily_avg": 538110.0,
     "mobile_share": 0.769,
     "grade": "S",
-    "opportunity_score": 108.181,
+    "opportunity_score": 108.179,
     "ratio": 0.23,
-    "blog_total": 3671065,
-    "cafe_total": 2381037,
-    "news_total": 2348623,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 3671150,
+    "cafe_total": 2381035,
+    "news_total": 2348648,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 16,
@@ -264,12 +264,12 @@
     "daily_avg": 11496.67,
     "mobile_share": 0.741,
     "grade": "S",
-    "opportunity_score": 95.742,
+    "opportunity_score": 95.738,
     "ratio": 0.3,
-    "blog_total": 103867,
-    "cafe_total": 33093,
+    "blog_total": 103871,
+    "cafe_total": 33095,
     "news_total": 23151,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 17,
@@ -281,12 +281,12 @@
     "daily_avg": 128406.67,
     "mobile_share": 0.911,
     "grade": "S",
-    "opportunity_score": 88.332,
+    "opportunity_score": 88.329,
     "ratio": 0.29,
-    "blog_total": 1098239,
-    "cafe_total": 493568,
-    "news_total": 913474,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1098283,
+    "cafe_total": 493573,
+    "news_total": 913487,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 18,
@@ -303,7 +303,7 @@
     "blog_total": 14915,
     "cafe_total": 6461,
     "news_total": 2027,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 19,
@@ -315,12 +315,12 @@
     "daily_avg": 2168.0,
     "mobile_share": 0.849,
     "grade": "S",
-    "opportunity_score": 59.314,
+    "opportunity_score": 59.312,
     "ratio": 0.47,
-    "blog_total": 30335,
-    "cafe_total": 8731,
+    "blog_total": 30336,
+    "cafe_total": 8732,
     "news_total": 15802,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 20,
@@ -332,12 +332,12 @@
     "daily_avg": 29860.0,
     "mobile_share": 0.935,
     "grade": "S",
-    "opportunity_score": 56.134,
+    "opportunity_score": 56.133,
     "ratio": 0.48,
-    "blog_total": 433893,
-    "cafe_total": 156987,
-    "news_total": 215505,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 433902,
+    "cafe_total": 156988,
+    "news_total": 215506,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 21,
@@ -353,8 +353,8 @@
     "ratio": 0.27,
     "blog_total": 21117,
     "cafe_total": 5961,
-    "news_total": 407360,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "news_total": 407361,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 22,
@@ -368,10 +368,10 @@
     "grade": "A",
     "opportunity_score": 50.67,
     "ratio": 0.57,
-    "blog_total": 583658,
-    "cafe_total": 165927,
-    "news_total": 179574,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 583662,
+    "cafe_total": 165928,
+    "news_total": 179575,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 23,
@@ -383,12 +383,12 @@
     "daily_avg": 2816.67,
     "mobile_share": 0.247,
     "grade": "A",
-    "opportunity_score": 50.443,
+    "opportunity_score": 50.442,
     "ratio": 0.53,
-    "blog_total": 44844,
-    "cafe_total": 28426,
+    "blog_total": 44845,
+    "cafe_total": 28427,
     "news_total": 5226,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 24,
@@ -400,12 +400,12 @@
     "daily_avg": 2963.0,
     "mobile_share": 0.903,
     "grade": "A",
-    "opportunity_score": 50.363,
+    "opportunity_score": 50.362,
     "ratio": 0.51,
-    "blog_total": 44986,
+    "blog_total": 44987,
     "cafe_total": 24939,
     "news_total": 25592,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 25,
@@ -417,12 +417,12 @@
     "daily_avg": 1494.67,
     "mobile_share": 0.796,
     "grade": "A",
-    "opportunity_score": 46.505,
+    "opportunity_score": 46.501,
     "ratio": 0.58,
-    "blog_total": 25854,
-    "cafe_total": 8594,
+    "blog_total": 25856,
+    "cafe_total": 8595,
     "news_total": 16391,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 26,
@@ -439,27 +439,10 @@
     "blog_total": 16806,
     "cafe_total": 4339,
     "news_total": 820,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 27,
-    "keyword": "청년일자리도약장려금",
-    "seed": "지원금",
-    "pc_search": 17800,
-    "mobile_search": 21900,
-    "monthly_total": 39700,
-    "daily_avg": 1323.33,
-    "mobile_share": 0.552,
-    "grade": "A",
-    "opportunity_score": 44.781,
-    "ratio": 0.66,
-    "blog_total": 26251,
-    "cafe_total": 4225,
-    "news_total": 9108,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 28,
     "keyword": "엔비디아주가",
     "seed": "주식",
     "pc_search": 77000,
@@ -468,15 +451,15 @@
     "daily_avg": 28216.67,
     "mobile_share": 0.909,
     "grade": "A",
-    "opportunity_score": 44.221,
+    "opportunity_score": 44.219,
     "ratio": 0.67,
-    "blog_total": 569670,
-    "cafe_total": 106774,
-    "news_total": 155195,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 569704,
+    "cafe_total": 106778,
+    "news_total": 155201,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 29,
+    "no": 28,
     "keyword": "유럽증시",
     "seed": "주식",
     "pc_search": 10200,
@@ -487,13 +470,13 @@
     "grade": "A",
     "opportunity_score": 39.481,
     "ratio": 0.67,
-    "blog_total": 571828,
-    "cafe_total": 323947,
+    "blog_total": 571830,
+    "cafe_total": 323948,
     "news_total": 176133,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 30,
+    "no": 29,
     "keyword": "나스닥",
     "seed": "주식",
     "pc_search": 219700,
@@ -502,15 +485,15 @@
     "daily_avg": 66306.67,
     "mobile_share": 0.89,
     "grade": "A",
-    "opportunity_score": 34.391,
+    "opportunity_score": 34.39,
     "ratio": 0.75,
-    "blog_total": 1495389,
-    "cafe_total": 756993,
-    "news_total": 838504,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1495406,
+    "cafe_total": 757005,
+    "news_total": 838505,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 31,
+    "no": 30,
     "keyword": "아시아증시",
     "seed": "주식",
     "pc_search": 11600,
@@ -521,10 +504,27 @@
     "grade": "A",
     "opportunity_score": 32.036,
     "ratio": 0.8,
-    "blog_total": 330194,
+    "blog_total": 330195,
     "cafe_total": 190108,
     "news_total": 156667,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 31,
+    "keyword": "그래핀관련주",
+    "seed": "주식",
+    "pc_search": 2230,
+    "mobile_search": 18700,
+    "monthly_total": 20930,
+    "daily_avg": 697.67,
+    "mobile_share": 0.893,
+    "grade": "A",
+    "opportunity_score": 29.689,
+    "ratio": 0.9,
+    "blog_total": 18828,
+    "cafe_total": 12163,
+    "news_total": 2070,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 32,
@@ -538,30 +538,13 @@
     "grade": "A",
     "opportunity_score": 28.978,
     "ratio": 1.01,
-    "blog_total": 142070,
+    "blog_total": 142072,
     "cafe_total": 31962,
     "news_total": 45813,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 33,
-    "keyword": "소상공인정책자금",
-    "seed": "지원금",
-    "pc_search": 130800,
-    "mobile_search": 199800,
-    "monthly_total": 330600,
-    "daily_avg": 11020.0,
-    "mobile_share": 0.604,
-    "grade": "A",
-    "opportunity_score": 28.875,
-    "ratio": 0.97,
-    "blog_total": 321619,
-    "cafe_total": 129381,
-    "news_total": 73732,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 34,
     "keyword": "TIGER200",
     "seed": "주식",
     "pc_search": 23600,
@@ -570,15 +553,15 @@
     "daily_avg": 2740.0,
     "mobile_share": 0.713,
     "grade": "A",
-    "opportunity_score": 28.377,
+    "opportunity_score": 28.376,
     "ratio": 1.04,
-    "blog_total": 85701,
-    "cafe_total": 23907,
+    "blog_total": 85706,
+    "cafe_total": 23909,
     "news_total": 12436,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 35,
+    "no": 34,
     "keyword": "코스피200",
     "seed": "주식",
     "pc_search": 36200,
@@ -589,13 +572,13 @@
     "grade": "A",
     "opportunity_score": 26.817,
     "ratio": 0.95,
-    "blog_total": 306964,
-    "cafe_total": 139513,
-    "news_total": 227216,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 306969,
+    "cafe_total": 139515,
+    "news_total": 227219,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 36,
+    "no": 35,
     "keyword": "ESS관련주",
     "seed": "주식",
     "pc_search": 6310,
@@ -604,15 +587,15 @@
     "daily_avg": 1683.67,
     "mobile_share": 0.875,
     "grade": "A",
-    "opportunity_score": 25.163,
+    "opportunity_score": 25.161,
     "ratio": 1.19,
-    "blog_total": 59983,
+    "blog_total": 59987,
     "cafe_total": 17239,
     "news_total": 4475,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 37,
+    "no": 36,
     "keyword": "니케이지수",
     "seed": "주식",
     "pc_search": 9080,
@@ -626,10 +609,10 @@
     "blog_total": 53050,
     "cafe_total": 26887,
     "news_total": 26622,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 38,
+    "no": 37,
     "keyword": "코스닥",
     "seed": "주식",
     "pc_search": 249100,
@@ -640,30 +623,13 @@
     "grade": "A",
     "opportunity_score": 16.463,
     "ratio": 1.33,
-    "blog_total": 1861105,
-    "cafe_total": 1055929,
-    "news_total": 3049102,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1861145,
+    "cafe_total": 1055933,
+    "news_total": 3049122,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 39,
-    "keyword": "희망리턴패키지",
-    "seed": "지원금",
-    "pc_search": 22300,
-    "mobile_search": 28300,
-    "monthly_total": 50600,
-    "daily_avg": 1686.67,
-    "mobile_share": 0.559,
-    "grade": "B",
-    "opportunity_score": 18.508,
-    "ratio": 1.69,
-    "blog_total": 85427,
-    "cafe_total": 12328,
-    "news_total": 6950,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 40,
+    "no": 38,
     "keyword": "주가지수",
     "seed": "주식",
     "pc_search": 58300,
@@ -674,13 +640,13 @@
     "grade": "B",
     "opportunity_score": 17.687,
     "ratio": 1.59,
-    "blog_total": 1684387,
-    "cafe_total": 655009,
+    "blog_total": 1684410,
+    "cafe_total": 655013,
     "news_total": 409052,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 41,
+    "no": 39,
     "keyword": "현대자동차주식시세",
     "seed": "주식",
     "pc_search": 60,
@@ -692,12 +658,12 @@
     "opportunity_score": 16.831,
     "ratio": 1.75,
     "blog_total": 37200,
-    "cafe_total": 12492,
+    "cafe_total": 12491,
     "news_total": 2663,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 42,
+    "no": 40,
     "keyword": "삼성전자배당금",
     "seed": "주식",
     "pc_search": 12300,
@@ -706,15 +672,15 @@
     "daily_avg": 2560.0,
     "mobile_share": 0.84,
     "grade": "B",
-    "opportunity_score": 16.445,
+    "opportunity_score": 16.444,
     "ratio": 1.82,
-    "blog_total": 139584,
+    "blog_total": 139588,
     "cafe_total": 26161,
     "news_total": 34665,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 43,
+    "no": 41,
     "keyword": "적금추천",
     "seed": "주식",
     "pc_search": 6950,
@@ -725,13 +691,13 @@
     "grade": "B",
     "opportunity_score": 15.53,
     "ratio": 1.66,
-    "blog_total": 46337,
+    "blog_total": 46338,
     "cafe_total": 24350,
     "news_total": 25654,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 44,
+    "no": 42,
     "keyword": "뉴욕증시",
     "seed": "주식",
     "pc_search": 16000,
@@ -742,13 +708,13 @@
     "grade": "B",
     "opportunity_score": 15.19,
     "ratio": 1.5,
-    "blog_total": 684585,
-    "cafe_total": 418342,
-    "news_total": 851653,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 684588,
+    "cafe_total": 418343,
+    "news_total": 851658,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 45,
+    "no": 43,
     "keyword": "국내배당주순위",
     "seed": "주식",
     "pc_search": 4400,
@@ -757,15 +723,15 @@
     "daily_avg": 770.0,
     "mobile_share": 0.81,
     "grade": "B",
-    "opportunity_score": 14.273,
+    "opportunity_score": 14.272,
     "ratio": 2.09,
-    "blog_total": 48208,
+    "blog_total": 48211,
     "cafe_total": 12568,
     "news_total": 6707,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 46,
+    "no": 44,
     "keyword": "국내증시",
     "seed": "주식",
     "pc_search": 32100,
@@ -776,13 +742,13 @@
     "grade": "B",
     "opportunity_score": 13.769,
     "ratio": 1.94,
-    "blog_total": 1280504,
-    "cafe_total": 579444,
-    "news_total": 572421,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1280541,
+    "cafe_total": 579449,
+    "news_total": 572434,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 47,
+    "no": 45,
     "keyword": "2차전지대장주",
     "seed": "주식",
     "pc_search": 6240,
@@ -791,15 +757,15 @@
     "daily_avg": 1114.67,
     "mobile_share": 0.813,
     "grade": "B",
-    "opportunity_score": 13.643,
+    "opportunity_score": 13.642,
     "ratio": 2.15,
-    "blog_total": 71875,
+    "blog_total": 71879,
     "cafe_total": 22441,
     "news_total": 9871,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 48,
+    "no": 46,
     "keyword": "주요증시",
     "seed": "주식",
     "pc_search": 13900,
@@ -810,47 +776,13 @@
     "grade": "B",
     "opportunity_score": 13.472,
     "ratio": 1.91,
-    "blog_total": 1102326,
-    "cafe_total": 445256,
-    "news_total": 834996,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1102338,
+    "cafe_total": 445257,
+    "news_total": 835005,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 49,
-    "keyword": "세금환급금조회",
-    "seed": "지원금",
-    "pc_search": 3870,
-    "mobile_search": 18800,
-    "monthly_total": 22670,
-    "daily_avg": 755.67,
-    "mobile_share": 0.829,
-    "grade": "B",
-    "opportunity_score": 13.132,
-    "ratio": 2.38,
-    "blog_total": 53973,
-    "cafe_total": 7658,
-    "news_total": 4451,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 50,
-    "keyword": "고유가",
-    "seed": "고유가",
-    "pc_search": 30600,
-    "mobile_search": 125500,
-    "monthly_total": 156100,
-    "daily_avg": 5203.33,
-    "mobile_share": 0.804,
-    "grade": "B",
-    "opportunity_score": 12.867,
-    "ratio": 1.89,
-    "blog_total": 294839,
-    "cafe_total": 154437,
-    "news_total": 277465,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 51,
+    "no": 47,
     "keyword": "S&P500",
     "seed": "주식",
     "pc_search": 60300,
@@ -861,13 +793,13 @@
     "grade": "B",
     "opportunity_score": 11.266,
     "ratio": 2.36,
-    "blog_total": 1113708,
-    "cafe_total": 390707,
-    "news_total": 734568,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1113718,
+    "cafe_total": 390710,
+    "news_total": 734569,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 52,
+    "no": 48,
     "keyword": "VIX지수",
     "seed": "주식",
     "pc_search": 7050,
@@ -878,13 +810,30 @@
     "grade": "B",
     "opportunity_score": 11.131,
     "ratio": 2.47,
-    "blog_total": 125034,
+    "blog_total": 125036,
     "cafe_total": 40784,
     "news_total": 60323,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 53,
+    "no": 49,
+    "keyword": "홍콩H지수",
+    "seed": "주식",
+    "pc_search": 630,
+    "mobile_search": 16000,
+    "monthly_total": 16630,
+    "daily_avg": 554.33,
+    "mobile_share": 0.962,
+    "grade": "B",
+    "opportunity_score": 11.021,
+    "ratio": 2.1,
+    "blog_total": 34895,
+    "cafe_total": 20807,
+    "news_total": 40598,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 50,
     "keyword": "거래량상위종목",
     "seed": "주식",
     "pc_search": 2190,
@@ -895,13 +844,13 @@
     "grade": "B",
     "opportunity_score": 9.961,
     "ratio": 2.52,
-    "blog_total": 115535,
+    "blog_total": 115540,
     "cafe_total": 57827,
     "news_total": 87282,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 54,
+    "no": 51,
     "keyword": "실시간미국증시",
     "seed": "주식",
     "pc_search": 720,
@@ -912,30 +861,13 @@
     "grade": "B",
     "opportunity_score": 9.203,
     "ratio": 3.04,
-    "blog_total": 106397,
-    "cafe_total": 54211,
+    "blog_total": 106399,
+    "cafe_total": 54212,
     "news_total": 7346,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 55,
-    "keyword": "소상공인지원금",
-    "seed": "지원금",
-    "pc_search": 25000,
-    "mobile_search": 136600,
-    "monthly_total": 161600,
-    "daily_avg": 5386.67,
-    "mobile_share": 0.845,
-    "grade": "B",
-    "opportunity_score": 9.173,
-    "ratio": 3.03,
-    "blog_total": 489635,
-    "cafe_total": 137354,
-    "news_total": 247497,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 56,
+    "no": 52,
     "keyword": "건설주",
     "seed": "주식",
     "pc_search": 4680,
@@ -949,27 +881,10 @@
     "blog_total": 65585,
     "cafe_total": 34440,
     "news_total": 39797,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 57,
-    "keyword": "중소기업확인서",
-    "seed": "지원금",
-    "pc_search": 40300,
-    "mobile_search": 6260,
-    "monthly_total": 46560,
-    "daily_avg": 1552.0,
-    "mobile_share": 0.134,
-    "grade": "B",
-    "opportunity_score": 8.985,
-    "ratio": 3.32,
-    "blog_total": 154744,
-    "cafe_total": 28865,
-    "news_total": 39387,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 58,
+    "no": 53,
     "keyword": "코스닥지수",
     "seed": "주식",
     "pc_search": 27400,
@@ -980,13 +895,13 @@
     "grade": "B",
     "opportunity_score": 8.945,
     "ratio": 2.73,
-    "blog_total": 683566,
-    "cafe_total": 333100,
-    "news_total": 662823,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 683589,
+    "cafe_total": 333102,
+    "news_total": 662832,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 59,
+    "no": 54,
     "keyword": "증시현황",
     "seed": "주식",
     "pc_search": 1930,
@@ -997,13 +912,13 @@
     "grade": "B",
     "opportunity_score": 8.862,
     "ratio": 3.04,
-    "blog_total": 239411,
-    "cafe_total": 57571,
+    "blog_total": 239418,
+    "cafe_total": 57570,
     "news_total": 184684,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 60,
+    "no": 55,
     "keyword": "오늘의증시현황",
     "seed": "주식",
     "pc_search": 300,
@@ -1014,13 +929,13 @@
     "grade": "B",
     "opportunity_score": 8.836,
     "ratio": 3.53,
-    "blog_total": 113066,
-    "cafe_total": 19413,
+    "blog_total": 113072,
+    "cafe_total": 19412,
     "news_total": 4279,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 61,
+    "no": 56,
     "keyword": "오늘코스피지수",
     "seed": "주식",
     "pc_search": 1730,
@@ -1029,15 +944,15 @@
     "daily_avg": 4837.67,
     "mobile_share": 0.988,
     "grade": "B",
-    "opportunity_score": 8.652,
+    "opportunity_score": 8.651,
     "ratio": 3.36,
-    "blog_total": 487203,
-    "cafe_total": 162472,
+    "blog_total": 487223,
+    "cafe_total": 162474,
     "news_total": 75410,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 62,
+    "no": 57,
     "keyword": "ETF투자방법",
     "seed": "주식",
     "pc_search": 20500,
@@ -1048,13 +963,13 @@
     "grade": "B",
     "opportunity_score": 8.581,
     "ratio": 3.62,
-    "blog_total": 460699,
-    "cafe_total": 86179,
+    "blog_total": 460703,
+    "cafe_total": 86181,
     "news_total": 14301,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 63,
+    "no": 58,
     "keyword": "증시",
     "seed": "주식",
     "pc_search": 72900,
@@ -1063,15 +978,66 @@
     "daily_avg": 34146.67,
     "mobile_share": 0.929,
     "grade": "B",
-    "opportunity_score": 8.038,
+    "opportunity_score": 8.037,
     "ratio": 2.9,
-    "blog_total": 2974596,
-    "cafe_total": 1618000,
-    "news_total": 3537565,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 2974645,
+    "cafe_total": 1618005,
+    "news_total": 3537594,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 64,
+    "no": 59,
+    "keyword": "미국증시개장시간",
+    "seed": "주식",
+    "pc_search": 1620,
+    "mobile_search": 17400,
+    "monthly_total": 19020,
+    "daily_avg": 634.0,
+    "mobile_share": 0.915,
+    "grade": "B",
+    "opportunity_score": 7.391,
+    "ratio": 3.6,
+    "blog_total": 68381,
+    "cafe_total": 31766,
+    "news_total": 31401,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 60,
+    "keyword": "김현준",
+    "seed": "주식",
+    "pc_search": 2850,
+    "mobile_search": 13900,
+    "monthly_total": 16750,
+    "daily_avg": 558.33,
+    "mobile_share": 0.83,
+    "grade": "B",
+    "opportunity_score": 5.98,
+    "ratio": 3.11,
+    "blog_total": 52155,
+    "cafe_total": 70404,
+    "news_total": 82840,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 61,
+    "keyword": "희토류관련주",
+    "seed": "주식",
+    "pc_search": 2520,
+    "mobile_search": 14800,
+    "monthly_total": 17320,
+    "daily_avg": 577.33,
+    "mobile_share": 0.855,
+    "grade": "C",
+    "opportunity_score": 6.969,
+    "ratio": 4.05,
+    "blog_total": 70091,
+    "cafe_total": 33629,
+    "news_total": 4922,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 62,
     "keyword": "넷플릭스주가",
     "seed": "주식",
     "pc_search": 6580,
@@ -1085,10 +1051,10 @@
     "blog_total": 143287,
     "cafe_total": 37778,
     "news_total": 53200,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 65,
+    "no": 63,
     "keyword": "한국증시거래시간",
     "seed": "주식",
     "pc_search": 7310,
@@ -1099,13 +1065,13 @@
     "grade": "C",
     "opportunity_score": 6.296,
     "ratio": 4.54,
-    "blog_total": 213699,
-    "cafe_total": 86857,
+    "blog_total": 213701,
+    "cafe_total": 86858,
     "news_total": 26505,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 66,
+    "no": 64,
     "keyword": "5월공모주",
     "seed": "주식",
     "pc_search": 9260,
@@ -1116,13 +1082,13 @@
     "grade": "C",
     "opportunity_score": 6.264,
     "ratio": 4.39,
-    "blog_total": 111719,
+    "blog_total": 111724,
     "cafe_total": 35196,
-    "news_total": 57191,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "news_total": 57192,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 67,
+    "no": 65,
     "keyword": "방산관련주",
     "seed": "주식",
     "pc_search": 5610,
@@ -1133,13 +1099,13 @@
     "grade": "C",
     "opportunity_score": 6.062,
     "ratio": 4.97,
-    "blog_total": 222912,
+    "blog_total": 222925,
     "cafe_total": 58224,
     "news_total": 15465,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 68,
+    "no": 66,
     "keyword": "정기예금금리",
     "seed": "주식",
     "pc_search": 8090,
@@ -1152,11 +1118,11 @@
     "ratio": 4.2,
     "blog_total": 173412,
     "cafe_total": 73530,
-    "news_total": 167933,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "news_total": 167934,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 69,
+    "no": 67,
     "keyword": "2차전지관련주",
     "seed": "주식",
     "pc_search": 10900,
@@ -1167,13 +1133,30 @@
     "grade": "C",
     "opportunity_score": 5.881,
     "ratio": 4.88,
-    "blog_total": 375804,
-    "cafe_total": 150206,
-    "news_total": 40393,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 375815,
+    "cafe_total": 150207,
+    "news_total": 40394,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 70,
+    "no": 68,
+    "keyword": "이차전지관련주",
+    "seed": "주식",
+    "pc_search": 2320,
+    "mobile_search": 18100,
+    "monthly_total": 20420,
+    "daily_avg": 680.67,
+    "mobile_share": 0.886,
+    "grade": "C",
+    "opportunity_score": 5.857,
+    "ratio": 5.09,
+    "blog_total": 103988,
+    "cafe_total": 28958,
+    "news_total": 10415,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 69,
     "keyword": "방산주",
     "seed": "주식",
     "pc_search": 6120,
@@ -1184,10 +1167,27 @@
     "grade": "C",
     "opportunity_score": 5.522,
     "ratio": 5.32,
-    "blog_total": 128956,
+    "blog_total": 128958,
     "cafe_total": 36447,
-    "news_total": 22394,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "news_total": 22395,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 70,
+    "keyword": "증권사순위",
+    "seed": "주식",
+    "pc_search": 4420,
+    "mobile_search": 16700,
+    "monthly_total": 21120,
+    "daily_avg": 704.0,
+    "mobile_share": 0.791,
+    "grade": "C",
+    "opportunity_score": 5.379,
+    "ratio": 5.21,
+    "blog_total": 110127,
+    "cafe_total": 27784,
+    "news_total": 55160,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 71,
@@ -1201,10 +1201,10 @@
     "grade": "C",
     "opportunity_score": 5.143,
     "ratio": 5.08,
-    "blog_total": 1610763,
-    "cafe_total": 585460,
-    "news_total": 1197310,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1610808,
+    "cafe_total": 585463,
+    "news_total": 1197331,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 72,
@@ -1218,13 +1218,30 @@
     "grade": "C",
     "opportunity_score": 5.082,
     "ratio": 5.53,
-    "blog_total": 931355,
-    "cafe_total": 485235,
+    "blog_total": 931365,
+    "cafe_total": 485236,
     "news_total": 13764,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 73,
+    "keyword": "베트남증시",
+    "seed": "주식",
+    "pc_search": 3090,
+    "mobile_search": 15700,
+    "monthly_total": 18790,
+    "daily_avg": 626.33,
+    "mobile_share": 0.836,
+    "grade": "C",
+    "opportunity_score": 5.046,
+    "ratio": 5.4,
+    "blog_total": 101506,
+    "cafe_total": 39467,
+    "news_total": 44083,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 74,
     "keyword": "바이오ETF",
     "seed": "주식",
     "pc_search": 8600,
@@ -1235,13 +1252,13 @@
     "grade": "C",
     "opportunity_score": 4.477,
     "ratio": 6.47,
-    "blog_total": 148819,
-    "cafe_total": 47020,
+    "blog_total": 148821,
+    "cafe_total": 47021,
     "news_total": 29894,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 74,
+    "no": 75,
     "keyword": "로봇관련주",
     "seed": "주식",
     "pc_search": 11400,
@@ -1252,27 +1269,10 @@
     "grade": "C",
     "opportunity_score": 4.435,
     "ratio": 6.62,
-    "blog_total": 458433,
-    "cafe_total": 161821,
-    "news_total": 28739,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 75,
-    "keyword": "개인사업자정책자금",
-    "seed": "지원금",
-    "pc_search": 10000,
-    "mobile_search": 21900,
-    "monthly_total": 31900,
-    "daily_avg": 1063.33,
-    "mobile_share": 0.687,
-    "grade": "C",
-    "opportunity_score": 4.332,
-    "ratio": 6.99,
-    "blog_total": 223135,
-    "cafe_total": 59163,
-    "news_total": 8190,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 458446,
+    "cafe_total": 161819,
+    "news_total": 28741,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 76,
@@ -1286,10 +1286,10 @@
     "grade": "C",
     "opportunity_score": 4.327,
     "ratio": 6.66,
-    "blog_total": 163084,
+    "blog_total": 163074,
     "cafe_total": 56972,
     "news_total": 28555,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 77,
@@ -1303,10 +1303,10 @@
     "grade": "C",
     "opportunity_score": 4.258,
     "ratio": 6.3,
-    "blog_total": 1938726,
-    "cafe_total": 780153,
-    "news_total": 981621,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1938826,
+    "cafe_total": 780165,
+    "news_total": 981635,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 78,
@@ -1320,13 +1320,30 @@
     "grade": "C",
     "opportunity_score": 4.226,
     "ratio": 6.63,
-    "blog_total": 1811072,
-    "cafe_total": 652909,
-    "news_total": 576952,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1811123,
+    "cafe_total": 652920,
+    "news_total": 576957,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 79,
+    "keyword": "사회복지사1급",
+    "seed": "복지",
+    "pc_search": 4230,
+    "mobile_search": 11100,
+    "monthly_total": 15330,
+    "daily_avg": 511.0,
+    "mobile_share": 0.724,
+    "grade": "C",
+    "opportunity_score": 4.206,
+    "ratio": 5.54,
+    "blog_total": 84985,
+    "cafe_total": 96217,
+    "news_total": 14213,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 80,
     "keyword": "구리관련주",
     "seed": "주식",
     "pc_search": 3550,
@@ -1337,13 +1354,30 @@
     "grade": "C",
     "opportunity_score": 4.047,
     "ratio": 7.11,
-    "blog_total": 156108,
+    "blog_total": 156110,
     "cafe_total": 65925,
     "news_total": 8012,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 80,
+    "no": 81,
+    "keyword": "파고라",
+    "seed": "스페이스",
+    "pc_search": 4850,
+    "mobile_search": 11400,
+    "monthly_total": 16250,
+    "daily_avg": 541.67,
+    "mobile_share": 0.702,
+    "grade": "C",
+    "opportunity_score": 3.989,
+    "ratio": 7.3,
+    "blog_total": 118553,
+    "cafe_total": 34313,
+    "news_total": 26193,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 82,
     "keyword": "연금저축",
     "seed": "주식",
     "pc_search": 13800,
@@ -1354,13 +1388,13 @@
     "grade": "C",
     "opportunity_score": 3.635,
     "ratio": 7.76,
-    "blog_total": 462990,
-    "cafe_total": 156140,
-    "news_total": 149333,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 462995,
+    "cafe_total": 156138,
+    "news_total": 149335,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 81,
+    "no": 83,
     "keyword": "사회복지사2급",
     "seed": "복지",
     "pc_search": 12000,
@@ -1371,13 +1405,13 @@
     "grade": "C",
     "opportunity_score": 3.23,
     "ratio": 7.26,
-    "blog_total": 331976,
-    "cafe_total": 387774,
+    "blog_total": 331981,
+    "cafe_total": 387775,
     "news_total": 19367,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 82,
+    "no": 84,
     "keyword": "배당금높은주식",
     "seed": "주식",
     "pc_search": 4620,
@@ -1388,30 +1422,13 @@
     "grade": "D",
     "opportunity_score": 3.497,
     "ratio": 8.88,
-    "blog_total": 255903,
-    "cafe_total": 33884,
+    "blog_total": 255909,
+    "cafe_total": 33883,
     "news_total": 34664,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 83,
-    "keyword": "정부지원금신청",
-    "seed": "지원금",
-    "pc_search": 10600,
-    "mobile_search": 89200,
-    "monthly_total": 99800,
-    "daily_avg": 3326.67,
-    "mobile_share": 0.894,
-    "grade": "D",
-    "opportunity_score": 3.318,
-    "ratio": 8.98,
-    "blog_total": 896155,
-    "cafe_total": 201550,
-    "news_total": 179896,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 84,
+    "no": 85,
     "keyword": "주식양도소득세",
     "seed": "주식",
     "pc_search": 4410,
@@ -1422,13 +1439,13 @@
     "grade": "D",
     "opportunity_score": 3.191,
     "ratio": 8.37,
-    "blog_total": 191779,
-    "cafe_total": 96523,
+    "blog_total": 191780,
+    "cafe_total": 96524,
     "news_total": 68766,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 85,
+    "no": 86,
     "keyword": "오늘주식시장",
     "seed": "주식",
     "pc_search": 3380,
@@ -1439,30 +1456,30 @@
     "grade": "D",
     "opportunity_score": 2.922,
     "ratio": 10.18,
-    "blog_total": 818928,
-    "cafe_total": 205038,
-    "news_total": 137414,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 86,
-    "keyword": "청년지원금",
-    "seed": "지원금",
-    "pc_search": 9660,
-    "mobile_search": 35100,
-    "monthly_total": 44760,
-    "daily_avg": 1492.0,
-    "mobile_share": 0.784,
-    "grade": "D",
-    "opportunity_score": 2.784,
-    "ratio": 9.75,
-    "blog_total": 436586,
-    "cafe_total": 143539,
-    "news_total": 245170,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 818952,
+    "cafe_total": 205041,
+    "news_total": 137415,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 87,
+    "keyword": "태양광관련주",
+    "seed": "주식",
+    "pc_search": 3070,
+    "mobile_search": 17500,
+    "monthly_total": 20570,
+    "daily_avg": 685.67,
+    "mobile_share": 0.851,
+    "grade": "D",
+    "opportunity_score": 2.59,
+    "ratio": 11.14,
+    "blog_total": 229220,
+    "cafe_total": 90771,
+    "news_total": 18614,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 88,
     "keyword": "주식계좌개설",
     "seed": "주식",
     "pc_search": 4090,
@@ -1471,15 +1488,15 @@
     "daily_avg": 946.33,
     "mobile_share": 0.856,
     "grade": "D",
-    "opportunity_score": 2.496,
+    "opportunity_score": 2.495,
     "ratio": 11.3,
-    "blog_total": 320669,
-    "cafe_total": 100330,
-    "news_total": 117146,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 320673,
+    "cafe_total": 100333,
+    "news_total": 117147,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 88,
+    "no": 89,
     "keyword": "주식",
     "seed": "주식",
     "pc_search": 151500,
@@ -1490,13 +1507,13 @@
     "grade": "D",
     "opportunity_score": 2.459,
     "ratio": 10.18,
-    "blog_total": 14317535,
-    "cafe_total": 9341403,
-    "news_total": 7378953,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 14317757,
+    "cafe_total": 9341382,
+    "news_total": 7378990,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 89,
+    "no": 90,
     "keyword": "증권",
     "seed": "주식",
     "pc_search": 37500,
@@ -1507,13 +1524,13 @@
     "grade": "D",
     "opportunity_score": 2.432,
     "ratio": 8.59,
-    "blog_total": 5269735,
-    "cafe_total": 3128755,
-    "news_total": 10225338,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 5269799,
+    "cafe_total": 3128754,
+    "news_total": 10225396,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 90,
+    "no": 91,
     "keyword": "코스피코스닥",
     "seed": "주식",
     "pc_search": 20500,
@@ -1524,13 +1541,13 @@
     "grade": "D",
     "opportunity_score": 2.341,
     "ratio": 10.63,
-    "blog_total": 1089350,
-    "cafe_total": 519659,
-    "news_total": 941777,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1089382,
+    "cafe_total": 519661,
+    "news_total": 941793,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 91,
+    "no": 92,
     "keyword": "AI관련주",
     "seed": "주식",
     "pc_search": 6970,
@@ -1541,13 +1558,13 @@
     "grade": "D",
     "opportunity_score": 2.265,
     "ratio": 13.11,
-    "blog_total": 448048,
-    "cafe_total": 126938,
-    "news_total": 52337,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 448076,
+    "cafe_total": 126944,
+    "news_total": 52340,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 92,
+    "no": 93,
     "keyword": "한국증시",
     "seed": "주식",
     "pc_search": 9700,
@@ -1558,47 +1575,13 @@
     "grade": "D",
     "opportunity_score": 2.241,
     "ratio": 12.8,
-    "blog_total": 1312949,
-    "cafe_total": 519014,
-    "news_total": 157297,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 93,
-    "keyword": "국가지원금",
-    "seed": "지원금",
-    "pc_search": 5550,
-    "mobile_search": 41000,
-    "monthly_total": 46550,
-    "daily_avg": 1551.67,
-    "mobile_share": 0.881,
-    "grade": "D",
-    "opportunity_score": 2.211,
-    "ratio": 12.48,
-    "blog_total": 580746,
-    "cafe_total": 170700,
-    "news_total": 306359,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1312974,
+    "cafe_total": 519016,
+    "news_total": 157299,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 94,
-    "keyword": "고용보험",
-    "seed": "지원금",
-    "pc_search": 55000,
-    "mobile_search": 48300,
-    "monthly_total": 103300,
-    "daily_avg": 3443.33,
-    "mobile_share": 0.468,
-    "grade": "D",
-    "opportunity_score": 2.193,
-    "ratio": 11.49,
-    "blog_total": 1186566,
-    "cafe_total": 962612,
-    "news_total": 231911,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 95,
     "keyword": "공매도",
     "seed": "주식",
     "pc_search": 8250,
@@ -1609,13 +1592,13 @@
     "grade": "D",
     "opportunity_score": 2.084,
     "ratio": 12.26,
-    "blog_total": 379355,
-    "cafe_total": 231559,
-    "news_total": 173193,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 379359,
+    "cafe_total": 231560,
+    "news_total": 173194,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 96,
+    "no": 95,
     "keyword": "근로기준법",
     "seed": "복지",
     "pc_search": 27100,
@@ -1626,13 +1609,13 @@
     "grade": "D",
     "opportunity_score": 2.074,
     "ratio": 13.11,
-    "blog_total": 455166,
-    "cafe_total": 165256,
-    "news_total": 225066,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 455174,
+    "cafe_total": 165254,
+    "news_total": 225068,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 97,
+    "no": 96,
     "keyword": "반도체관련주",
     "seed": "주식",
     "pc_search": 11100,
@@ -1643,13 +1626,13 @@
     "grade": "D",
     "opportunity_score": 2.014,
     "ratio": 14.26,
-    "blog_total": 1035405,
-    "cafe_total": 395617,
-    "news_total": 138024,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1035437,
+    "cafe_total": 395622,
+    "news_total": 138028,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 98,
+    "no": 97,
     "keyword": "카카오주식",
     "seed": "주식",
     "pc_search": 7640,
@@ -1660,30 +1643,13 @@
     "grade": "D",
     "opportunity_score": 2.012,
     "ratio": 13.38,
-    "blog_total": 700450,
-    "cafe_total": 345005,
+    "blog_total": 700451,
+    "cafe_total": 345002,
     "news_total": 229095,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 99,
-    "keyword": "소상공인대출",
-    "seed": "지원금",
-    "pc_search": 8560,
-    "mobile_search": 26400,
-    "monthly_total": 34960,
-    "daily_avg": 1165.33,
-    "mobile_share": 0.755,
-    "grade": "D",
-    "opportunity_score": 1.925,
-    "ratio": 13.05,
-    "blog_total": 456102,
-    "cafe_total": 216344,
-    "news_total": 367030,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 100,
+    "no": 98,
     "keyword": "국내주식",
     "seed": "주식",
     "pc_search": 13700,
@@ -1692,15 +1658,15 @@
     "daily_avg": 6736.67,
     "mobile_share": 0.932,
     "grade": "D",
-    "opportunity_score": 1.805,
+    "opportunity_score": 1.804,
     "ratio": 14.81,
-    "blog_total": 2993991,
-    "cafe_total": 1077837,
-    "news_total": 1809902,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 2994101,
+    "cafe_total": 1077844,
+    "news_total": 1809917,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 101,
+    "no": 99,
     "keyword": "오늘의증시",
     "seed": "주식",
     "pc_search": 2750,
@@ -1711,13 +1677,13 @@
     "grade": "D",
     "opportunity_score": 1.759,
     "ratio": 16.54,
-    "blog_total": 1099079,
-    "cafe_total": 399832,
+    "blog_total": 1099103,
+    "cafe_total": 399835,
     "news_total": 99894,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 102,
+    "no": 100,
     "keyword": "미국주식",
     "seed": "주식",
     "pc_search": 14000,
@@ -1728,13 +1694,13 @@
     "grade": "D",
     "opportunity_score": 1.714,
     "ratio": 16.42,
-    "blog_total": 4094250,
-    "cafe_total": 1250576,
-    "news_total": 1586364,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 4094309,
+    "cafe_total": 1250577,
+    "news_total": 1586376,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 103,
+    "no": 101,
     "keyword": "맞춤형복지",
     "seed": "복지",
     "pc_search": 23400,
@@ -1745,10 +1711,44 @@
     "grade": "D",
     "opportunity_score": 1.664,
     "ratio": 14.3,
-    "blog_total": 627745,
-    "cafe_total": 123519,
-    "news_total": 1042863,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 627762,
+    "cafe_total": 123510,
+    "news_total": 1042879,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 102,
+    "keyword": "그늘막",
+    "seed": "스페이스",
+    "pc_search": 5260,
+    "mobile_search": 20100,
+    "monthly_total": 25360,
+    "daily_avg": 845.33,
+    "mobile_share": 0.793,
+    "grade": "D",
+    "opportunity_score": 1.453,
+    "ratio": 18.17,
+    "blog_total": 460678,
+    "cafe_total": 293655,
+    "news_total": 92523,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 103,
+    "keyword": "배당주",
+    "seed": "주식",
+    "pc_search": 4210,
+    "mobile_search": 11500,
+    "monthly_total": 15710,
+    "daily_avg": 523.67,
+    "mobile_share": 0.732,
+    "grade": "D",
+    "opportunity_score": 1.052,
+    "ratio": 28.61,
+    "blog_total": 449392,
+    "cafe_total": 108304,
+    "news_total": 52874,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 104,
@@ -1762,13 +1762,30 @@
     "grade": "D",
     "opportunity_score": 1.006,
     "ratio": 29.17,
-    "blog_total": 638187,
-    "cafe_total": 179330,
+    "blog_total": 638191,
+    "cafe_total": 179332,
     "news_total": 119333,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 105,
+    "keyword": "주식시황",
+    "seed": "주식",
+    "pc_search": 1760,
+    "mobile_search": 18800,
+    "monthly_total": 20560,
+    "daily_avg": 685.33,
+    "mobile_share": 0.914,
+    "grade": "D",
+    "opportunity_score": 0.999,
+    "ratio": 26.74,
+    "blog_total": 549828,
+    "cafe_total": 336926,
+    "news_total": 91347,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 106,
     "keyword": "미국ETF",
     "seed": "주식",
     "pc_search": 9630,
@@ -1779,47 +1796,13 @@
     "grade": "D",
     "opportunity_score": 0.981,
     "ratio": 29.65,
-    "blog_total": 1059508,
-    "cafe_total": 275717,
-    "news_total": 288604,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 106,
-    "keyword": "세금환급",
-    "seed": "지원금",
-    "pc_search": 4040,
-    "mobile_search": 18500,
-    "monthly_total": 22540,
-    "daily_avg": 751.33,
-    "mobile_share": 0.821,
-    "grade": "D",
-    "opportunity_score": 0.969,
-    "ratio": 30.31,
-    "blog_total": 683257,
-    "cafe_total": 205682,
-    "news_total": 101167,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1059530,
+    "cafe_total": 275721,
+    "news_total": 288606,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 107,
-    "keyword": "지원금",
-    "seed": "지원금",
-    "pc_search": 36700,
-    "mobile_search": 127600,
-    "monthly_total": 164300,
-    "daily_avg": 5476.67,
-    "mobile_share": 0.777,
-    "grade": "D",
-    "opportunity_score": 0.951,
-    "ratio": 26.76,
-    "blog_total": 4396817,
-    "cafe_total": 2738628,
-    "news_total": 2009884,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 108,
     "keyword": "평생교육원",
     "seed": "복지",
     "pc_search": 7570,
@@ -1830,30 +1813,30 @@
     "grade": "D",
     "opportunity_score": 0.916,
     "ratio": 29.79,
-    "blog_total": 663509,
-    "cafe_total": 335077,
+    "blog_total": 663516,
+    "cafe_total": 335076,
     "news_total": 149043,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 108,
+    "keyword": "사회복지사자격증",
+    "seed": "복지",
+    "pc_search": 4710,
+    "mobile_search": 14500,
+    "monthly_total": 19210,
+    "daily_avg": 640.33,
+    "mobile_share": 0.755,
+    "grade": "D",
+    "opportunity_score": 0.908,
+    "ratio": 22.98,
+    "blog_total": 441384,
+    "cafe_total": 732006,
+    "news_total": 38858,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 109,
-    "keyword": "재무제표",
-    "seed": "지원금",
-    "pc_search": 14600,
-    "mobile_search": 9590,
-    "monthly_total": 24190,
-    "daily_avg": 806.33,
-    "mobile_share": 0.396,
-    "grade": "D",
-    "opportunity_score": 0.807,
-    "ratio": 33.05,
-    "blog_total": 799469,
-    "cafe_total": 322005,
-    "news_total": 435993,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 110,
     "keyword": "주식거래시간",
     "seed": "주식",
     "pc_search": 5810,
@@ -1864,13 +1847,13 @@
     "grade": "D",
     "opportunity_score": 0.697,
     "ratio": 42.0,
-    "blog_total": 1050377,
+    "blog_total": 1050390,
     "cafe_total": 339655,
-    "news_total": 134570,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "news_total": 134571,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 111,
+    "no": 110,
     "keyword": "미국주식시간",
     "seed": "주식",
     "pc_search": 2990,
@@ -1881,13 +1864,13 @@
     "grade": "D",
     "opportunity_score": 0.629,
     "ratio": 44.67,
-    "blog_total": 1259262,
-    "cafe_total": 366882,
-    "news_total": 530683,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1259279,
+    "cafe_total": 366873,
+    "news_total": 530685,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 112,
+    "no": 111,
     "keyword": "사회복지사",
     "seed": "복지",
     "pc_search": 7880,
@@ -1898,47 +1881,30 @@
     "grade": "D",
     "opportunity_score": 0.594,
     "ratio": 38.03,
-    "blog_total": 1098313,
-    "cafe_total": 1362226,
-    "news_total": 227126,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 1098334,
+    "cafe_total": 1362227,
+    "news_total": 227127,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 112,
+    "keyword": "불편한편의점",
+    "seed": "주식",
+    "pc_search": 3550,
+    "mobile_search": 17200,
+    "monthly_total": 20750,
+    "daily_avg": 691.67,
+    "mobile_share": 0.829,
+    "grade": "D",
+    "opportunity_score": 0.546,
+    "ratio": 56.08,
+    "blog_total": 1163749,
+    "cafe_total": 261728,
+    "news_total": 62609,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 113,
-    "keyword": "사업자대출",
-    "seed": "지원금",
-    "pc_search": 6300,
-    "mobile_search": 17400,
-    "monthly_total": 23700,
-    "daily_avg": 790.0,
-    "mobile_share": 0.734,
-    "grade": "D",
-    "opportunity_score": 0.446,
-    "ratio": 59.55,
-    "blog_total": 1411319,
-    "cafe_total": 831740,
-    "news_total": 340587,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 114,
-    "keyword": "소상공인",
-    "seed": "지원금",
-    "pc_search": 14600,
-    "mobile_search": 21500,
-    "monthly_total": 36100,
-    "daily_avg": 1203.33,
-    "mobile_share": 0.596,
-    "grade": "D",
-    "opportunity_score": 0.386,
-    "ratio": 65.62,
-    "blog_total": 2369047,
-    "cafe_total": 836424,
-    "news_total": 2297767,
-    "updated_at": "2026-05-20T16:29:36+09:00"
-  },
-  {
-    "no": 115,
     "keyword": "해외주식",
     "seed": "주식",
     "pc_search": 2680,
@@ -1949,13 +1915,13 @@
     "grade": "D",
     "opportunity_score": 0.386,
     "ratio": 69.77,
-    "blog_total": 2008025,
-    "cafe_total": 793151,
-    "news_total": 1003078,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 2008058,
+    "cafe_total": 793156,
+    "news_total": 1003084,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 116,
+    "no": 114,
     "keyword": "오늘주식",
     "seed": "주식",
     "pc_search": 1730,
@@ -1966,13 +1932,13 @@
     "grade": "D",
     "opportunity_score": 0.237,
     "ratio": 121.6,
-    "blog_total": 4417693,
-    "cafe_total": 1551474,
-    "news_total": 754836,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 4417762,
+    "cafe_total": 1551419,
+    "news_total": 754840,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 117,
+    "no": 115,
     "keyword": "채권",
     "seed": "주식",
     "pc_search": 8760,
@@ -1983,13 +1949,13 @@
     "grade": "D",
     "opportunity_score": 0.179,
     "ratio": 150.51,
-    "blog_total": 4719979,
-    "cafe_total": 1656136,
-    "news_total": 2742232,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 4720039,
+    "cafe_total": 1656106,
+    "news_total": 2742244,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 118,
+    "no": 116,
     "keyword": "한국주식",
     "seed": "주식",
     "pc_search": 2060,
@@ -2000,13 +1966,13 @@
     "grade": "D",
     "opportunity_score": 0.177,
     "ratio": 150.31,
-    "blog_total": 3375864,
-    "cafe_total": 1190704,
-    "news_total": 2170383,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "blog_total": 3375916,
+    "cafe_total": 1190694,
+    "news_total": 2170400,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
-    "no": 119,
+    "no": 117,
     "keyword": "경제뉴스",
     "seed": "주식",
     "pc_search": 4100,
@@ -2016,11 +1982,45 @@
     "mobile_share": 0.835,
     "grade": "D",
     "opportunity_score": 0.161,
-    "ratio": 175.1,
-    "blog_total": 4342560,
-    "cafe_total": 1492226,
-    "news_total": 1423369,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "ratio": 175.11,
+    "blog_total": 4342620,
+    "cafe_total": 1492221,
+    "news_total": 1423370,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 118,
+    "keyword": "주식분석",
+    "seed": "주식",
+    "pc_search": 2890,
+    "mobile_search": 16100,
+    "monthly_total": 18990,
+    "daily_avg": 633.0,
+    "mobile_share": 0.848,
+    "grade": "D",
+    "opportunity_score": 0.151,
+    "ratio": 179.57,
+    "blog_total": 3409987,
+    "cafe_total": 1228955,
+    "news_total": 1784180,
+    "updated_at": "2026-05-20T16:43:47+09:00"
+  },
+  {
+    "no": 119,
+    "keyword": "주식시간",
+    "seed": "주식",
+    "pc_search": 4310,
+    "mobile_search": 13700,
+    "monthly_total": 18010,
+    "daily_avg": 600.33,
+    "mobile_share": 0.761,
+    "grade": "D",
+    "opportunity_score": 0.125,
+    "ratio": 219.93,
+    "blog_total": 3961024,
+    "cafe_total": 1433504,
+    "news_total": 1608401,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   },
   {
     "no": 120,
@@ -2033,10 +2033,10 @@
     "mobile_share": 0.932,
     "grade": "D",
     "opportunity_score": 0.013,
-    "ratio": 1889.58,
-    "blog_total": 51490949,
-    "cafe_total": 23916618,
-    "news_total": 39400991,
-    "updated_at": "2026-05-20T16:29:36+09:00"
+    "ratio": 1889.6,
+    "blog_total": 51491609,
+    "cafe_total": 23916383,
+    "news_total": 39401286,
+    "updated_at": "2026-05-20T16:43:47+09:00"
   }
 ]
