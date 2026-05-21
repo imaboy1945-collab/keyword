@@ -339,77 +339,81 @@ function renderRelatedThead() {
     }).join('') + '</tr>';
 }
 
-function calcGradeJS(ratio, dailyAvg, mobileShare) {
-  if(ratio<0.5 && dailyAvg>=20 && mobileShare>=0.45) return 'S';
-  if(ratio<1.5 && dailyAvg>=10) return 'A';
-  if(ratio<4.0) return 'B';
-  if(ratio<8.0) return 'C';
-  return 'D';
+// ── 재계산 헬퍼 ──
+function gradeCalc(monthly, mobile, blog, cafe, news) {
+  if (!monthly || blog == null) return { grade: null, score: null, ratio: null };
+  const daily  = monthly / 30;
+  const mShare = mobile / monthly;
+  const r      = Math.round((blog / monthly) * 100) / 100;
+  const comp   = Math.max(blog + (cafe||0)*0.35 + (news||0)*0.2, 1);
+  const score  = Math.round((daily * 1000 / comp) * 1000) / 1000;
+  let grade = 'D';
+  if      (r < 0.5 && daily >= 20 && mShare >= 0.45) grade = 'S';
+  else if (r < 1.5 && daily >= 10)                   grade = 'A';
+  else if (r < 4.0)                                  grade = 'B';
+  else if (r < 8.0)                                  grade = 'C';
+  return { grade, score, ratio: r };
 }
 
 function getSortedRelated() {
+  const gc = {S:'var(--s)',A:'var(--a)',B:'var(--b)',C:'var(--c)',D:'var(--d)'};
   const merged = relatedList.map(item => {
-    const ana = relatedAnalyzed[item.keyword] || {};
-    const monthly   = item.monthly_total || ana.monthly_total || 0;
-    const pc        = item.pc_search     || ana.pc_search     || 0;
-    const mobile    = item.mobile_search || ana.mobile_search || 0;
-    const blog      = ana.blog_total  ?? null;
-    const cafe      = ana.cafe_total  ?? null;
-    const news      = ana.news_total  ?? null;
-
-    // 등급·황금도·경쟁비율: 병합된 monthly + 분석된 문서수로 재계산
-    let grade = ana.grade;
-    let score = ana.opportunity_score;
-    let ratio = ana.ratio;
-
-    if (monthly > 0 && blog !== null) {
-      const dailyAvg   = monthly / 30;
-      const mobileShare = monthly > 0 ? mobile / monthly : 0;
-      ratio = Math.round((blog / monthly) * 100) / 100;
-      const comp = Math.max(blog + (cafe||0)*0.35 + (news||0)*0.2, 1);
-      score = Math.round((dailyAvg * 1000 / comp) * 1000) / 1000;
-      grade = calcGradeJS(ratio, dailyAvg, mobileShare);
-    }
-
+    const ana = relatedAnalyzed[item.keyword] || null;
+    // 검색량: relatedList(DataLab 추정) 우선, 없으면 분석값
+    const monthly  = item.monthly_total  || (ana && ana.monthly_total)  || 0;
+    const pc       = item.pc_search      || (ana && ana.pc_search)      || 0;
+    const mobile   = item.mobile_search  || (ana && ana.mobile_search)  || 0;
+    const blog     = ana ? (ana.blog_total  ?? null) : null;
+    const cafe     = ana ? (ana.cafe_total  ?? null) : null;
+    const news     = ana ? (ana.news_total  ?? null) : null;
+    // 등급·황금도: 병합값으로 재계산
+    const calc = gradeCalc(monthly, mobile, blog, cafe, news);
     return {
-      keyword: item.keyword,
-      monthly_total: monthly, pc_search: pc, mobile_search: mobile,
-      daily_avg: Math.round(monthly/30*10)/10,
-      mobile_share: monthly>0 ? Math.round(mobile/monthly*1000)/1000 : 0,
-      estimated: item.estimated || ana.estimated || false,
-      grade, opportunity_score: score, ratio,
-      blog_total: blog, cafe_total: cafe, news_total: news,
+      keyword:           item.keyword,
+      monthly_total:     monthly,
+      pc_search:         pc,
+      mobile_search:     mobile,
+      daily_avg:         Math.round(monthly / 30 * 10) / 10,
+      mobile_share:      monthly > 0 ? Math.round(mobile / monthly * 1000) / 1000 : 0,
+      estimated:         item.estimated || (ana && ana.estimated) || false,
+      grade:             calc.grade,
+      opportunity_score: calc.score,
+      ratio:             calc.ratio,
+      blog_total:        blog,
+      cafe_total:        cafe,
+      news_total:        news,
+      _done:             ana !== null,
     };
   });
-  return [...merged].sort((a,b)=>{
-    if(relatedSortKey==='keyword') return relatedSortDir*(a.keyword.localeCompare(b.keyword,'ko'));
-    if(relatedSortKey==='grade'){
-      const diff=(GRADE_RANK[a.grade??'']??9)-(GRADE_RANK[b.grade??'']??9);
-      return relatedSortDir===1?diff:-diff;
-    }
-    const av=a[relatedSortKey]??-1, bv=b[relatedSortKey]??-1;
-    return relatedSortDir*(bv-av);
+
+  const GR = {S:0, A:1, B:2, C:3, D:4, null:9};
+  return [...merged].sort((a, b) => {
+    if (relatedSortKey === 'keyword') return relatedSortDir * a.keyword.localeCompare(b.keyword, 'ko');
+    if (relatedSortKey === 'grade')   return relatedSortDir * ((GR[a.grade] ?? 9) - (GR[b.grade] ?? 9));
+    const av = a[relatedSortKey] ?? -1;
+    const bv = b[relatedSortKey] ?? -1;
+    return relatedSortDir * (bv - av);
   });
 }
 
 function renderRelatedRows() {
-  const sorted=getSortedRelated();
-  const gc={S:'var(--s)',A:'var(--a)',B:'var(--b)',C:'var(--c)',D:'var(--d)'};
-  document.getElementById('tbody').innerHTML = sorted.map((d,i)=>{
-    const done = relatedAnalyzed[d.keyword] !== undefined;
-    const loading=`<span class="cell-loading"><span class="cell-spin"></span></span>`;
+  const GC = {S:'var(--s)',A:'var(--a)',B:'var(--b)',C:'var(--c)',D:'var(--d)'};
+  const sorted = getSortedRelated();
+  document.getElementById('tbody').innerHTML = sorted.map((d, i) => {
+    const spin = `<span class="cell-loading"><span class="cell-spin"></span></span>`;
+    const na   = `<span class="nsm">—</span>`;
     return `<tr>
       <td class="nsm">${i+1}</td>
       <td style="font-weight:500">${d.keyword}</td>
-      <td>${done&&d.grade?`<span class="gb gb-${d.grade}">${d.grade}</span>`:loading}</td>
-      <td>${done&&d.opportunity_score!=null?`<span style="font-weight:700;color:${gc[d.grade]||'var(--muted)'}">${(+d.opportunity_score).toFixed(1)}</span>`:'<span class="cell-loading">—</span>'}</td>
-      <td class="num nbig">${d.monthly_total>0?(d.estimated?'<span style="color:var(--accent2)">~</span>':'')+fmt(d.monthly_total):'<span class="nsm">—</span>'}</td>
-      <td class="num nsm">${d.pc_search>0?fmt(d.pc_search):'—'}</td>
-      <td class="num nsm">${d.mobile_search>0?fmt(d.mobile_search):'—'}</td>
-      <td class="num nsm">${done&&d.ratio!=null?(+d.ratio).toFixed(2):'<span class="cell-loading">—</span>'}</td>
-      <td class="num nsm">${done&&d.blog_total!=null?fmt(d.blog_total):'<span class="cell-loading">—</span>'}</td>
-      <td class="num nsm">${done&&d.cafe_total!=null?fmt(d.cafe_total):'<span class="cell-loading">—</span>'}</td>
-      <td class="num nsm">${done&&d.news_total!=null?fmt(d.news_total):'<span class="cell-loading">—</span>'}</td>
+      <td>${d._done && d.grade ? `<span class="gb gb-${d.grade}">${d.grade}</span>` : spin}</td>
+      <td>${d._done && d.score != null ? `<span style="font-weight:700;color:${GC[d.grade]||'var(--muted)'}">${(+d.opportunity_score).toFixed(1)}</span>` : (d._done ? na : spin)}</td>
+      <td class="num nbig">${d.monthly_total > 0 ? (d.estimated ? '<span style="color:var(--accent2)">~</span>' : '') + fmt(d.monthly_total) : na}</td>
+      <td class="num nsm">${d.pc_search    > 0 ? fmt(d.pc_search)    : '—'}</td>
+      <td class="num nsm">${d.mobile_search > 0 ? fmt(d.mobile_search) : '—'}</td>
+      <td class="num nsm">${d._done && d.ratio  != null ? (+d.ratio).toFixed(2) : (d._done ? na : spin)}</td>
+      <td class="num nsm">${d._done && d.blog_total != null ? fmt(d.blog_total)  : (d._done ? na : spin)}</td>
+      <td class="num nsm">${d._done && d.cafe_total != null ? fmt(d.cafe_total)  : (d._done ? na : spin)}</td>
+      <td class="num nsm">${d._done && d.news_total != null ? fmt(d.news_total)  : (d._done ? na : spin)}</td>
     </tr>`;
   }).join('');
 }
