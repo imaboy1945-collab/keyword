@@ -175,7 +175,8 @@
           <div><div class="ri-kw" id="resKw">—</div><div class="ri-sub">황금도 <strong id="resScore">—</strong></div></div>
         </div>
         <div class="res-cards" id="resCards"></div>
-        <div class="note">✅ 검색광고 API 실제 검색량 · update_data.py 동일 계산</div>
+        <div class="note">✅ 검색광고 API 실제 검색량 · update_data.py 동일 계산<br>
+        <span style="opacity:.7">등급 기준 — S: 경쟁비율&lt;0.5·일평균≥20·모바일≥45% &nbsp;|&nbsp; A: 경쟁비율&lt;1.5·일평균≥10 &nbsp;|&nbsp; B: 경쟁비율&lt;4 &nbsp;|&nbsp; C: 경쟁비율&lt;8 &nbsp;|&nbsp; D: 그 외</span></div>
       </div>
     </div>
   </div>
@@ -338,25 +339,46 @@ function renderRelatedThead() {
     }).join('') + '</tr>';
 }
 
+function calcGradeJS(ratio, dailyAvg, mobileShare) {
+  if(ratio<0.5 && dailyAvg>=20 && mobileShare>=0.45) return 'S';
+  if(ratio<1.5 && dailyAvg>=10) return 'A';
+  if(ratio<4.0) return 'B';
+  if(ratio<8.0) return 'C';
+  return 'D';
+}
+
 function getSortedRelated() {
   const merged = relatedList.map(item => {
     const ana = relatedAnalyzed[item.keyword] || {};
+    const monthly   = item.monthly_total || ana.monthly_total || 0;
+    const pc        = item.pc_search     || ana.pc_search     || 0;
+    const mobile    = item.mobile_search || ana.mobile_search || 0;
+    const blog      = ana.blog_total  ?? null;
+    const cafe      = ana.cafe_total  ?? null;
+    const news      = ana.news_total  ?? null;
+
+    // 등급·황금도·경쟁비율: 병합된 monthly + 분석된 문서수로 재계산
+    let grade = ana.grade;
+    let score = ana.opportunity_score;
+    let ratio = ana.ratio;
+
+    if (monthly > 0 && blog !== null) {
+      const dailyAvg   = monthly / 30;
+      const mobileShare = monthly > 0 ? mobile / monthly : 0;
+      ratio = Math.round((blog / monthly) * 100) / 100;
+      const comp = Math.max(blog + (cafe||0)*0.35 + (news||0)*0.2, 1);
+      score = Math.round((dailyAvg * 1000 / comp) * 1000) / 1000;
+      grade = calcGradeJS(ratio, dailyAvg, mobileShare);
+    }
+
     return {
-      keyword:       item.keyword,
-      // 검색량: relatedList 원본 우선 (action=related가 정확)
-      // 분석에서만 나온 경우(relatedList=0) 보조로 사용
-      monthly_total: item.monthly_total || ana.monthly_total || 0,
-      pc_search:     item.pc_search     || ana.pc_search     || 0,
-      mobile_search: item.mobile_search || ana.mobile_search || 0,
-      daily_avg:     item.daily_avg     || ana.daily_avg     || 0,
-      mobile_share:  item.mobile_share  || ana.mobile_share  || 0,
-      // 등급·황금도·문서수: 분석 결과만 사용
-      grade:             ana.grade,
-      opportunity_score: ana.opportunity_score,
-      ratio:             ana.ratio,
-      blog_total:        ana.blog_total,
-      cafe_total:        ana.cafe_total,
-      news_total:        ana.news_total,
+      keyword: item.keyword,
+      monthly_total: monthly, pc_search: pc, mobile_search: mobile,
+      daily_avg: Math.round(monthly/30*10)/10,
+      mobile_share: monthly>0 ? Math.round(mobile/monthly*1000)/1000 : 0,
+      estimated: item.estimated || ana.estimated || false,
+      grade, opportunity_score: score, ratio,
+      blog_total: blog, cafe_total: cafe, news_total: news,
     };
   });
   return [...merged].sort((a,b)=>{
