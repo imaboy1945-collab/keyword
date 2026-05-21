@@ -291,7 +291,24 @@ function showResult(d) {
 }
 
 // ── 연관 키워드 테이블 ──
-// ── 연관 키워드 상태 ──
+// ── 요약 카드 업데이트 ──
+function updateSummaryCards(data, mode='main') {
+  if (mode === 'main') {
+    const g={S:0,A:0,B:0,C:0,D:0};
+    data.forEach(d=>g[d.grade]++);
+    document.getElementById('cntAll').textContent = data.length;
+    ['S','A','B','C','D'].forEach(x=>document.getElementById('cnt'+x).textContent=g[x]);
+    document.querySelector('.card.total .card-sub').textContent = '키워드';
+  } else {
+    // 연관 키워드 모드
+    const analyzed = Object.values(relatedAnalyzed);
+    const g={S:0,A:0,B:0,C:0,D:0};
+    analyzed.forEach(d=>{ if(d.grade) g[d.grade]=(g[d.grade]||0)+1; });
+    document.getElementById('cntAll').textContent = data.length;
+    document.querySelector('.card.total .card-sub').textContent = '연관 키워드';
+    ['S','A','B','C','D'].forEach(x=>document.getElementById('cnt'+x).textContent=g[x]||0);
+  }
+}
 let relatedList = [];       // 원본 목록
 let relatedAnalyzed = {};   // keyword → 분석 완료 데이터
 let relatedSortKey = 'monthly_total';
@@ -390,6 +407,7 @@ function showRelatedTable(kw, list) {
 
   renderRelatedThead();
   renderRelatedRows();
+  updateSummaryCards(list, 'related');
   analyzeRelatedQueue(list);
 }
 
@@ -411,7 +429,11 @@ async function analyzeRelatedQueue(list) {
     try {
       const r=await fetch(`${API}?keyword=${encodeURIComponent(list[i].keyword)}&action=analyze`);
       const d=await r.json();
-      if(!d.error){ relatedAnalyzed[list[i].keyword]=d; renderRelatedRows(); }
+      if(!d.error){
+        relatedAnalyzed[list[i].keyword]=d;
+        renderRelatedRows();
+        updateSummaryCards(list, 'related');
+      }
     } catch(e){}
     done++;
     document.getElementById('footInfo').textContent=`${done}/${list.length}개 분석 완료…`;
@@ -432,6 +454,7 @@ document.getElementById('backBtn').addEventListener('click',()=>{
     <th data-col="mobile_share">모바일%</th><th data-col="ratio">경쟁비율</th>
     <th data-col="blog_total">블로그</th><th data-col="cafe_total">카페</th>
     <th data-col="news_total">뉴스</th></tr>`;
+  updateSummaryCards(allData, 'main');
   render();
 });
 
@@ -444,16 +467,13 @@ async function loadData() {
     const r=await fetch('data.json?t='+Date.now());
     allData=await r.json();
     maxScore=Math.max(...allData.map(d=>d.opportunity_score));
-    const g={S:0,A:0,B:0,C:0,D:0};
-    allData.forEach(d=>g[d.grade]++);
-    document.getElementById('cntAll').textContent=allData.length;
-    ['S','A','B','C','D'].forEach(x=>document.getElementById('cnt'+x).textContent=g[x]);
-    document.getElementById('totalCount').textContent=allData.length;
     if(allData.length){
       const dt=new Date(allData[0].updated_at);
       document.getElementById('updatedAt').textContent=`${dt.getMonth()+1}/${dt.getDate()} ${dt.getHours()}:${String(dt.getMinutes()).padStart(2,'0')}`;
       document.getElementById('footUpd').textContent=`최종 업데이트 ${allData[0].updated_at.slice(0,16).replace('T',' ')} KST`;
+      document.getElementById('totalCount').textContent=allData.length;
     }
+    updateSummaryCards(allData, 'main');
     render();
   } catch{ document.getElementById('tbody').innerHTML=`<tr><td colspan="11"><div class="empty">데이터를 불러오지 못했습니다</div></td></tr>`; }
 }
