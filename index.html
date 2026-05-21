@@ -394,22 +394,22 @@ function getSortedRelated() {
 
 function renderRelatedRows() {
   const sorted=getSortedRelated();
+  const gc={S:'var(--s)',A:'var(--a)',B:'var(--b)',C:'var(--c)',D:'var(--d)'};
   document.getElementById('tbody').innerHTML = sorted.map((d,i)=>{
-    const analyzed=relatedAnalyzed[d.keyword];
+    const done = relatedAnalyzed[d.keyword] !== undefined;
     const loading=`<span class="cell-loading"><span class="cell-spin"></span></span>`;
-    const mp=Math.round((d.mobile_share||0)*100);
     return `<tr>
       <td class="nsm">${i+1}</td>
       <td style="font-weight:500">${d.keyword}</td>
-      <td>${analyzed?`<span class="gb gb-${analyzed.grade}">${analyzed.grade}</span>`:loading}</td>
-      <td>${analyzed?`<span style="font-weight:700;color:${GC[analyzed.grade]||'var(--muted)'}">${analyzed.opportunity_score.toFixed(1)}</span>`:'<span class="cell-loading">—</span>'}</td>
+      <td>${done&&d.grade?`<span class="gb gb-${d.grade}">${d.grade}</span>`:loading}</td>
+      <td>${done&&d.opportunity_score!=null?`<span style="font-weight:700;color:${gc[d.grade]||'var(--muted)'}">${(+d.opportunity_score).toFixed(1)}</span>`:'<span class="cell-loading">—</span>'}</td>
       <td class="num nbig">${d.monthly_total>0?(d.estimated?'<span style="color:var(--accent2)">~</span>':'')+fmt(d.monthly_total):'<span class="nsm">—</span>'}</td>
       <td class="num nsm">${d.pc_search>0?fmt(d.pc_search):'—'}</td>
       <td class="num nsm">${d.mobile_search>0?fmt(d.mobile_search):'—'}</td>
-      <td class="num nsm">${analyzed?analyzed.ratio.toFixed(2):'<span class="cell-loading">—</span>'}</td>
-      <td class="num nsm">${analyzed?fmt(analyzed.blog_total):'<span class="cell-loading">—</span>'}</td>
-      <td class="num nsm">${analyzed?fmt(analyzed.cafe_total):'<span class="cell-loading">—</span>'}</td>
-      <td class="num nsm">${analyzed?fmt(analyzed.news_total):'<span class="cell-loading">—</span>'}</td>
+      <td class="num nsm">${done&&d.ratio!=null?(+d.ratio).toFixed(2):'<span class="cell-loading">—</span>'}</td>
+      <td class="num nsm">${done&&d.blog_total!=null?fmt(d.blog_total):'<span class="cell-loading">—</span>'}</td>
+      <td class="num nsm">${done&&d.cafe_total!=null?fmt(d.cafe_total):'<span class="cell-loading">—</span>'}</td>
+      <td class="num nsm">${done&&d.news_total!=null?fmt(d.news_total):'<span class="cell-loading">—</span>'}</td>
     </tr>`;
   }).join('');
 }
