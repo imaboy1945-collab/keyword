@@ -313,11 +313,11 @@ const GRADE_RANK = {S:0,A:1,B:2,C:3,D:4,'':9};
 const GC = {S:'var(--s)',A:'var(--a)',B:'var(--b)',C:'var(--c)',D:'var(--d)'};
 
 function renderRelatedThead() {
-  document.getElementById('mainThead').innerHTML = '<tr><th>#</th>' +
+  document.getElementById('mainThead').innerHTML = '<tr><th style="width:40px">#</th>' +
     RCOLS.map(c=>{
       const active = c.key===relatedSortKey;
-      const arrow  = active ? (relatedSortDir===-1?' ▼':' ▲') : '';
-      return `<th data-rcol="${c.key}" class="${active?'sorted':''}" style="cursor:pointer">${c.label}${arrow}</th>`;
+      const arrow  = active ? (relatedSortDir===-1?' ▼':' ▲') : ' ↕';
+      return `<th data-rcol="${c.key}" class="${active?'sorted':''}" style="cursor:pointer;user-select:none">${c.label}<span style="opacity:${active?1:0.3};font-size:10px">${arrow}</span></th>`;
     }).join('') + '</tr>';
 }
 
