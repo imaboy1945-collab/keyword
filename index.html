@@ -1,318 +1,584 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>키워드 전략 연구소</title>
-    <style>
-        body { font-family: -apple-system, sans-serif; background-color: #f1f3f5; margin: 0; padding: 15px; }
-        .container { max-width: 1100px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        
-        /* 제목 글자 크기 1pt 축소 (22px -> 21px) */
-        h1 { font-size: 21px; color: #212529; margin-bottom: 16px; border-left: 6px solid #007bff; padding-left: 15px; }
-        .search-panel {
-            display: grid;
-            grid-template-columns: minmax(180px, 1fr) auto;
-            gap: 10px;
-            align-items: center;
-            margin-bottom: 14px;
-        }
-        .search-input {
-            height: 42px;
-            border: 1px solid #ced4da;
-            border-radius: 8px;
-            padding: 0 14px;
-            font-size: 15px;
-            outline: none;
-        }
-        .search-input:focus {
-            border-color: #339af0;
-            box-shadow: 0 0 0 3px rgba(51, 154, 240, 0.14);
-        }
-        .clear-button {
-            height: 42px;
-            min-width: 78px;
-            border: 1px solid #ced4da;
-            border-radius: 8px;
-            background: #fff;
-            color: #495057;
-            font-size: 14px;
-            cursor: pointer;
-        }
-        .summary {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(120px, 1fr));
-            gap: 10px;
-            margin-bottom: 14px;
-        }
-        .metric {
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 10px 12px;
-            background: #fbfcfd;
-        }
-        .metric-label { color: #868e96; font-size: 12px; margin-bottom: 4px; }
-        .metric-value { color: #212529; font-size: 18px; font-weight: 700; }
-        
-        .table-wrapper { 
-            overflow: auto; 
-            max-height: 80vh; 
-            border: 1px solid #dee2e6;
-        }
-        
-        table { width: 100%; border-collapse: separate; border-spacing: 0; }
-        
-        /* 전체 표 글자 크기 1pt 축소 (14px -> 13px) */
-        th, td { padding: 12px 10px; text-align: center; border-bottom: 1px solid #dee2e6; border-right: 1px solid #eee; font-size: 13px; white-space: nowrap; }
-        
-        /* 1. 상단 행(1행) 고정 */
-        thead th { 
-            position: sticky; 
-            top: 0; 
-            z-index: 10; 
-            background-color: #f8f9fa; 
-            color: #495057; 
-            font-weight: 600;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>키워드 전략 연구소 — bestwellth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* 2. 좌측 열(1, 2열) 고정 설정 */
-        /* 1열 (No) 너비 최적화 */
-        th:nth-child(1), td:nth-child(1) {
-            position: sticky;
-            left: 0;
-            width: 40px;
-            min-width: 40px;
-            background-color: #fff;
-            z-index: 5;
-        }
-        /* 2열 (연관 키워드) 유동적 너비 설정 */
-        th:nth-child(2), td:nth-child(2) {
-            position: sticky;
-            left: 40px; /* 1열 너비만큼 띄움 */
-            background-color: #fff;
-            z-index: 5;
-            text-align: left;
-            color: #007bff;
-            font-weight: 600;
-            /* 글자 길이에 맞춰 유동적으로 확장 */
-            width: auto;
-            min-width: max-content;
-        }
+    :root {
+      --bg:        #0b0f1a;
+      --surface:   #111827;
+      --surface2:  #1a2235;
+      --border:    #1e2d45;
+      --accent:    #00e5a0;
+      --accent2:   #00b8ff;
+      --warn:      #ff6b6b;
+      --text:      #e2e8f0;
+      --muted:     #64748b;
+      --s-color:   #00e5a0;
+      --a-color:   #38bdf8;
+      --b-color:   #a78bfa;
+      --c-color:   #fb923c;
+      --d-color:   #64748b;
+    }
 
-        /* 고정된 행과 열이 만나는 모서리 */
-        thead th:nth-child(1), thead th:nth-child(2) {
-            z-index: 15;
-            background-color: #f8f9fa;
-        }
+    html { scroll-behavior: smooth; }
 
-        .grade-S { color: #d9480f; background-color: #fff4e6; font-weight: bold; border-radius: 4px; padding: 3px 6px; }
-        .grade-A { color: #f08c00; font-weight: bold; }
-        .score { color: #087f5b; font-weight: 700; }
-        .muted { color: #868e96; font-size: 12px; }
-        .empty-row td {
-            position: static !important;
-            color: #868e96;
-            text-align: center;
-            padding: 26px 10px;
-        }
-        mark {
-            background: #fff3bf;
-            color: inherit;
-            padding: 0 2px;
-            border-radius: 3px;
-        }
-        @media (max-width: 720px) {
-            .container { padding: 14px; }
-            .search-panel { grid-template-columns: 1fr; }
-            .clear-button { width: 100%; }
-            .summary { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
-        }
-    </style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── 배경 노이즈 텍스처 ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ── 헤더 ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(11,15,26,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 15px; font-weight: 700; letter-spacing: -0.3px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .logo-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    .header-meta {
+      font-size: 12px; color: var(--muted);
+      display: flex; align-items: center; gap: 16px;
+    }
+    .update-badge {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 20px; padding: 4px 12px; font-size: 11px;
+    }
+    .update-badge span { color: var(--accent); }
+
+    /* ── 메인 ── */
+    main {
+      position: relative; z-index: 1;
+      max-width: 1400px; margin: 0 auto;
+      padding: 24px 20px 60px;
+    }
+
+    /* ── 요약 카드 ── */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+      animation: fadeUp 0.5s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      position: relative; overflow: hidden;
+    }
+    .card::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 2px;
+    }
+    .card.s::after { background: var(--s-color); }
+    .card.a::after { background: var(--a-color); }
+    .card.b::after { background: var(--b-color); }
+    .card.c::after { background: var(--c-color); }
+    .card.d::after { background: var(--d-color); }
+    .card.total::after { background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+
+    .card-label { font-size: 11px; color: var(--muted); font-weight: 500; margin-bottom: 6px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .card-value { font-size: 28px; font-weight: 900; line-height: 1; }
+    .card-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+    /* ── 컨트롤 바 ── */
+    .controls {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+      margin-bottom: 16px;
+      animation: fadeUp 0.5s 0.1s ease both;
+    }
+
+    .grade-tabs {
+      display: flex; gap: 4px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 4px;
+    }
+    .grade-tab {
+      padding: 6px 14px; border-radius: 7px; border: none;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      transition: all 0.15s; background: transparent;
+      color: var(--muted);
+    }
+    .grade-tab:hover { color: var(--text); }
+    .grade-tab.active {
+      color: #0b0f1a; font-weight: 700;
+    }
+    .grade-tab[data-grade="ALL"].active { background: var(--text); color: var(--bg); }
+    .grade-tab[data-grade="S"].active   { background: var(--s-color); }
+    .grade-tab[data-grade="A"].active   { background: var(--a-color); }
+    .grade-tab[data-grade="B"].active   { background: var(--b-color); }
+    .grade-tab[data-grade="C"].active   { background: var(--c-color); }
+    .grade-tab[data-grade="D"].active   { background: var(--d-color); color: var(--text); }
+
+    .search-wrap {
+      flex: 1; min-width: 200px; max-width: 320px;
+      position: relative;
+    }
+    .search-wrap svg {
+      position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+      color: var(--muted); pointer-events: none;
+    }
+    .search-input {
+      width: 100%; height: 40px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 0 14px 0 38px;
+      font-family: 'Noto Sans KR', sans-serif; font-size: 13px; color: var(--text);
+      outline: none; transition: border-color 0.15s;
+    }
+    .search-input::placeholder { color: var(--muted); }
+    .search-input:focus { border-color: var(--accent); }
+
+    .sort-select {
+      height: 40px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 0 14px;
+      font-family: 'Noto Sans KR', sans-serif; font-size: 13px; color: var(--text);
+      outline: none; cursor: pointer; transition: border-color 0.15s;
+    }
+    .sort-select:focus { border-color: var(--accent); }
+
+    .count-badge {
+      margin-left: auto;
+      font-size: 12px; color: var(--muted);
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 6px 14px;
+      white-space: nowrap;
+    }
+    .count-badge strong { color: var(--accent); }
+
+    /* ── 테이블 ── */
+    .table-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px; overflow: hidden;
+      animation: fadeUp 0.5s 0.2s ease both;
+    }
+
+    .table-scroll { overflow: auto; max-height: 72vh; }
+
+    table { width: 100%; border-collapse: separate; border-spacing: 0; }
+
+    thead th {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--surface2);
+      font-size: 11px; font-weight: 600; color: var(--muted);
+      letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 12px 14px; white-space: nowrap;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer; user-select: none;
+      transition: color 0.15s;
+    }
+    thead th:hover { color: var(--text); }
+    thead th.sorted { color: var(--accent); }
+    thead th .sort-arrow { margin-left: 4px; opacity: 0.5; }
+    thead th.sorted .sort-arrow { opacity: 1; }
+
+    /* 고정 열 */
+    th:nth-child(1), td:nth-child(1) {
+      position: sticky; left: 0; z-index: 11;
+      width: 44px; min-width: 44px;
+      background: var(--surface2);
+    }
+    td:nth-child(1) { background: var(--surface); }
+    th:nth-child(2), td:nth-child(2) {
+      position: sticky; left: 44px; z-index: 11;
+      min-width: 130px;
+      background: var(--surface2);
+      border-right: 1px solid var(--border);
+    }
+    td:nth-child(2) { background: var(--surface); }
+
+    tbody tr {
+      transition: background 0.1s;
+      animation: rowIn 0.3s ease both;
+    }
+    @keyframes rowIn {
+      from { opacity: 0; transform: translateX(-4px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    tbody tr:hover td { background: var(--surface2) !important; }
+    tbody tr:hover td:nth-child(1),
+    tbody tr:hover td:nth-child(2) { background: var(--surface2) !important; }
+
+    td {
+      padding: 11px 14px; font-size: 13px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap; text-align: center;
+      color: var(--text);
+    }
+    td:nth-child(2) { text-align: left; font-weight: 500; }
+    tbody tr:last-child td { border-bottom: none; }
+
+    /* 등급 배지 */
+    .grade-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 7px;
+      font-size: 13px; font-weight: 900; letter-spacing: -0.5px;
+    }
+    .grade-S { background: rgba(0,229,160,0.15); color: var(--s-color); }
+    .grade-A { background: rgba(56,189,248,0.15); color: var(--a-color); }
+    .grade-B { background: rgba(167,139,250,0.15); color: var(--b-color); }
+    .grade-C { background: rgba(251,146,60,0.15); color: var(--c-color); }
+    .grade-D { background: rgba(100,116,139,0.15); color: var(--d-color); }
+
+    /* 황금도 바 */
+    .score-wrap { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+    .score-bar-bg {
+      width: 60px; height: 5px; border-radius: 3px;
+      background: var(--border); overflow: hidden;
+    }
+    .score-bar-fill {
+      height: 100%; border-radius: 3px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent));
+      transition: width 0.4s ease;
+    }
+    .score-num { font-weight: 700; font-size: 13px; min-width: 52px; text-align: right; }
+
+    /* 숫자 포맷 */
+    .num { font-variant-numeric: tabular-nums; }
+    .num-big { color: var(--text); font-weight: 600; }
+    .num-sm { font-size: 12px; color: var(--muted); }
+
+    /* 모바일 비율 바 */
+    .mobile-bar {
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .mobile-seg {
+      height: 4px; border-radius: 2px; min-width: 2px;
+    }
+
+    /* 빈 상태 */
+    .empty-state {
+      text-align: center; padding: 64px 20px;
+      color: var(--muted); font-size: 14px;
+    }
+    .empty-state svg { margin-bottom: 16px; opacity: 0.3; }
+
+    /* 푸터 */
+    .table-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12px; color: var(--muted);
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 640px) {
+      header { padding: 0 16px; }
+      main { padding: 16px 12px 48px; }
+      .header-meta .update-badge { display: none; }
+      .summary-grid { grid-template-columns: repeat(3, 1fr); }
+      .card-value { font-size: 22px; }
+      .controls { gap: 8px; }
+      .count-badge { display: none; }
+      .score-bar-bg { display: none; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>통합 키워드 분석 리포트 [Column]</h1>
-        <div class="search-panel">
-            <input id="keywordSearch" class="search-input" type="search" placeholder="검색어 입력" autocomplete="off">
-            <button id="clearSearch" class="clear-button" type="button">초기화</button>
-        </div>
-        <div class="summary">
-            <div class="metric">
-                <div class="metric-label">관련 키워드</div>
-                <div id="matchedCount" class="metric-value">0</div>
-            </div>
-            <div class="metric">
-                <div class="metric-label">최고 점수</div>
-                <div id="bestScore" class="metric-value">0</div>
-            </div>
-            <div class="metric">
-                <div class="metric-label">S/A 등급</div>
-                <div id="topGradeCount" class="metric-value">0</div>
-            </div>
-            <div class="metric">
-                <div class="metric-label">총 월검색량</div>
-                <div id="totalMonthly" class="metric-value">0</div>
-            </div>
-        </div>
-        <div class="table-wrapper">
-            <table id="resultTable">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>연관 키워드</th>
-                        <th>PC 검색량</th>
-                        <th>모바일 검색량</th>
-                        <th>월검색량</th>
-                        <th>일평균</th>
-                        <th>등급 (경쟁률)</th>
-                        <th>기회점수</th>
-                        <th>블로그</th>
-                        <th>카페글</th>
-                        <th>뉴스</th>
-                        <th>시드</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+
+<header>
+  <div class="logo">
+    <div class="logo-dot"></div>
+    키워드 전략 연구소
+  </div>
+  <div class="header-meta">
+    <div class="update-badge">
+      <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#00e5a0"/></svg>
+      업데이트 <span id="updatedAt">—</span>
     </div>
-    <script>
-        const state = {
-            rows: [],
-            query: ''
-        };
+    <span id="totalCount">—</span>개 키워드
+  </div>
+</header>
 
-        const numberFormat = new Intl.NumberFormat('ko-KR');
-        const tbody = document.querySelector('#resultTable tbody');
-        const searchInput = document.querySelector('#keywordSearch');
-        const clearButton = document.querySelector('#clearSearch');
-        const matchedCount = document.querySelector('#matchedCount');
-        const bestScore = document.querySelector('#bestScore');
-        const topGradeCount = document.querySelector('#topGradeCount');
-        const totalMonthly = document.querySelector('#totalMonthly');
+<main>
 
-        function formatNumber(value) {
-            return numberFormat.format(Math.round(Number(value) || 0));
-        }
+  <!-- 요약 카드 -->
+  <div class="summary-grid" id="summaryGrid">
+    <div class="card total">
+      <div class="card-label">전체</div>
+      <div class="card-value" id="cntAll">—</div>
+      <div class="card-sub">키워드</div>
+    </div>
+    <div class="card s">
+      <div class="card-label">S 등급</div>
+      <div class="card-value" style="color:var(--s-color)" id="cntS">—</div>
+      <div class="card-sub">최우선 공략</div>
+    </div>
+    <div class="card a">
+      <div class="card-label">A 등급</div>
+      <div class="card-value" style="color:var(--a-color)" id="cntA">—</div>
+      <div class="card-sub">고기회</div>
+    </div>
+    <div class="card b">
+      <div class="card-label">B 등급</div>
+      <div class="card-value" style="color:var(--b-color)" id="cntB">—</div>
+      <div class="card-sub">보통</div>
+    </div>
+    <div class="card c">
+      <div class="card-label">C 등급</div>
+      <div class="card-value" style="color:var(--c-color)" id="cntC">—</div>
+      <div class="card-sub">경쟁 있음</div>
+    </div>
+    <div class="card d">
+      <div class="card-label">D 등급</div>
+      <div class="card-value" style="color:var(--d-color)" id="cntD">—</div>
+      <div class="card-sub">포화 상태</div>
+    </div>
+  </div>
 
-        function getMonthlyTotal(item) {
-            return item.monthly_total ?? ((Number(item.pc_search) || 0) + (Number(item.mobile_search) || 0));
-        }
+  <!-- 컨트롤 -->
+  <div class="controls">
+    <div class="grade-tabs" id="gradeTabs">
+      <button class="grade-tab active" data-grade="ALL">전체</button>
+      <button class="grade-tab" data-grade="S">S</button>
+      <button class="grade-tab" data-grade="A">A</button>
+      <button class="grade-tab" data-grade="B">B</button>
+      <button class="grade-tab" data-grade="C">C</button>
+      <button class="grade-tab" data-grade="D">D</button>
+    </div>
 
-        function getOpportunityScore(item) {
-            if (item.opportunity_score !== undefined) return Number(item.opportunity_score) || 0;
-            const monthlyTotal = getMonthlyTotal(item);
-            const blogTotal = Number(item.blog_total) || 0;
-            const cafeTotal = Number(item.cafe_total) || 0;
-            const newsTotal = Number(item.news_total) || 0;
-            const competition = Math.max(blogTotal + (cafeTotal * 0.35) + (newsTotal * 0.2), 1);
-            return Number((((monthlyTotal / 30) * 1000) / competition).toFixed(3));
-        }
+    <div class="search-wrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="키워드 검색…">
+    </div>
 
-        function normalizeText(value) {
-            return String(value ?? '').replace(/\s+/g, '').toLowerCase();
-        }
+    <select class="sort-select" id="sortSelect">
+      <option value="grade">등급순</option>
+      <option value="opportunity_score">황금도순</option>
+      <option value="monthly_total">검색량순</option>
+      <option value="ratio">경쟁도순(낮은)</option>
+      <option value="blog_total">블로그수순</option>
+    </select>
 
-        function escapeHtml(value) {
-            return String(value).replace(/[&<>"']/g, char => ({
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#39;'
-            }[char]));
-        }
+    <div class="count-badge">표시 <strong id="displayCount">—</strong>개</div>
+  </div>
 
-        function highlightKeyword(keyword, query) {
-            const safeKeyword = escapeHtml(keyword);
-            const trimmedQuery = query.trim();
-            if (!trimmedQuery) return safeKeyword;
-            const escapedQuery = trimmedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            return safeKeyword.replace(new RegExp(escapedQuery, 'gi'), match => `<mark>${match}</mark>`);
-        }
+  <!-- 테이블 -->
+  <div class="table-container">
+    <div class="table-scroll">
+      <table id="kwTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th data-col="keyword">키워드</th>
+            <th data-col="grade">등급</th>
+            <th data-col="opportunity_score" class="sorted">황금도 ▼</th>
+            <th data-col="monthly_total">월검색</th>
+            <th data-col="daily_avg">일평균</th>
+            <th data-col="mobile_share">모바일%</th>
+            <th data-col="ratio">경쟁비율</th>
+            <th data-col="blog_total">블로그</th>
+            <th data-col="cafe_total">카페</th>
+            <th data-col="news_total">뉴스</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="table-footer">
+      <span id="footerInfo">데이터 로딩 중…</span>
+      <span id="footerUpdated"></span>
+    </div>
+  </div>
 
-        function getFilteredRows() {
-            const query = normalizeText(state.query);
-            const rows = state.rows.map(item => ({
-                ...item,
-                monthly_total: getMonthlyTotal(item),
-                opportunity_score: getOpportunityScore(item)
-            }));
+</main>
 
-            if (!query) return rows;
-            return rows
-                .filter(item => {
-                    const keyword = normalizeText(item.keyword);
-                    const seed = normalizeText(item.seed);
-                    return keyword.includes(query) || seed.includes(query);
-                })
-                .sort((a, b) => {
-                    const exactA = normalizeText(a.keyword).startsWith(query) ? 1 : 0;
-                    const exactB = normalizeText(b.keyword).startsWith(query) ? 1 : 0;
-                    return exactB - exactA || b.opportunity_score - a.opportunity_score || b.monthly_total - a.monthly_total;
-                });
-        }
+<script>
+const DATA_URL = 'data.json';
+let allData = [];
+let activeGrade = 'ALL';
+let searchQuery = '';
+let sortKey = 'opportunity_score';
+let sortDir = -1;
+let maxScore = 1;
 
-        function updateSummary(rows) {
-            matchedCount.textContent = formatNumber(rows.length);
-            bestScore.textContent = formatNumber(Math.max(...rows.map(item => item.opportunity_score), 0));
-            topGradeCount.textContent = formatNumber(rows.filter(item => item.grade === 'S' || item.grade === 'A').length);
-            totalMonthly.textContent = formatNumber(rows.reduce((sum, item) => sum + item.monthly_total, 0));
-        }
+const fmt = n => Number(n).toLocaleString('ko-KR');
+const fmtDec = n => Number(n).toFixed(1);
 
-        function renderTable() {
-            const rows = getFilteredRows();
-            updateSummary(rows);
-            tbody.innerHTML = '';
+async function loadData() {
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    allData = await res.json();
+    maxScore = Math.max(...allData.map(d => d.opportunity_score));
+    initSummary();
+    render();
+  } catch(e) {
+    document.getElementById('tbody').innerHTML =
+      `<tr><td colspan="11"><div class="empty-state">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+        <div>데이터를 불러오지 못했습니다</div>
+      </div></td></tr>`;
+  }
+}
 
-            if (rows.length === 0) {
-                tbody.innerHTML = '<tr class="empty-row"><td colspan="12">검색 결과 없음</td></tr>';
-                return;
-            }
+function initSummary() {
+  const grades = {S:0,A:0,B:0,C:0,D:0};
+  allData.forEach(d => grades[d.grade]++);
+  document.getElementById('cntAll').textContent = allData.length;
+  document.getElementById('cntS').textContent = grades.S;
+  document.getElementById('cntA').textContent = grades.A;
+  document.getElementById('cntB').textContent = grades.B;
+  document.getElementById('cntC').textContent = grades.C;
+  document.getElementById('cntD').textContent = grades.D;
+  document.getElementById('totalCount').textContent = allData.length;
+  if (allData.length > 0) {
+    const d = new Date(allData[0].updated_at);
+    const mo = d.getMonth()+1, day = d.getDate(), h = d.getHours(), mi = String(d.getMinutes()).padStart(2,'0');
+    document.getElementById('updatedAt').textContent = `${mo}/${day} ${h}:${mi}`;
+    document.getElementById('footerUpdated').textContent = `최종 업데이트 ${allData[0].updated_at.slice(0,16).replace('T',' ')} KST`;
+  }
+}
 
-            rows.forEach((item, index) => {
-                const tr = document.createElement('tr');
-                const gradeClass = (item.grade === 'S') ? 'grade-S' : (item.grade === 'A' ? 'grade-A' : '');
-                const cafeTotal = item.cafe_total ?? 0;
-                const newsTotal = item.news_total ?? 0;
-                const seed = item.seed ?? '-';
+function getFiltered() {
+  return allData
+    .filter(d => activeGrade === 'ALL' || d.grade === activeGrade)
+    .filter(d => !searchQuery || d.keyword.includes(searchQuery));
+}
 
-                tr.innerHTML = `
-                    <td>${index + 1}</td>
-                    <td>${highlightKeyword(item.keyword, state.query)}</td>
-                    <td>${formatNumber(item.pc_search)}</td>
-                    <td>${formatNumber(item.mobile_search)}</td>
-                    <td>${formatNumber(item.monthly_total)}</td>
-                    <td>${formatNumber(item.daily_avg)}</td>
-                    <td><span class="${gradeClass}">${item.grade} (${item.ratio})</span></td>
-                    <td class="score">${formatNumber(item.opportunity_score)}</td>
-                    <td>${formatNumber(item.blog_total)}</td>
-                    <td>${formatNumber(cafeTotal)}</td>
-                    <td>${formatNumber(newsTotal)}</td>
-                    <td class="muted">${escapeHtml(seed)}</td>
-                `;
-                tbody.appendChild(tr);
-            });
-        }
+function getSorted(arr) {
+  const gradeRank = {S:0,A:1,B:2,C:3,D:4};
+  if (sortKey === 'grade') {
+    return [...arr].sort((a,b) => (gradeRank[a.grade]-gradeRank[b.grade]) || (b.opportunity_score - a.opportunity_score));
+  }
+  if (sortKey === 'ratio') {
+    return [...arr].sort((a,b) => (a[sortKey]-b[sortKey]));
+  }
+  return [...arr].sort((a,b) => sortDir * (b[sortKey] - a[sortKey]));
+}
 
-        searchInput.addEventListener('input', event => {
-            state.query = event.target.value;
-            renderTable();
-        });
+function render() {
+  const filtered = getFiltered();
+  const sorted = getSorted(filtered);
+  document.getElementById('displayCount').textContent = sorted.length;
+  document.getElementById('footerInfo').textContent = `${sorted.length}개 키워드 표시 중`;
 
-        clearButton.addEventListener('click', () => {
-            searchInput.value = '';
-            state.query = '';
-            searchInput.focus();
-            renderTable();
-        });
+  if (sorted.length === 0) {
+    document.getElementById('tbody').innerHTML =
+      `<tr><td colspan="11"><div class="empty-state">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <div>검색 결과가 없습니다</div>
+      </div></td></tr>`;
+    return;
+  }
 
-        fetch('data.json')
-            .then(res => res.json())
-            .then(data => {
-                state.rows = Array.isArray(data) ? data : [];
-                renderTable();
-            });
-    </script>
+  const rows = sorted.map((d, i) => {
+    const scorePct = Math.min(100, (d.opportunity_score / maxScore) * 100).toFixed(1);
+    const mobilePct = Math.round(d.mobile_share * 100);
+    const pcPct = 100 - mobilePct;
+    return `<tr style="animation-delay:${Math.min(i*0.02, 0.5)}s">
+      <td class="num-sm">${i+1}</td>
+      <td>${d.keyword}</td>
+      <td><span class="grade-badge grade-${d.grade}">${d.grade}</span></td>
+      <td>
+        <div class="score-wrap">
+          <div class="score-bar-bg"><div class="score-bar-fill" style="width:${scorePct}%"></div></div>
+          <span class="score-num num">${d.opportunity_score.toFixed(1)}</span>
+        </div>
+      </td>
+      <td class="num num-big">${fmt(d.monthly_total)}</td>
+      <td class="num num-sm">${fmt(Math.round(d.daily_avg))}</td>
+      <td>
+        <div class="mobile-bar">
+          <div class="mobile-seg" style="width:${Math.round(pcPct*0.5)}px;background:#38bdf8;opacity:0.6"></div>
+          <div class="mobile-seg" style="width:${Math.round(mobilePct*0.5)}px;background:#00e5a0;opacity:0.8"></div>
+          <span class="num-sm" style="min-width:32px;text-align:right">${mobilePct}%</span>
+        </div>
+      </td>
+      <td class="num num-sm">${d.ratio.toFixed(2)}</td>
+      <td class="num num-sm">${fmt(d.blog_total)}</td>
+      <td class="num num-sm">${fmt(d.cafe_total)}</td>
+      <td class="num num-sm">${fmt(d.news_total)}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('tbody').innerHTML = rows;
+}
+
+// 등급 탭
+document.getElementById('gradeTabs').addEventListener('click', e => {
+  const btn = e.target.closest('.grade-tab');
+  if (!btn) return;
+  document.querySelectorAll('.grade-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeGrade = btn.dataset.grade;
+  render();
+});
+
+// 검색
+document.getElementById('searchInput').addEventListener('input', e => {
+  searchQuery = e.target.value.trim();
+  render();
+});
+
+// 정렬 select
+document.getElementById('sortSelect').addEventListener('change', e => {
+  sortKey = e.target.value;
+  sortDir = -1;
+  render();
+});
+
+// 컬럼 헤더 클릭 정렬
+document.querySelector('thead').addEventListener('click', e => {
+  const th = e.target.closest('th[data-col]');
+  if (!th) return;
+  const col = th.dataset.col;
+  if (sortKey === col) sortDir *= -1;
+  else { sortKey = col; sortDir = -1; }
+  document.querySelectorAll('thead th').forEach(t => {
+    t.classList.remove('sorted');
+    if (t.dataset.col) t.innerHTML = t.innerHTML.replace(/ [▲▼]$/, '');
+  });
+  th.classList.add('sorted');
+  th.innerHTML = th.innerHTML.replace(/ [▲▼]$/, '') + (sortDir === -1 ? ' ▼' : ' ▲');
+  document.getElementById('sortSelect').value = ['grade','opportunity_score','monthly_total','ratio','blog_total'].includes(col) ? col : 'opportunity_score';
+  render();
+});
+
+loadData();
+</script>
 </body>
 </html>
