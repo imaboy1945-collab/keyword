@@ -291,85 +291,117 @@ function showResult(d) {
 }
 
 // ── 연관 키워드 테이블 ──
+// ── 연관 키워드 상태 ──
+let relatedList = [];       // 원본 목록
+let relatedAnalyzed = {};   // keyword → 분석 완료 데이터
+let relatedSortKey = 'monthly_total';
+let relatedSortDir = -1;    // -1: 내림차순, 1: 오름차순
+
+const RCOLS = [
+  {key:'keyword',    label:'키워드'},
+  {key:'grade',      label:'등급'},
+  {key:'opportunity_score', label:'황금도'},
+  {key:'monthly_total',     label:'월검색'},
+  {key:'pc_search',         label:'PC'},
+  {key:'mobile_search',     label:'모바일'},
+  {key:'ratio',             label:'경쟁비율'},
+  {key:'blog_total',        label:'블로그'},
+  {key:'cafe_total',        label:'카페'},
+  {key:'news_total',        label:'뉴스'},
+];
+const GRADE_RANK = {S:0,A:1,B:2,C:3,D:4,'':9};
+const GC = {S:'var(--s)',A:'var(--a)',B:'var(--b)',C:'var(--c)',D:'var(--d)'};
+
+function renderRelatedThead() {
+  document.getElementById('mainThead').innerHTML = '<tr><th>#</th>' +
+    RCOLS.map(c=>{
+      const active = c.key===relatedSortKey;
+      const arrow  = active ? (relatedSortDir===-1?' ▼':' ▲') : '';
+      return `<th data-rcol="${c.key}" class="${active?'sorted':''}" style="cursor:pointer">${c.label}${arrow}</th>`;
+    }).join('') + '</tr>';
+}
+
+function getSortedRelated() {
+  const merged = relatedList.map(item => ({
+    ...item,
+    ...(relatedAnalyzed[item.keyword] || {})
+  }));
+  return [...merged].sort((a,b)=>{
+    if(relatedSortKey==='keyword') return relatedSortDir*(a.keyword.localeCompare(b.keyword,'ko'));
+    if(relatedSortKey==='grade'){
+      const diff=(GRADE_RANK[a.grade??'']??9)-(GRADE_RANK[b.grade??'']??9);
+      return relatedSortDir===1?diff:-diff;
+    }
+    const av=a[relatedSortKey]??-1, bv=b[relatedSortKey]??-1;
+    return relatedSortDir*(bv-av);
+  });
+}
+
+function renderRelatedRows() {
+  const sorted=getSortedRelated();
+  document.getElementById('tbody').innerHTML = sorted.map((d,i)=>{
+    const analyzed=relatedAnalyzed[d.keyword];
+    const loading=`<span class="cell-loading"><span class="cell-spin"></span></span>`;
+    const mp=Math.round((d.mobile_share||0)*100);
+    return `<tr>
+      <td class="nsm">${i+1}</td>
+      <td style="font-weight:500">${d.keyword}</td>
+      <td>${analyzed?`<span class="gb gb-${analyzed.grade}">${analyzed.grade}</span>`:loading}</td>
+      <td>${analyzed?`<span style="font-weight:700;color:${GC[analyzed.grade]||'var(--muted)'}">${analyzed.opportunity_score.toFixed(1)}</span>`:'<span class="cell-loading">—</span>'}</td>
+      <td class="num nbig">${d.monthly_total>0?fmt(d.monthly_total):(analyzed&&analyzed.monthly_total>0?fmt(analyzed.monthly_total):'<span class="nsm">—</span>')}</td>
+      <td class="num nsm">${d.pc_search>0?fmt(d.pc_search):(analyzed&&analyzed.pc_search>0?fmt(analyzed.pc_search):'—')}</td>
+      <td class="num nsm">${d.mobile_search>0?fmt(d.mobile_search):(analyzed&&analyzed.mobile_search>0?fmt(analyzed.mobile_search):'—')}</td>
+      <td class="num nsm">${analyzed?analyzed.ratio.toFixed(2):'<span class="cell-loading">—</span>'}</td>
+      <td class="num nsm">${analyzed?fmt(analyzed.blog_total):'<span class="cell-loading">—</span>'}</td>
+      <td class="num nsm">${analyzed?fmt(analyzed.cafe_total):'<span class="cell-loading">—</span>'}</td>
+      <td class="num nsm">${analyzed?fmt(analyzed.news_total):'<span class="cell-loading">—</span>'}</td>
+    </tr>`;
+  }).join('');
+}
+
 function showRelatedTable(kw, list) {
   tableMode='related';
+  relatedList=list;
+  relatedAnalyzed={};
+  relatedSortKey='monthly_total';
+  relatedSortDir=-1;
+
   document.getElementById('modeBar').style.display='flex';
   document.getElementById('modeKw').textContent=kw;
   document.getElementById('modeSub').textContent=`${list.length}개`;
   document.getElementById('mainControls').style.display='none';
-
-  document.getElementById('mainThead').innerHTML=`<tr>
-    <th>#</th><th>키워드</th>
-    <th>등급</th><th>황금도</th>
-    <th>월검색</th><th>PC</th><th>모바일</th>
-    <th>경쟁비율</th><th>블로그</th><th>카페</th><th>뉴스</th>
-  </tr>`;
-
   document.getElementById('footInfo').textContent=`${list.length}개 연관 키워드 분석 중…`;
 
-  // 초기 행 렌더 (검색량만 있는 상태)
-  document.getElementById('tbody').innerHTML = list.map((d,i)=>`
-    <tr id="rrow-${i}">
-      <td class="nsm">${i+1}</td>
-      <td>${d.keyword}</td>
-      <td id="rg-${i}"><span class="cell-loading"><span class="cell-spin"></span></span></td>
-      <td id="rs-${i}" class="cell-loading">—</td>
-      <td class="num nbig">${d.monthly_total>0?fmt(d.monthly_total):'<span class="nsm">—</span>'}</td>
-      <td class="num nsm">${d.pc_search>0?fmt(d.pc_search):'—'}</td>
-      <td class="num nsm">${d.mobile_search>0?fmt(d.mobile_search):'—'}</td>
-      <td id="rr-${i}" class="cell-loading">—</td>
-      <td id="rb-${i}" class="cell-loading">—</td>
-      <td id="rc-${i}" class="cell-loading">—</td>
-      <td id="rn-${i}" class="cell-loading">—</td>
-    </tr>`).join('');
-
-  // 순차 분석 시작
+  renderRelatedThead();
+  renderRelatedRows();
   analyzeRelatedQueue(list);
 }
+
+// 헤더 클릭 정렬 (연관 키워드 모드)
+document.getElementById('mainThead').addEventListener('click', e=>{
+  if(tableMode!=='related') return;
+  const th=e.target.closest('th[data-rcol]'); if(!th) return;
+  const col=th.dataset.rcol;
+  if(relatedSortKey===col) relatedSortDir*=-1;
+  else { relatedSortKey=col; relatedSortDir=-1; }
+  renderRelatedThead();
+  renderRelatedRows();
+});
 
 async function analyzeRelatedQueue(list) {
   let done=0;
   for(let i=0;i<list.length;i++){
-    if(tableMode!=='related') break; // 모드 변경 시 중단
+    if(tableMode!=='related') break;
     try {
       const r=await fetch(`${API}?keyword=${encodeURIComponent(list[i].keyword)}&action=analyze`);
       const d=await r.json();
-      if(!d.error) updateRelatedRow(i, d, list.length);
+      if(!d.error){ relatedAnalyzed[list[i].keyword]=d; renderRelatedRows(); }
     } catch(e){}
     done++;
     document.getElementById('footInfo').textContent=`${done}/${list.length}개 분석 완료…`;
-    await sleep(300); // API 과부하 방지
+    await sleep(300);
   }
   document.getElementById('footInfo').textContent=`${list.length}개 연관 키워드 분석 완료`;
-}
-
-function updateRelatedRow(i, d, total) {
-  const gc={S:'var(--s)',A:'var(--a)',B:'var(--b)',C:'var(--c)',D:'var(--d)'};
-  const gEl=document.getElementById(`rg-${i}`);
-  const sEl=document.getElementById(`rs-${i}`);
-  const rEl=document.getElementById(`rr-${i}`);
-  const bEl=document.getElementById(`rb-${i}`);
-  const cEl=document.getElementById(`rc-${i}`);
-  const nEl=document.getElementById(`rn-${i}`);
-  const row=document.getElementById(`rrow-${i}`);
-  if(!gEl) return;
-
-  gEl.innerHTML=`<span class="gb gb-${d.grade}">${d.grade}</span>`;
-  sEl.innerHTML=`<span style="font-weight:700;color:${gc[d.grade]}">${d.opportunity_score.toFixed(1)}</span>`;
-  sEl.className='';
-
-  // 검색량이 있으면 월검색/PC/모바일도 업데이트
-  if(d.monthly_total>0){
-    const cells=row.querySelectorAll('td');
-    if(cells[4]) cells[4].innerHTML=`<span class="num nbig">${fmt(d.monthly_total)}</span>`;
-    if(cells[5]) cells[5].innerHTML=`<span class="num nsm">${fmt(d.pc_search)}</span>`;
-    if(cells[6]) cells[6].innerHTML=`<span class="num nsm">${fmt(d.mobile_search)}</span>`;
-  }
-
-  rEl.innerHTML=`<span class="num nsm">${d.ratio.toFixed(2)}</span>`; rEl.className='';
-  bEl.innerHTML=`<span class="num nsm">${fmt(d.blog_total)}</span>`; bEl.className='';
-  cEl.innerHTML=`<span class="num nsm">${fmt(d.cafe_total)}</span>`; cEl.className='';
-  nEl.innerHTML=`<span class="num nsm">${fmt(d.news_total)}</span>`; nEl.className='';
 }
 
 // 전체로 복귀
