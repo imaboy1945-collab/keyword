@@ -7,280 +7,170 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #0b0f1a; --surface: #111827; --surface2: #1a2235;
-      --border: #1e2d45; --accent: #00e5a0; --accent2: #00b8ff;
-      --warn: #ff6b6b; --text: #e2e8f0; --muted: #64748b;
-      --s-color: #00e5a0; --a-color: #38bdf8; --b-color: #a78bfa;
-      --c-color: #fb923c; --d-color: #64748b;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0b0f1a;--surface:#111827;--surface2:#1a2235;
+      --border:#1e2d45;--accent:#00e5a0;--accent2:#00b8ff;
+      --warn:#ff6b6b;--text:#e2e8f0;--muted:#64748b;
+      --s:#00e5a0;--a:#38bdf8;--b:#a78bfa;--c:#fb923c;--d:#64748b;
     }
-    body { font-family: 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 
     /* 헤더 */
-    header {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(11,15,26,0.92); backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px; height: 60px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .logo { font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
-    .logo-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--accent); box-shadow: 0 0 10px var(--accent);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.85)} }
-    .header-meta { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 16px; }
-    .update-badge {
-      display: flex; align-items: center; gap: 6px;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 20px; padding: 4px 12px; font-size: 11px;
-    }
-    .update-badge span { color: var(--accent); }
+    header{position:sticky;top:0;z-index:100;background:rgba(11,15,26,.93);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:15px;font-weight:700;display:flex;align-items:center;gap:10px}
+    .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+    .header-meta{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:16px}
+    .update-badge{display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:11px}
+    .update-badge span{color:var(--accent)}
 
-    /* 메인 */
-    main { max-width: 1400px; margin: 0 auto; padding: 24px 20px 60px; }
+    main{max-width:1400px;margin:0 auto;padding:24px 20px 60px}
 
-    /* ── 실시간 조회 패널 ── */
-    .live-panel {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 14px; margin-bottom: 20px; overflow: hidden;
-      animation: fadeUp .4s ease both;
-    }
-    .live-header {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 14px 18px; cursor: pointer; user-select: none;
-      border-bottom: 1px solid transparent; transition: border-color .2s;
-    }
-    .live-header.open { border-color: var(--border); }
-    .live-header-left { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; }
-    .live-badge {
-      background: rgba(0,229,160,.15); color: var(--accent);
-      font-size: 10px; font-weight: 700; padding: 2px 8px;
-      border-radius: 20px; border: 1px solid rgba(0,229,160,.3);
-    }
-    .live-chevron { color: var(--muted); transition: transform .2s; font-size: 12px; }
-    .live-chevron.open { transform: rotate(180deg); }
-    .live-body { display: none; padding: 18px; }
-    .live-body.open { display: block; }
+    /* 패널 공통 */
+    .panel{background:var(--surface);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden}
+    .panel-hd{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;cursor:pointer;user-select:none;border-bottom:1px solid transparent;transition:border-color .2s}
+    .panel-hd.open{border-color:var(--border)}
+    .panel-hd-left{display:flex;align-items:center;gap:10px;font-weight:700;font-size:13px}
+    .badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px}
+    .badge-ok{background:rgba(0,229,160,.15);color:var(--accent);border:1px solid rgba(0,229,160,.3)}
+    .badge-no{background:rgba(100,116,139,.15);color:var(--muted);border:1px solid rgba(100,116,139,.3)}
+    .badge-live{background:rgba(0,184,255,.15);color:var(--accent2);border:1px solid rgba(0,184,255,.3)}
+    .chevron{color:var(--muted);transition:transform .2s;font-size:11px}
+    .chevron.open{transform:rotate(180deg)}
+    .panel-bd{display:none;padding:18px}
+    .panel-bd.open{display:block}
 
-    /* API 키 설정 */
-    .api-row {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      margin-bottom: 14px; align-items: flex-end;
-    }
-    .api-field { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 180px; }
-    .api-label { font-size: 11px; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: .5px; }
-    .api-input {
-      height: 38px; background: var(--surface2); border: 1px solid var(--border);
-      border-radius: 8px; padding: 0 12px; font-family: 'Noto Sans KR', sans-serif;
-      font-size: 13px; color: var(--text); outline: none; transition: border-color .15s;
-    }
-    .api-input:focus { border-color: var(--accent); }
-    .save-btn {
-      height: 38px; padding: 0 18px; border-radius: 8px; border: none;
-      background: var(--accent); color: #0b0f1a; font-family: 'Noto Sans KR', sans-serif;
-      font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap;
-      transition: opacity .15s;
-    }
-    .save-btn:hover { opacity: .85; }
-    .save-ok { font-size: 12px; color: var(--accent); display: none; }
+    /* 폼 */
+    .sec-label{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
+    .field-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;align-items:flex-end}
+    .field{display:flex;flex-direction:column;gap:5px;flex:1;min-width:160px}
+    .field label{font-size:11px;color:var(--muted);font-weight:500}
+    .fi{height:38px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:0 12px;font-family:'Noto Sans KR',sans-serif;font-size:13px;color:var(--text);outline:none;transition:border-color .15s;width:100%}
+    .fi:focus{border-color:var(--accent)}
+    .btn{height:38px;padding:0 18px;border-radius:8px;border:none;font-family:'Noto Sans KR',sans-serif;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;transition:opacity .15s}
+    .btn-save{background:var(--accent);color:#0b0f1a}
+    .btn-save:hover{opacity:.85}
+    .save-ok{font-size:12px;color:var(--accent);margin-left:4px;display:none}
+    .divider{border:none;border-top:1px solid var(--border);margin:14px 0}
 
-    /* 검색 입력 */
-    .live-search-row { display: flex; gap: 10px; align-items: center; }
-    .live-input-wrap { position: relative; flex: 1; max-width: 400px; }
-    .live-input-wrap svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
-    .live-kw-input {
-      width: 100%; height: 44px; background: var(--surface2);
-      border: 1px solid var(--border); border-radius: 10px;
-      padding: 0 14px 0 38px; font-family: 'Noto Sans KR', sans-serif;
-      font-size: 14px; color: var(--text); outline: none; transition: border-color .15s;
-    }
-    .live-kw-input:focus { border-color: var(--accent); }
-    .live-kw-input::placeholder { color: var(--muted); }
-    .analyze-btn {
-      height: 44px; padding: 0 22px; border-radius: 10px; border: none;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #0b0f1a; font-family: 'Noto Sans KR', sans-serif;
-      font-size: 14px; font-weight: 700; cursor: pointer;
-      transition: opacity .15s, transform .1s;
-    }
-    .analyze-btn:hover { opacity: .9; transform: translateY(-1px); }
-    .analyze-btn:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+    /* 실시간 분석 */
+    .live-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .live-input-wrap{position:relative;flex:1;min-width:200px;max-width:460px}
+    .live-input-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+    .kw-input{width:100%;height:46px;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:0 14px 0 40px;font-family:'Noto Sans KR',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color .15s}
+    .kw-input:focus{border-color:var(--accent)}
+    .kw-input::placeholder{color:var(--muted)}
+    .btn-analyze{height:46px;padding:0 26px;border-radius:10px;border:none;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0b0f1a;font-family:'Noto Sans KR',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:opacity .15s,transform .1s;white-space:nowrap}
+    .btn-analyze:hover{opacity:.9;transform:translateY(-1px)}
+    .btn-analyze:disabled{opacity:.35;cursor:not-allowed;transform:none}
 
-    /* 결과 카드 */
-    .live-result { margin-top: 16px; display: none; }
-    .live-result.show { display: block; }
-    .result-cards {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 10px; margin-bottom: 14px;
-    }
-    .result-card {
-      background: var(--surface2); border: 1px solid var(--border);
-      border-radius: 10px; padding: 14px 16px;
-    }
-    .result-card .rc-label { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
-    .result-card .rc-val { font-size: 22px; font-weight: 900; line-height: 1.1; }
-    .result-card .rc-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    /* 로딩 */
+    .loading-wrap{display:none;margin-top:16px}
+    .loading-wrap.show{display:block}
+    .progress-bar-bg{height:4px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:10px}
+    .progress-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent2),var(--accent));width:0%;transition:width .5s ease}
+    .loading-steps{display:flex;flex-direction:column;gap:5px}
+    .step{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);transition:color .3s}
+    .step.active{color:var(--text)}
+    .step.done{color:var(--accent)}
+    .step-icon{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0;transition:all .3s}
+    .step.active .step-icon{border-color:var(--accent2);background:rgba(0,184,255,.15);animation:spin .7s linear infinite}
+    .step.done .step-icon{border-color:var(--accent);background:rgba(0,229,160,.15);animation:none}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .eta{font-size:11px;color:var(--muted);margin-top:8px}
 
-    .result-grade-wrap {
-      display: flex; align-items: center; gap: 14px;
-      background: var(--surface2); border: 1px solid var(--border);
-      border-radius: 10px; padding: 14px 18px;
-    }
-    .result-grade-big {
-      width: 52px; height: 52px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; font-weight: 900;
-    }
-    .result-grade-info .rgi-kw { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
-    .result-grade-info .rgi-score { font-size: 13px; color: var(--muted); }
-    .result-grade-info .rgi-score strong { color: var(--accent); }
-    .add-to-table-btn {
-      margin-left: auto; height: 36px; padding: 0 16px;
-      border-radius: 8px; border: 1px solid var(--border);
-      background: transparent; color: var(--text);
-      font-family: 'Noto Sans KR', sans-serif;
-      font-size: 12px; font-weight: 600; cursor: pointer;
-      transition: border-color .15s, color .15s;
-    }
-    .add-to-table-btn:hover { border-color: var(--accent); color: var(--accent); }
+    /* 에러 */
+    .err-box{background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.3);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--warn);margin-top:12px;display:none}
+    .err-box.show{display:block}
 
-    .live-error {
-      background: rgba(255,107,107,.1); border: 1px solid rgba(255,107,107,.3);
-      border-radius: 10px; padding: 12px 16px; font-size: 13px; color: var(--warn);
-      margin-top: 12px; display: none;
-    }
-    .live-error.show { display: block; }
-    .live-loading {
-      display: none; align-items: center; gap: 10px;
-      font-size: 13px; color: var(--muted); margin-top: 12px;
-    }
-    .live-loading.show { display: flex; }
-    .spinner {
-      width: 16px; height: 16px; border-radius: 50%;
-      border: 2px solid var(--border); border-top-color: var(--accent);
-      animation: spin .7s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
+    /* 결과 */
+    .result-wrap{display:none;margin-top:16px}
+    .result-wrap.show{display:block}
+    .result-header{display:flex;align-items:center;gap:14px;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:12px}
+    .grade-big{width:54px;height:54px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;flex-shrink:0}
+    .ri-kw{font-size:17px;font-weight:700;margin-bottom:3px}
+    .ri-sub{font-size:13px;color:var(--muted)}
+    .ri-sub strong{color:var(--accent)}
+    .btn-add-row{margin-left:auto;height:36px;padding:0 16px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--text);font-family:'Noto Sans KR',sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:border-color .15s,color .15s;white-space:nowrap}
+    .btn-add-row:hover{border-color:var(--accent);color:var(--accent)}
+    .result-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+    .rc{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:13px 15px}
+    .rc-label{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+    .rc-val{font-size:20px;font-weight:900;line-height:1.1}
+    .rc-sub{font-size:11px;color:var(--muted);margin-top:2px}
+    .note{font-size:11px;color:var(--muted);margin-top:8px}
 
     /* 요약 카드 */
-    .summary-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px; margin-bottom: 20px;
-      animation: fadeUp .5s .05s ease both;
-    }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
-    .card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 12px; padding: 14px 16px; position: relative; overflow: hidden;
-    }
-    .card::after { content:''; position:absolute; top:0; left:0; right:0; height:2px; }
-    .card.s::after{background:var(--s-color)} .card.a::after{background:var(--a-color)}
-    .card.b::after{background:var(--b-color)} .card.c::after{background:var(--c-color)}
-    .card.d::after{background:var(--d-color)} .card.total::after{background:linear-gradient(90deg,var(--accent),var(--accent2))}
-    .card-label { font-size:11px; color:var(--muted); font-weight:500; margin-bottom:5px; text-transform:uppercase; letter-spacing:.5px; }
-    .card-value { font-size:26px; font-weight:900; line-height:1; }
-    .card-sub { font-size:11px; color:var(--muted); margin-top:3px; }
+    .summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:16px}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 15px;position:relative;overflow:hidden}
+    .card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+    .card.s::after{background:var(--s)}.card.a::after{background:var(--a)}.card.b::after{background:var(--b)}.card.c::after{background:var(--c)}.card.d::after{background:var(--d)}.card.total::after{background:linear-gradient(90deg,var(--accent),var(--accent2))}
+    .card-label{font-size:11px;color:var(--muted);font-weight:500;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+    .card-value{font-size:24px;font-weight:900;line-height:1}
+    .card-sub{font-size:11px;color:var(--muted);margin-top:2px}
 
     /* 컨트롤 */
-    .controls {
-      display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
-      margin-bottom: 14px; animation: fadeUp .5s .1s ease both;
-    }
-    .grade-tabs {
-      display: flex; gap: 3px; background: var(--surface);
-      border: 1px solid var(--border); border-radius: 10px; padding: 4px;
-    }
-    .grade-tab {
-      padding: 6px 13px; border-radius: 7px; border: none;
-      font-family: 'Noto Sans KR', sans-serif; font-size: 13px; font-weight: 600;
-      cursor: pointer; transition: all .15s; background: transparent; color: var(--muted);
-    }
-    .grade-tab:hover { color: var(--text); }
-    .grade-tab.active { color: #0b0f1a; font-weight: 700; }
-    .grade-tab[data-grade="ALL"].active{background:var(--text);color:var(--bg)}
-    .grade-tab[data-grade="S"].active{background:var(--s-color)}
-    .grade-tab[data-grade="A"].active{background:var(--a-color)}
-    .grade-tab[data-grade="B"].active{background:var(--b-color)}
-    .grade-tab[data-grade="C"].active{background:var(--c-color)}
-    .grade-tab[data-grade="D"].active{background:var(--d-color);color:var(--text)}
-    .search-wrap { flex:1; min-width:180px; max-width:300px; position:relative; }
-    .search-wrap svg { position:absolute; left:11px; top:50%; transform:translateY(-50%); color:var(--muted); pointer-events:none; }
-    .search-input {
-      width:100%; height:40px; background:var(--surface); border:1px solid var(--border);
-      border-radius:10px; padding:0 12px 0 36px; font-family:'Noto Sans KR',sans-serif;
-      font-size:13px; color:var(--text); outline:none; transition:border-color .15s;
-    }
-    .search-input::placeholder{color:var(--muted)} .search-input:focus{border-color:var(--accent)}
-    .sort-select {
-      height:40px; background:var(--surface); border:1px solid var(--border);
-      border-radius:10px; padding:0 12px; font-family:'Noto Sans KR',sans-serif;
-      font-size:13px; color:var(--text); outline:none; cursor:pointer;
-    }
-    .count-badge {
-      margin-left:auto; font-size:12px; color:var(--muted);
-      background:var(--surface); border:1px solid var(--border);
-      border-radius:20px; padding:6px 13px; white-space:nowrap;
-    }
-    .count-badge strong{color:var(--accent)}
+    .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:13px}
+    .grade-tabs{display:flex;gap:3px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:4px}
+    .gt{padding:6px 12px;border-radius:7px;border:none;font-family:'Noto Sans KR',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;background:transparent;color:var(--muted)}
+    .gt:hover{color:var(--text)}
+    .gt.on{color:#0b0f1a;font-weight:700}
+    .gt[data-g="ALL"].on{background:var(--text);color:var(--bg)}
+    .gt[data-g="S"].on{background:var(--s)}.gt[data-g="A"].on{background:var(--a)}.gt[data-g="B"].on{background:var(--b)}.gt[data-g="C"].on{background:var(--c)}.gt[data-g="D"].on{background:var(--d);color:var(--text)}
+    .search-wrap{flex:1;min-width:150px;max-width:260px;position:relative}
+    .search-wrap svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+    .search-input{width:100%;height:40px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:0 12px 0 32px;font-family:'Noto Sans KR',sans-serif;font-size:13px;color:var(--text);outline:none;transition:border-color .15s}
+    .search-input::placeholder{color:var(--muted)}.search-input:focus{border-color:var(--accent)}
+    .sort-sel{height:40px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:0 12px;font-family:'Noto Sans KR',sans-serif;font-size:13px;color:var(--text);outline:none;cursor:pointer}
+    .cnt-badge{margin-left:auto;font-size:12px;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 12px;white-space:nowrap}
+    .cnt-badge strong{color:var(--accent)}
 
     /* 테이블 */
-    .table-container {
-      background:var(--surface); border:1px solid var(--border); border-radius:14px; overflow:hidden;
-      animation: fadeUp .5s .15s ease both;
-    }
-    .table-scroll { overflow:auto; max-height:70vh; }
-    table { width:100%; border-collapse:separate; border-spacing:0; }
-    thead th {
-      position:sticky; top:0; z-index:10; background:var(--surface2);
-      font-size:11px; font-weight:600; color:var(--muted); letter-spacing:.5px;
-      text-transform:uppercase; padding:11px 13px; white-space:nowrap;
-      border-bottom:1px solid var(--border); cursor:pointer; user-select:none; transition:color .15s;
-    }
+    .tbl-wrap{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+    .tbl-scroll{overflow:auto;max-height:70vh}
+    table{width:100%;border-collapse:separate;border-spacing:0}
+    thead th{position:sticky;top:0;z-index:10;background:var(--surface2);font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;padding:11px 13px;white-space:nowrap;border-bottom:1px solid var(--border);cursor:pointer;user-select:none;transition:color .15s}
     thead th:hover{color:var(--text)} thead th.sorted{color:var(--accent)}
     th:nth-child(1),td:nth-child(1){position:sticky;left:0;z-index:11;width:40px;min-width:40px;background:var(--surface2)}
     td:nth-child(1){background:var(--surface)}
     th:nth-child(2),td:nth-child(2){position:sticky;left:40px;z-index:11;min-width:120px;background:var(--surface2);border-right:1px solid var(--border)}
     td:nth-child(2){background:var(--surface)}
-    tbody tr{transition:background .1s} tbody tr:hover td{background:var(--surface2)!important}
+    tbody tr:hover td{background:var(--surface2)!important}
     tbody tr:hover td:nth-child(1),tbody tr:hover td:nth-child(2){background:var(--surface2)!important}
     td{padding:10px 13px;font-size:13px;border-bottom:1px solid var(--border);white-space:nowrap;text-align:center;color:var(--text)}
-    td:nth-child(2){text-align:left;font-weight:500} tbody tr:last-child td{border-bottom:none}
+    td:nth-child(2){text-align:left;font-weight:500}
+    tbody tr:last-child td{border-bottom:none}
+    tr.live-row td{background:rgba(0,229,160,.04)!important}
+    tr.live-row td:nth-child(1),tr.live-row td:nth-child(2){background:rgba(0,229,160,.06)!important}
+    .live-tag{font-size:9px;background:rgba(0,229,160,.2);color:var(--accent);padding:1px 5px;border-radius:4px;margin-left:5px;vertical-align:middle}
+    .gb{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:7px;font-size:13px;font-weight:900}
+    .gb-S{background:rgba(0,229,160,.15);color:var(--s)}.gb-A{background:rgba(56,189,248,.15);color:var(--a)}.gb-B{background:rgba(167,139,250,.15);color:var(--b)}.gb-C{background:rgba(251,146,60,.15);color:var(--c)}.gb-D{background:rgba(100,116,139,.15);color:var(--d)}
+    .sb{display:flex;align-items:center;gap:7px;justify-content:flex-end}
+    .sb-bg{width:52px;height:4px;border-radius:3px;background:var(--border);overflow:hidden}
+    .sb-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent2),var(--accent))}
+    .sn{font-weight:700;font-size:13px;min-width:50px;text-align:right}
+    .num{font-variant-numeric:tabular-nums}.nbig{font-weight:600}.nsm{font-size:12px;color:var(--muted)}
+    .mb{display:inline-flex;align-items:center;gap:5px}
+    .ms{height:4px;border-radius:2px;min-width:2px}
+    .empty{text-align:center;padding:56px 20px;color:var(--muted);font-size:14px}
+    .tbl-foot{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}
 
-    /* 실시간 행 강조 */
-    tr.live-row td { background: rgba(0,229,160,.05)!important; }
-    tr.live-row td:nth-child(1),tr.live-row td:nth-child(2){ background: rgba(0,229,160,.07)!important; }
-    .live-tag { font-size:9px; background: rgba(0,229,160,.2); color: var(--accent); padding:1px 5px; border-radius:4px; margin-left:5px; vertical-align:middle; }
-
-    .grade-badge{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:7px;font-size:13px;font-weight:900}
-    .grade-S{background:rgba(0,229,160,.15);color:var(--s-color)} .grade-A{background:rgba(56,189,248,.15);color:var(--a-color)}
-    .grade-B{background:rgba(167,139,250,.15);color:var(--b-color)} .grade-C{background:rgba(251,146,60,.15);color:var(--c-color)}
-    .grade-D{background:rgba(100,116,139,.15);color:var(--d-color)}
-
-    .score-wrap{display:flex;align-items:center;gap:7px;justify-content:flex-end}
-    .score-bar-bg{width:56px;height:4px;border-radius:3px;background:var(--border);overflow:hidden}
-    .score-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent2),var(--accent));transition:width .4s ease}
-    .score-num{font-weight:700;font-size:13px;min-width:50px;text-align:right}
-    .num{font-variant-numeric:tabular-nums} .num-big{font-weight:600} .num-sm{font-size:12px;color:var(--muted)}
-    .mobile-bar{display:inline-flex;align-items:center;gap:5px}
-    .mobile-seg{height:4px;border-radius:2px;min-width:2px}
-
-    .empty-state{text-align:center;padding:56px 20px;color:var(--muted);font-size:14px}
-    .table-footer{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .panel{animation:fadeUp .4s ease both}
+    .summary-grid{animation:fadeUp .4s .05s ease both}
+    .controls{animation:fadeUp .4s .1s ease both}
+    .tbl-wrap{animation:fadeUp .4s .15s ease both}
 
     @media(max-width:640px){
       header{padding:0 14px} main{padding:14px 10px 48px}
       .header-meta .update-badge{display:none}
       .summary-grid{grid-template-columns:repeat(3,1fr)}
       .card-value{font-size:20px}
-      .count-badge{display:none}
-      .score-bar-bg{display:none}
-      .live-search-row{flex-direction:column}
+      .cnt-badge,.sb-bg{display:none}
+      .live-row{flex-direction:column}
       .live-input-wrap{max-width:100%;width:100%}
-      .analyze-btn{width:100%}
+      .btn-analyze{width:100%}
     }
   </style>
 </head>
@@ -299,118 +189,119 @@
 
 <main>
 
-  <!-- ── 실시간 조회 패널 ── -->
-  <div class="live-panel">
-    <div class="live-header" id="liveToggle">
-      <div class="live-header-left">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00e5a0" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        실시간 키워드 분석
-        <span class="live-badge">LIVE</span>
+  <!-- ── 설정 패널 ── -->
+  <div class="panel">
+    <div class="panel-hd" id="cfgToggle">
+      <div class="panel-hd-left">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        GitHub 설정
+        <span class="badge badge-no" id="cfgBadge">미설정</span>
       </div>
-      <span class="live-chevron" id="liveChevron">▼</span>
+      <span class="chevron" id="cfgChevron">▼</span>
     </div>
-
-    <div class="live-body" id="liveBody">
-
-      <!-- API 키 설정 -->
-      <div style="font-size:11px;color:var(--muted);margin-bottom:10px;font-weight:500;">
-        🔑 NAVER API 키 설정 (최초 1회, 자동 저장)
-      </div>
-      <div class="api-row">
-        <div class="api-field">
-          <div class="api-label">Client ID</div>
-          <input type="text" class="api-input" id="apiClientId" placeholder="네이버 Client ID">
+    <div class="panel-bd" id="cfgBody">
+      <div class="sec-label">GitHub Personal Access Token (repo 권한)</div>
+      <div class="field-row">
+        <div class="field" style="max-width:480px">
+          <label>PAT Token</label>
+          <input type="password" class="fi" id="ghToken" placeholder="ghp_…">
         </div>
-        <div class="api-field">
-          <div class="api-label">Client Secret</div>
-          <input type="password" class="api-input" id="apiClientSecret" placeholder="네이버 Client Secret">
-        </div>
-        <button class="save-btn" id="saveApiBtn">저장</button>
+        <button class="btn btn-save" id="saveBtn">저장</button>
         <span class="save-ok" id="saveOk">✅ 저장됨</span>
       </div>
+      <div class="note" style="margin-top:2px">저장 후 실시간 분석에서 GitHub Actions를 통해 정확한 검색량을 조회합니다 (약 35~50초 소요)</div>
+    </div>
+  </div>
 
-      <div style="border-top:1px solid var(--border);margin:14px 0;"></div>
-
-      <!-- 키워드 검색 -->
-      <div style="font-size:11px;color:var(--muted);margin-bottom:10px;font-weight:500;">
-        📊 분석할 키워드를 입력하세요
+  <!-- ── 실시간 분석 패널 ── -->
+  <div class="panel">
+    <div class="panel-hd open" id="liveToggle">
+      <div class="panel-hd-left">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        실시간 키워드 분석
+        <span class="badge badge-live">GitHub Actions</span>
       </div>
-      <div class="live-search-row">
+      <span class="chevron open" id="liveChevron">▼</span>
+    </div>
+    <div class="panel-bd open" id="liveBody">
+      <div class="live-row">
         <div class="live-input-wrap">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          <input type="text" class="live-kw-input" id="liveKwInput" placeholder="예: 당뇨에 좋은 음식, 제주도 맛집 추천…">
+          <input type="text" class="kw-input" id="kwInput" placeholder="예: 당뇨에 좋은 음식, 제주도 맛집 추천…">
         </div>
-        <button class="analyze-btn" id="analyzeBtn">분석하기</button>
+        <button class="btn-analyze" id="analyzeBtn">분석하기</button>
       </div>
 
       <!-- 로딩 -->
-      <div class="live-loading" id="liveLoading">
-        <div class="spinner"></div>
-        <span id="loadingMsg">네이버 API 호출 중…</span>
+      <div class="loading-wrap" id="loadingWrap">
+        <div style="height:12px"></div>
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressFill"></div></div>
+        <div class="loading-steps" id="loadingSteps">
+          <div class="step" id="step1"><div class="step-icon">◐</div><span>GitHub Actions 워크플로우 실행 중</span></div>
+          <div class="step" id="step2"><div class="step-icon">◐</div><span>검색광고 API — PC·모바일 검색량 수집 중</span></div>
+          <div class="step" id="step3"><div class="step-icon">◐</div><span>검색 API — 블로그·카페·뉴스 문서수 수집 중</span></div>
+          <div class="step" id="step4"><div class="step-icon">◐</div><span>황금도 점수·등급 계산 중</span></div>
+        </div>
+        <div class="eta" id="etaText"></div>
       </div>
 
       <!-- 에러 -->
-      <div class="live-error" id="liveError"></div>
+      <div class="err-box" id="errBox"></div>
 
       <!-- 결과 -->
-      <div class="live-result" id="liveResult">
-        <div style="height:14px"></div>
-        <div class="result-grade-wrap" id="resultGradeWrap">
-          <div class="result-grade-big grade-badge" id="resultGradeBig">—</div>
-          <div class="result-grade-info">
-            <div class="rgi-kw" id="resultKw">—</div>
-            <div class="rgi-score">황금도 점수 <strong id="resultScore">—</strong></div>
+      <div class="result-wrap" id="resultWrap">
+        <div class="result-header">
+          <div class="grade-big gb" id="resBigGrade">—</div>
+          <div>
+            <div class="ri-kw" id="resKw">—</div>
+            <div class="ri-sub">황금도 <strong id="resScore">—</strong> &nbsp;|&nbsp; 등급 기준: update_data.py 동일</div>
           </div>
-          <button class="add-to-table-btn" id="addToTableBtn">+ 표에 추가</button>
+          <button class="btn-add-row" id="addRowBtn">+ 표에 추가</button>
         </div>
-        <div style="height:12px"></div>
-        <div class="result-cards" id="resultCards"></div>
-        <div style="font-size:11px;color:var(--muted);margin-top:6px;">
-          * 검색량은 데이터랩 트렌드 지수 기반 추정값입니다. 정확한 검색량은 검색광고 API를 사용하세요.
-        </div>
+        <div class="result-cards" id="resCards"></div>
+        <div class="note">✅ 검색광고 API 실제 검색량 기반 — update_data.py와 동일한 계산 방식</div>
       </div>
-
     </div>
   </div>
 
   <!-- 요약 카드 -->
   <div class="summary-grid">
     <div class="card total"><div class="card-label">전체</div><div class="card-value" id="cntAll">—</div><div class="card-sub">키워드</div></div>
-    <div class="card s"><div class="card-label">S 등급</div><div class="card-value" style="color:var(--s-color)" id="cntS">—</div><div class="card-sub">최우선 공략</div></div>
-    <div class="card a"><div class="card-label">A 등급</div><div class="card-value" style="color:var(--a-color)" id="cntA">—</div><div class="card-sub">고기회</div></div>
-    <div class="card b"><div class="card-label">B 등급</div><div class="card-value" style="color:var(--b-color)" id="cntB">—</div><div class="card-sub">보통</div></div>
-    <div class="card c"><div class="card-label">C 등급</div><div class="card-value" style="color:var(--c-color)" id="cntC">—</div><div class="card-sub">경쟁 있음</div></div>
-    <div class="card d"><div class="card-label">D 등급</div><div class="card-value" style="color:var(--d-color)" id="cntD">—</div><div class="card-sub">포화 상태</div></div>
+    <div class="card s"><div class="card-label">S 등급</div><div class="card-value" style="color:var(--s)" id="cntS">—</div><div class="card-sub">최우선 공략</div></div>
+    <div class="card a"><div class="card-label">A 등급</div><div class="card-value" style="color:var(--a)" id="cntA">—</div><div class="card-sub">고기회</div></div>
+    <div class="card b"><div class="card-label">B 등급</div><div class="card-value" style="color:var(--b)" id="cntB">—</div><div class="card-sub">보통</div></div>
+    <div class="card c"><div class="card-label">C 등급</div><div class="card-value" style="color:var(--c)" id="cntC">—</div><div class="card-sub">경쟁 있음</div></div>
+    <div class="card d"><div class="card-label">D 등급</div><div class="card-value" style="color:var(--d)" id="cntD">—</div><div class="card-sub">포화 상태</div></div>
   </div>
 
   <!-- 컨트롤 -->
   <div class="controls">
-    <div class="grade-tabs" id="gradeTabs">
-      <button class="grade-tab active" data-grade="ALL">전체</button>
-      <button class="grade-tab" data-grade="S">S</button>
-      <button class="grade-tab" data-grade="A">A</button>
-      <button class="grade-tab" data-grade="B">B</button>
-      <button class="grade-tab" data-grade="C">C</button>
-      <button class="grade-tab" data-grade="D">D</button>
+    <div class="grade-tabs">
+      <button class="gt on" data-g="ALL">전체</button>
+      <button class="gt" data-g="S">S</button>
+      <button class="gt" data-g="A">A</button>
+      <button class="gt" data-g="B">B</button>
+      <button class="gt" data-g="C">C</button>
+      <button class="gt" data-g="D">D</button>
     </div>
     <div class="search-wrap">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input type="text" class="search-input" id="searchInput" placeholder="키워드 검색…">
     </div>
-    <select class="sort-select" id="sortSelect">
+    <select class="sort-sel" id="sortSel">
       <option value="grade">등급순</option>
       <option value="opportunity_score">황금도순</option>
       <option value="monthly_total">검색량순</option>
       <option value="ratio">경쟁도순(낮은)</option>
       <option value="blog_total">블로그수순</option>
     </select>
-    <div class="count-badge">표시 <strong id="displayCount">—</strong>개</div>
+    <div class="cnt-badge">표시 <strong id="dispCount">—</strong>개</div>
   </div>
 
   <!-- 테이블 -->
-  <div class="table-container">
-    <div class="table-scroll">
-      <table id="kwTable">
+  <div class="tbl-wrap">
+    <div class="tbl-scroll">
+      <table>
         <thead>
           <tr>
             <th>#</th>
@@ -429,348 +320,328 @@
         <tbody id="tbody"></tbody>
       </table>
     </div>
-    <div class="table-footer">
-      <span id="footerInfo">데이터 로딩 중…</span>
-      <span id="footerUpdated"></span>
+    <div class="tbl-foot">
+      <span id="footInfo">로딩 중…</span>
+      <span id="footUpd"></span>
     </div>
   </div>
 
 </main>
 
 <script>
-// ── 데이터 & 상태 ──
-const DATA_URL = 'data.json';
-let allData = [];
-let liveRows = [];
-let activeGrade = 'ALL';
-let searchQuery = '';
-let sortKey = 'opportunity_score';
-let sortDir = -1;
-let maxScore = 1;
+// ── 상수 ──
+const OWNER = 'imaboy1945-collab';
+const REPO  = 'keyword';
+const WF    = 'live_analyze.yml';
+const GH    = 'https://api.github.com';
+const RAW   = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main`;
+
+// ── 상태 ──
+let allData = [], liveRows = [];
+let activeGrade = 'ALL', searchQ = '', sortKey = 'opportunity_score', sortDir = -1, maxScore = 1;
 
 const fmt = n => Number(n).toLocaleString('ko-KR');
 
-// CORS 프록시
-const PROXY = 'https://corsproxy.io/?';
+// ── 패널 토글 ──
+function setupToggle(toggleId, chevronId, bodyId) {
+  document.getElementById(toggleId).addEventListener('click', () => {
+    const b = document.getElementById(bodyId);
+    const c = document.getElementById(chevronId);
+    const h = document.getElementById(toggleId);
+    const open = b.classList.toggle('open');
+    c.classList.toggle('open', open);
+    h.classList.toggle('open', open);
+  });
+}
+setupToggle('cfgToggle','cfgChevron','cfgBody');
+setupToggle('liveToggle','liveChevron','liveBody');
 
-// ── API 키 저장/로드 ──
-function loadApiKeys() {
-  document.getElementById('apiClientId').value = localStorage.getItem('nv_client_id') || '';
-  document.getElementById('apiClientSecret').value = localStorage.getItem('nv_client_secret') || '';
-  if (localStorage.getItem('nv_client_id')) {
-    document.getElementById('saveOk').style.display = 'inline';
+// ── 설정 저장 ──
+function loadConfig() {
+  const tok = localStorage.getItem('gh_token') || '';
+  document.getElementById('ghToken').value = tok;
+  if (tok) {
+    document.getElementById('cfgBadge').textContent = '설정됨';
+    document.getElementById('cfgBadge').className = 'badge badge-ok';
   }
 }
-document.getElementById('saveApiBtn').addEventListener('click', () => {
-  localStorage.setItem('nv_client_id', document.getElementById('apiClientId').value.trim());
-  localStorage.setItem('nv_client_secret', document.getElementById('apiClientSecret').value.trim());
+document.getElementById('saveBtn').addEventListener('click', () => {
+  const tok = document.getElementById('ghToken').value.trim();
+  if (!tok) return;
+  localStorage.setItem('gh_token', tok);
+  document.getElementById('cfgBadge').textContent = '설정됨';
+  document.getElementById('cfgBadge').className = 'badge badge-ok';
   const ok = document.getElementById('saveOk');
   ok.style.display = 'inline';
   setTimeout(() => ok.style.display = 'none', 2500);
 });
 
-// ── 패널 토글 ──
-document.getElementById('liveToggle').addEventListener('click', () => {
-  const body = document.getElementById('liveBody');
-  const chevron = document.getElementById('liveChevron');
-  const header = document.getElementById('liveToggle');
-  const open = body.classList.toggle('open');
-  chevron.classList.toggle('open', open);
-  header.classList.toggle('open', open);
-});
-
-// ── Naver API 호출 헬퍼 ──
-async function naverGet(path, params) {
-  const clientId = localStorage.getItem('nv_client_id');
-  const clientSecret = localStorage.getItem('nv_client_secret');
-  if (!clientId || !clientSecret) throw new Error('API 키를 먼저 저장해 주세요.');
-
-  const url = 'https://openapi.naver.com' + path + '?' + new URLSearchParams(params);
-  const res = await fetch(PROXY + encodeURIComponent(url), {
-    headers: {
-      'X-Naver-Client-Id': clientId,
-      'X-Naver-Client-Secret': clientSecret
-    }
-  });
-  if (!res.ok) throw new Error(`검색 API 오류 (${res.status})`);
-  return res.json();
+// ── 단계 UI ──
+function setStep(n, state) { // state: 'wait' | 'active' | 'done'
+  const el = document.getElementById('step' + n);
+  el.className = 'step' + (state === 'active' ? ' active' : state === 'done' ? ' done' : '');
+  el.querySelector('.step-icon').textContent = state === 'done' ? '✓' : '◐';
+}
+function setProgress(pct) {
+  document.getElementById('progressFill').style.width = pct + '%';
 }
 
-async function naverPost(path, body) {
-  const clientId = localStorage.getItem('nv_client_id');
-  const clientSecret = localStorage.getItem('nv_client_secret');
-  if (!clientId || !clientSecret) throw new Error('API 키를 먼저 저장해 주세요.');
+// ── GitHub API helpers ──
+function ghHeaders() {
+  const tok = localStorage.getItem('gh_token');
+  if (!tok) throw new Error('GitHub Token을 먼저 설정해 주세요.');
+  return { 'Authorization': `token ${tok}`, 'Accept': 'application/vnd.github.v3+json' };
+}
 
-  const url = 'https://openapi.naver.com' + path;
-  const res = await fetch(PROXY + encodeURIComponent(url), {
+async function triggerWorkflow(keyword) {
+  const res = await fetch(`${GH}/repos/${OWNER}/${REPO}/actions/workflows/${WF}/dispatches`, {
     method: 'POST',
-    headers: {
-      'X-Naver-Client-Id': clientId,
-      'X-Naver-Client-Secret': clientSecret,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(body)
+    headers: { ...ghHeaders(), 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ref: 'main', inputs: { keyword } })
   });
-  if (!res.ok) throw new Error(`데이터랩 API 오류 (${res.status})`);
-  return res.json();
-}
-
-// ── 실시간 분석 ──
-async function analyze() {
-  const kw = document.getElementById('liveKwInput').value.trim();
-  if (!kw) return;
-
-  const btn = document.getElementById('analyzeBtn');
-  const loading = document.getElementById('liveLoading');
-  const loadingMsg = document.getElementById('loadingMsg');
-  const errEl = document.getElementById('liveError');
-  const resultEl = document.getElementById('liveResult');
-
-  btn.disabled = true;
-  loading.classList.add('show');
-  errEl.classList.remove('show');
-  resultEl.classList.remove('show');
-
-  try {
-    // 1. 검색 API - 블로그/카페/뉴스 문서수
-    loadingMsg.textContent = '블로그 문서 수 조회 중…';
-    const [blogData, cafeData, newsData] = await Promise.all([
-      naverGet('/v1/search/blog.json', { query: kw, display: 1 }),
-      naverGet('/v1/search/cafearticle.json', { query: kw, display: 1 }),
-      naverGet('/v1/search/news.json', { query: kw, display: 1 })
-    ]);
-
-    loadingMsg.textContent = '트렌드 데이터 조회 중…';
-
-    // 2. 데이터랩 - 검색 트렌드
-    const today = new Date();
-    const endDate = today.toISOString().slice(0, 10);
-    const startDate = new Date(today - 30 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
-    const trendData = await naverPost('/v1/datalab/search', {
-      startDate, endDate,
-      timeUnit: 'date',
-      keywordGroups: [{ groupName: kw, keywords: [kw] }],
-      device: 'mo'
-    });
-
-    // 3. 계산
-    const blogTotal = blogData.total || 0;
-    const cafeTotal = cafeData.total || 0;
-    const newsTotal = newsData.total || 0;
-
-    const results = trendData.results?.[0]?.data || [];
-    const trendAvg = results.length
-      ? results.reduce((s, r) => s + r.ratio, 0) / results.length
-      : 0;
-
-    // 트렌드 지수를 검색량 추정값으로 변환 (1 ratio ≈ 약 500회 추정)
-    const estMonthly = Math.round(trendAvg * 500);
-    const estDaily = Math.round(estMonthly / 30);
-    const ratio = estMonthly > 0 ? Math.round((blogTotal / estMonthly) * 100) / 100 : 0;
-    const score = blogTotal > 0 ? Math.round((estDaily * 1000) / Math.max(blogTotal + cafeTotal * 0.35 + newsTotal * 0.2, 1) * 1000) / 1000 : 0;
-
-    // 등급 계산
-    let grade = 'D';
-    if (ratio < 0.5 && estMonthly >= 20) grade = 'S';
-    else if (ratio < 1.5 && estMonthly >= 10) grade = 'A';
-    else if (ratio < 4.0) grade = 'B';
-    else if (ratio < 8.0) grade = 'C';
-
-    // 4. 결과 표시
-    const gradeBig = document.getElementById('resultGradeBig');
-    gradeBig.textContent = grade;
-    gradeBig.className = `result-grade-big grade-badge grade-${grade}`;
-    document.getElementById('resultKw').textContent = kw;
-    document.getElementById('resultScore').textContent = score.toFixed(1);
-
-    const gradeColors = {S:'var(--s-color)',A:'var(--a-color)',B:'var(--b-color)',C:'var(--c-color)',D:'var(--d-color)'};
-    document.getElementById('resultGradeWrap').style.borderColor = gradeColors[grade].replace('var(','').replace(')','');
-
-    document.getElementById('resultCards').innerHTML = `
-      <div class="result-card">
-        <div class="rc-label">블로그 문서수</div>
-        <div class="rc-val num">${fmt(blogTotal)}</div>
-        <div class="rc-sub">경쟁 문서</div>
-      </div>
-      <div class="result-card">
-        <div class="rc-label">카페 문서수</div>
-        <div class="rc-val num">${fmt(cafeTotal)}</div>
-        <div class="rc-sub">카페 게시글</div>
-      </div>
-      <div class="result-card">
-        <div class="rc-label">뉴스 문서수</div>
-        <div class="rc-val num">${fmt(newsTotal)}</div>
-        <div class="rc-sub">뉴스 기사</div>
-      </div>
-      <div class="result-card">
-        <div class="rc-label">트렌드 지수</div>
-        <div class="rc-val" style="color:var(--accent2)">${trendAvg.toFixed(1)}</div>
-        <div class="rc-sub">30일 평균 (데이터랩)</div>
-      </div>
-      <div class="result-card">
-        <div class="rc-label">추정 월검색량</div>
-        <div class="rc-val num">${fmt(estMonthly)}</div>
-        <div class="rc-sub">트렌드 기반 추정</div>
-      </div>
-      <div class="result-card">
-        <div class="rc-label">경쟁비율</div>
-        <div class="rc-val">${ratio.toFixed(2)}</div>
-        <div class="rc-sub">블로그÷추정검색량</div>
-      </div>
-    `;
-
-    // 표에 추가 버튼
-    document.getElementById('addToTableBtn').onclick = () => {
-      const row = {
-        no: 0, keyword: kw, seed: '실시간',
-        pc_search: 0, mobile_search: estMonthly,
-        monthly_total: estMonthly, daily_avg: estDaily,
-        mobile_share: 0.85, grade, opportunity_score: score,
-        ratio, blog_total: blogTotal, cafe_total: cafeTotal,
-        news_total: newsTotal, updated_at: new Date().toISOString(),
-        _live: true
-      };
-      liveRows = liveRows.filter(r => r.keyword !== kw);
-      liveRows.push(row);
-      maxScore = Math.max(maxScore, score, ...allData.map(d => d.opportunity_score));
-      render();
-    };
-
-    resultEl.classList.add('show');
-
-  } catch(e) {
-    errEl.textContent = '❌ ' + e.message + ' — API 키를 확인하거나 잠시 후 다시 시도해 주세요.';
-    errEl.classList.add('show');
-  } finally {
-    btn.disabled = false;
-    loading.classList.remove('show');
+  if (!res.ok) {
+    const e = await res.json().catch(() => ({}));
+    throw new Error(`워크플로우 실행 실패 (${res.status}): ${e.message || ''}`);
   }
 }
 
+async function getLatestRun(afterTs) {
+  const res = await fetch(
+    `${GH}/repos/${OWNER}/${REPO}/actions/workflows/${WF}/runs?per_page=5`,
+    { headers: ghHeaders() }
+  );
+  const data = await res.json();
+  const runs = data.workflow_runs || [];
+  // afterTs 이후에 생성된 가장 최신 run
+  return runs.find(r => new Date(r.created_at) >= afterTs) || null;
+}
+
+async function pollRun(runId, onProgress) {
+  for (let i = 0; i < 60; i++) {
+    await sleep(5000);
+    const res = await fetch(`${GH}/repos/${OWNER}/${REPO}/actions/runs/${runId}`, { headers: ghHeaders() });
+    const run = await res.json();
+    onProgress(run);
+    if (run.status === 'completed') return run;
+  }
+  throw new Error('시간 초과 (5분). 나중에 다시 시도해 주세요.');
+}
+
+async function fetchResult() {
+  const res = await fetch(`${RAW}/live_result.json?t=${Date.now()}`);
+  if (!res.ok) throw new Error('결과 파일을 읽을 수 없습니다.');
+  return res.json();
+}
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+// ── 실시간 분석 ──
+async function analyze() {
+  const kw = document.getElementById('kwInput').value.trim();
+  if (!kw) return;
+
+  const btn = document.getElementById('analyzeBtn');
+  const loadW = document.getElementById('loadingWrap');
+  const errBox = document.getElementById('errBox');
+  const resWrap = document.getElementById('resultWrap');
+
+  btn.disabled = true;
+  loadW.classList.add('show');
+  errBox.classList.remove('show');
+  resWrap.classList.remove('show');
+  setProgress(0);
+  [1,2,3,4].forEach(n => setStep(n, 'wait'));
+
+  const eta = document.getElementById('etaText');
+  eta.textContent = '예상 소요 시간: 35~50초';
+
+  try {
+    // 1. 워크플로우 실행
+    setStep(1, 'active'); setProgress(5);
+    const beforeTs = new Date();
+    await triggerWorkflow(kw);
+    setProgress(15);
+
+    // 2. run ID 찾기 (최대 20초 대기)
+    let run = null;
+    for (let i = 0; i < 10; i++) {
+      await sleep(2000);
+      run = await getLatestRun(beforeTs);
+      if (run) break;
+    }
+    if (!run) throw new Error('워크플로우 실행을 감지하지 못했습니다. 잠시 후 다시 시도해 주세요.');
+
+    setStep(1, 'done'); setStep(2, 'active'); setProgress(25);
+
+    // 3. 폴링
+    let elapsed = 0;
+    const finalRun = await pollRun(run.id, (r) => {
+      elapsed += 5;
+      const remaining = Math.max(0, 40 - elapsed);
+      eta.textContent = `실행 중… 약 ${remaining}초 남음`;
+
+      if (elapsed >= 10) { setStep(2, 'done'); setStep(3, 'active'); setProgress(50); }
+      if (elapsed >= 20) { setStep(3, 'done'); setStep(4, 'active'); setProgress(75); }
+      if (elapsed >= 28) { setProgress(90); }
+    });
+
+    if (finalRun.conclusion !== 'success') {
+      throw new Error(`워크플로우 실패 (${finalRun.conclusion}). GitHub Actions 탭에서 로그를 확인해 주세요.`);
+    }
+
+    setStep(4, 'done'); setProgress(100);
+    await sleep(800);
+
+    // 4. 결과 읽기
+    const d = await fetchResult();
+    if (d.keyword !== kw) {
+      // 키워드 불일치 → 재시도 1회
+      await sleep(3000);
+      const d2 = await fetchResult();
+      if (d2.keyword !== kw) throw new Error('결과가 아직 반영되지 않았습니다. 잠시 후 새로고침해 주세요.');
+    }
+
+    showResult(d);
+
+  } catch(e) {
+    errBox.textContent = '❌ ' + e.message;
+    errBox.classList.add('show');
+  } finally {
+    btn.disabled = false;
+    loadW.classList.remove('show');
+    setProgress(0);
+  }
+}
+
+// ── 결과 표시 ──
+function showResult(d) {
+  const gradeCol = {S:'var(--s)',A:'var(--a)',B:'var(--b)',C:'var(--c)',D:'var(--d)'};
+
+  const bigEl = document.getElementById('resBigGrade');
+  bigEl.textContent = d.grade;
+  bigEl.className = `grade-big gb gb-${d.grade}`;
+
+  document.getElementById('resKw').textContent = d.keyword;
+  document.getElementById('resScore').textContent = d.opportunity_score.toFixed(1);
+
+  document.getElementById('resCards').innerHTML = `
+    <div class="rc"><div class="rc-label">PC 검색량</div><div class="rc-val num">${fmt(d.pc_search)}</div><div class="rc-sub">월간 PC</div></div>
+    <div class="rc"><div class="rc-label">모바일 검색량</div><div class="rc-val num">${fmt(d.mobile_search)}</div><div class="rc-sub">월간 모바일</div></div>
+    <div class="rc"><div class="rc-label">월 총검색량</div><div class="rc-val num" style="color:${gradeCol[d.grade]}">${fmt(d.monthly_total)}</div><div class="rc-sub">PC + 모바일</div></div>
+    <div class="rc"><div class="rc-label">블로그 문서</div><div class="rc-val num">${fmt(d.blog_total)}</div><div class="rc-sub">경쟁 문서수</div></div>
+    <div class="rc"><div class="rc-label">카페 문서</div><div class="rc-val num">${fmt(d.cafe_total)}</div><div class="rc-sub">카페 게시글</div></div>
+    <div class="rc"><div class="rc-label">뉴스 문서</div><div class="rc-val num">${fmt(d.news_total)}</div><div class="rc-sub">뉴스 기사</div></div>
+    <div class="rc"><div class="rc-label">경쟁 비율</div><div class="rc-val">${d.ratio.toFixed(2)}</div><div class="rc-sub">블로그÷검색량</div></div>
+    <div class="rc"><div class="rc-label">일평균 검색</div><div class="rc-val num">${fmt(Math.round(d.daily_avg))}</div><div class="rc-sub">일 평균</div></div>
+    <div class="rc"><div class="rc-label">모바일 비율</div><div class="rc-val">${Math.round(d.mobile_share*100)}%</div><div class="rc-sub">모바일 점유</div></div>
+  `;
+
+  document.getElementById('addRowBtn').onclick = () => {
+    liveRows = liveRows.filter(r => r.keyword !== d.keyword);
+    liveRows.unshift({ ...d, _live: true });
+    maxScore = Math.max(maxScore, d.opportunity_score, ...allData.map(x => x.opportunity_score));
+    render();
+  };
+
+  document.getElementById('resultWrap').classList.add('show');
+}
+
 document.getElementById('analyzeBtn').addEventListener('click', analyze);
-document.getElementById('liveKwInput').addEventListener('keydown', e => { if (e.key === 'Enter') analyze(); });
+document.getElementById('kwInput').addEventListener('keydown', e => { if (e.key === 'Enter') analyze(); });
 
 // ── 데이터 로드 ──
 async function loadData() {
   try {
-    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    const res = await fetch('data.json?t=' + Date.now());
     allData = await res.json();
     maxScore = Math.max(...allData.map(d => d.opportunity_score));
-    initSummary();
+    const g = {S:0,A:0,B:0,C:0,D:0};
+    allData.forEach(d => g[d.grade]++);
+    document.getElementById('cntAll').textContent = allData.length;
+    document.getElementById('cntS').textContent = g.S;
+    document.getElementById('cntA').textContent = g.A;
+    document.getElementById('cntB').textContent = g.B;
+    document.getElementById('cntC').textContent = g.C;
+    document.getElementById('cntD').textContent = g.D;
+    document.getElementById('totalCount').textContent = allData.length;
+    if (allData.length) {
+      const dt = new Date(allData[0].updated_at);
+      document.getElementById('updatedAt').textContent = `${dt.getMonth()+1}/${dt.getDate()} ${dt.getHours()}:${String(dt.getMinutes()).padStart(2,'0')}`;
+      document.getElementById('footUpd').textContent = `최종 업데이트 ${allData[0].updated_at.slice(0,16).replace('T',' ')} KST`;
+    }
     render();
   } catch(e) {
-    document.getElementById('tbody').innerHTML =
-      `<tr><td colspan="11"><div class="empty-state">데이터를 불러오지 못했습니다</div></td></tr>`;
+    document.getElementById('tbody').innerHTML = `<tr><td colspan="11"><div class="empty">데이터를 불러오지 못했습니다</div></td></tr>`;
   }
 }
 
-function initSummary() {
-  const grades = {S:0,A:0,B:0,C:0,D:0};
-  allData.forEach(d => grades[d.grade]++);
-  document.getElementById('cntAll').textContent = allData.length;
-  document.getElementById('cntS').textContent = grades.S;
-  document.getElementById('cntA').textContent = grades.A;
-  document.getElementById('cntB').textContent = grades.B;
-  document.getElementById('cntC').textContent = grades.C;
-  document.getElementById('cntD').textContent = grades.D;
-  document.getElementById('totalCount').textContent = allData.length;
-  if (allData.length > 0) {
-    const d = new Date(allData[0].updated_at);
-    document.getElementById('updatedAt').textContent = `${d.getMonth()+1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')}`;
-    document.getElementById('footerUpdated').textContent = `최종 업데이트 ${allData[0].updated_at.slice(0,16).replace('T',' ')} KST`;
-  }
-}
-
+// ── 렌더링 ──
 function getFiltered() {
   const combined = [...liveRows, ...allData];
   return combined
     .filter(d => activeGrade === 'ALL' || d.grade === activeGrade)
-    .filter(d => !searchQuery || d.keyword.includes(searchQuery));
+    .filter(d => !searchQ || d.keyword.includes(searchQ));
 }
-
 function getSorted(arr) {
   const gr = {S:0,A:1,B:2,C:3,D:4};
   if (sortKey === 'grade') return [...arr].sort((a,b) => (gr[a.grade]-gr[b.grade])||(b.opportunity_score-a.opportunity_score));
-  if (sortKey === 'ratio') return [...arr].sort((a,b) => a[sortKey]-b[sortKey]);
+  if (sortKey === 'ratio') return [...arr].sort((a,b) => a.ratio-b.ratio);
   return [...arr].sort((a,b) => sortDir*(b[sortKey]-a[sortKey]));
 }
-
 function render() {
   const sorted = getSorted(getFiltered());
-  document.getElementById('displayCount').textContent = sorted.length;
-  document.getElementById('footerInfo').textContent = `${sorted.length}개 키워드 표시 중`;
-
+  document.getElementById('dispCount').textContent = sorted.length;
+  document.getElementById('footInfo').textContent = `${sorted.length}개 키워드 표시 중`;
   if (!sorted.length) {
-    document.getElementById('tbody').innerHTML =
-      `<tr><td colspan="11"><div class="empty-state">검색 결과가 없습니다</div></td></tr>`;
+    document.getElementById('tbody').innerHTML = `<tr><td colspan="11"><div class="empty">검색 결과가 없습니다</div></td></tr>`;
     return;
   }
-
   document.getElementById('tbody').innerHTML = sorted.map((d, i) => {
-    const scorePct = Math.min(100, (d.opportunity_score / maxScore) * 100).toFixed(1);
-    const mobilePct = Math.round((d.mobile_share || 0) * 100);
-    const pcPct = 100 - mobilePct;
-    const isLive = d._live;
-    return `<tr class="${isLive ? 'live-row' : ''}" style="animation-delay:${Math.min(i*.015,.4)}s">
-      <td class="num-sm">${i+1}</td>
-      <td>${d.keyword}${isLive ? '<span class="live-tag">LIVE</span>' : ''}</td>
-      <td><span class="grade-badge grade-${d.grade}">${d.grade}</span></td>
-      <td><div class="score-wrap">
-        <div class="score-bar-bg"><div class="score-bar-fill" style="width:${scorePct}%"></div></div>
-        <span class="score-num num">${d.opportunity_score.toFixed(1)}</span>
+    const sp = Math.min(100, (d.opportunity_score / maxScore) * 100).toFixed(1);
+    const mp = Math.round((d.mobile_share||0)*100);
+    return `<tr class="${d._live?'live-row':''}">
+      <td class="nsm">${i+1}</td>
+      <td>${d.keyword}${d._live?'<span class="live-tag">LIVE</span>':''}</td>
+      <td><span class="gb gb-${d.grade}">${d.grade}</span></td>
+      <td><div class="sb"><div class="sb-bg"><div class="sb-fill" style="width:${sp}%"></div></div><span class="sn num">${d.opportunity_score.toFixed(1)}</span></div></td>
+      <td class="num nbig">${fmt(d.monthly_total)}</td>
+      <td class="num nsm">${fmt(Math.round(d.daily_avg))}</td>
+      <td><div class="mb">
+        <div class="ms" style="width:${Math.round((100-mp)*.4)}px;background:#38bdf8;opacity:.6"></div>
+        <div class="ms" style="width:${Math.round(mp*.4)}px;background:#00e5a0;opacity:.8"></div>
+        <span class="nsm" style="min-width:28px;text-align:right">${mp}%</span>
       </div></td>
-      <td class="num num-big">${fmt(d.monthly_total)}</td>
-      <td class="num num-sm">${fmt(Math.round(d.daily_avg))}</td>
-      <td><div class="mobile-bar">
-        <div class="mobile-seg" style="width:${Math.round(pcPct*.45)}px;background:#38bdf8;opacity:.6"></div>
-        <div class="mobile-seg" style="width:${Math.round(mobilePct*.45)}px;background:#00e5a0;opacity:.8"></div>
-        <span class="num-sm" style="min-width:30px;text-align:right">${mobilePct}%</span>
-      </div></td>
-      <td class="num num-sm">${d.ratio.toFixed(2)}</td>
-      <td class="num num-sm">${fmt(d.blog_total)}</td>
-      <td class="num num-sm">${fmt(d.cafe_total)}</td>
-      <td class="num num-sm">${fmt(d.news_total)}</td>
+      <td class="num nsm">${d.ratio.toFixed(2)}</td>
+      <td class="num nsm">${fmt(d.blog_total)}</td>
+      <td class="num nsm">${fmt(d.cafe_total)}</td>
+      <td class="num nsm">${fmt(d.news_total)}</td>
     </tr>`;
   }).join('');
 }
 
-// 등급 탭
-document.getElementById('gradeTabs').addEventListener('click', e => {
-  const btn = e.target.closest('.grade-tab');
+// ── 이벤트 ──
+document.querySelector('.grade-tabs').addEventListener('click', e => {
+  const btn = e.target.closest('.gt');
   if (!btn) return;
-  document.querySelectorAll('.grade-tab').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  activeGrade = btn.dataset.grade;
+  document.querySelectorAll('.gt').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  activeGrade = btn.dataset.g;
   render();
 });
-
-// 검색
-document.getElementById('searchInput').addEventListener('input', e => {
-  searchQuery = e.target.value.trim();
-  render();
-});
-
-// 정렬
-document.getElementById('sortSelect').addEventListener('change', e => {
-  sortKey = e.target.value; sortDir = -1; render();
-});
-
-// 컬럼 헤더 클릭
+document.getElementById('searchInput').addEventListener('input', e => { searchQ = e.target.value.trim(); render(); });
+document.getElementById('sortSel').addEventListener('change', e => { sortKey = e.target.value; sortDir = -1; render(); });
 document.querySelector('thead').addEventListener('click', e => {
   const th = e.target.closest('th[data-col]');
   if (!th) return;
   const col = th.dataset.col;
   if (sortKey === col) sortDir *= -1; else { sortKey = col; sortDir = -1; }
-  document.querySelectorAll('thead th').forEach(t => {
-    t.classList.remove('sorted');
-    if (t.dataset.col) t.innerHTML = t.innerHTML.replace(/ [▲▼]$/, '');
-  });
+  document.querySelectorAll('thead th').forEach(t => { t.classList.remove('sorted'); if(t.dataset.col) t.innerHTML = t.innerHTML.replace(/ [▲▼]$/,''); });
   th.classList.add('sorted');
-  th.innerHTML = th.innerHTML.replace(/ [▲▼]$/, '') + (sortDir === -1 ? ' ▼' : ' ▲');
+  th.innerHTML = th.innerHTML.replace(/ [▲▼]$/,'') + (sortDir===-1?' ▼':' ▲');
   render();
 });
 
-loadApiKeys();
+loadConfig();
 loadData();
 </script>
 </body>
