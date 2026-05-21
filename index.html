@@ -322,10 +322,26 @@ function renderRelatedThead() {
 }
 
 function getSortedRelated() {
-  const merged = relatedList.map(item => ({
-    ...item,
-    ...(relatedAnalyzed[item.keyword] || {})
-  }));
+  const merged = relatedList.map(item => {
+    const ana = relatedAnalyzed[item.keyword] || {};
+    return {
+      keyword:       item.keyword,
+      // 검색량: relatedList 원본 우선 (action=related가 정확)
+      // 분석에서만 나온 경우(relatedList=0) 보조로 사용
+      monthly_total: item.monthly_total || ana.monthly_total || 0,
+      pc_search:     item.pc_search     || ana.pc_search     || 0,
+      mobile_search: item.mobile_search || ana.mobile_search || 0,
+      daily_avg:     item.daily_avg     || ana.daily_avg     || 0,
+      mobile_share:  item.mobile_share  || ana.mobile_share  || 0,
+      // 등급·황금도·문서수: 분석 결과만 사용
+      grade:             ana.grade,
+      opportunity_score: ana.opportunity_score,
+      ratio:             ana.ratio,
+      blog_total:        ana.blog_total,
+      cafe_total:        ana.cafe_total,
+      news_total:        ana.news_total,
+    };
+  });
   return [...merged].sort((a,b)=>{
     if(relatedSortKey==='keyword') return relatedSortDir*(a.keyword.localeCompare(b.keyword,'ko'));
     if(relatedSortKey==='grade'){
