@@ -6,6 +6,10 @@ on:
     - cron: "10 22 * * *"
   workflow_dispatch:
     inputs:
+      live_keyword:
+        description: '실시간 분석 키워드 (단일)'
+        required: false
+        type: string
       seed_keywords:
         description: "쉼표로 구분한 시드 키워드"
         required: false
@@ -53,4 +57,36 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data.json
           git diff --staged --quiet || git commit -m "Update keyword analysis data"
+          git push
+
+  live_keyword:
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.live_keyword != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Analyze Live Keyword
+        env:
+          NAVER_CUSTOMER_ID: ${{ secrets.NAVER_CUSTOMER_ID }}
+          NAVER_ACCESS_LICENSE: ${{ secrets.NAVER_ACCESS_LICENSE }}
+          NAVER_SECRET_KEY: ${{ secrets.NAVER_SECRET_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python live_analyze.py "${{ github.event.inputs.live_keyword }}"
+
+      - name: Commit Result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add live_result.json
+          git diff --staged --quiet || git commit -m "live: ${{ github.event.inputs.live_keyword }}"
           git push
