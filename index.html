@@ -24,7 +24,6 @@
     .upd-badge span{color:var(--accent)}
     main{max-width:1400px;margin:0 auto;padding:24px 20px 60px}
 
-    /* 패널 */
     .panel{background:var(--surface);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden;animation:fadeUp .4s ease both}
     .panel-hd{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;cursor:pointer;user-select:none;border-bottom:1px solid transparent;transition:border-color .2s}
     .panel-hd.open{border-color:var(--border)}
@@ -36,7 +35,6 @@
     .panel-bd{display:none;padding:18px}
     .panel-bd.open{display:block}
 
-    /* 검색 */
     .live-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
     .live-iw{position:relative;flex:1;min-width:200px;max-width:520px}
     .live-iw svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
@@ -68,7 +66,6 @@
     .rc-sub{font-size:11px;color:var(--muted);margin-top:2px}
     .note{font-size:11px;color:var(--muted);margin-top:8px}
 
-    /* 요약 */
     .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:16px;animation:fadeUp .4s .05s ease both}
     .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px 15px;position:relative;overflow:hidden}
     .card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px}
@@ -77,7 +74,6 @@
     .card-val{font-size:24px;font-weight:900;line-height:1}
     .card-sub{font-size:11px;color:var(--muted);margin-top:2px}
 
-    /* 컨트롤 */
     .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:13px;animation:fadeUp .4s .1s ease both}
     .grade-tabs{display:flex;gap:3px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:4px}
     .gt{padding:6px 12px;border-radius:7px;border:none;font-family:'Noto Sans KR',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;background:transparent;color:var(--muted)}
@@ -92,14 +88,13 @@
     .cnt-badge{margin-left:auto;font-size:12px;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 12px;white-space:nowrap}
     .cnt-badge strong{color:var(--accent)}
 
-    /* 테이블 모드 전환 바 */
     .mode-bar{display:flex;align-items:center;gap:10px;margin-bottom:10px;animation:fadeUp .4s .08s ease both}
     .mode-info{font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:8px}
     .mode-kw{color:var(--accent)}
+    .mode-sub{font-size:12px;color:var(--muted);font-weight:400}
     .btn-back{height:32px;padding:0 14px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:'Noto Sans KR',sans-serif;font-size:12px;cursor:pointer;transition:all .15s;margin-left:auto}
     .btn-back:hover{border-color:var(--accent);color:var(--accent)}
 
-    /* 테이블 */
     .tbl-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;animation:fadeUp .4s .15s ease both}
     .tbl-scroll{overflow:auto;max-height:70vh}
     table{width:100%;border-collapse:separate;border-spacing:0}
@@ -107,7 +102,7 @@
     thead th:hover{color:var(--text)} thead th.sorted{color:var(--accent)}
     th:nth-child(1),td:nth-child(1){position:sticky;left:0;z-index:11;width:40px;min-width:40px;background:var(--surface2)}
     td:nth-child(1){background:var(--surface)}
-    th:nth-child(2),td:nth-child(2){position:sticky;left:40px;z-index:11;min-width:120px;background:var(--surface2);border-right:1px solid var(--border)}
+    th:nth-child(2),td:nth-child(2){position:sticky;left:40px;z-index:11;min-width:130px;background:var(--surface2);border-right:1px solid var(--border)}
     td:nth-child(2){background:var(--surface)}
     tbody tr:hover td{background:var(--surface2)!important}
     tbody tr:hover td:nth-child(1),tbody tr:hover td:nth-child(2){background:var(--surface2)!important}
@@ -122,16 +117,16 @@
     .sb{display:flex;align-items:center;gap:7px;justify-content:flex-end}
     .sb-bg{width:52px;height:4px;border-radius:3px;background:var(--border);overflow:hidden}
     .sb-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent2),var(--accent))}
-    .sn{font-weight:700;font-size:13px;min-width:50px;text-align:right}
+    .sn{font-weight:700;font-size:13px;min-width:44px;text-align:right}
     .num{font-variant-numeric:tabular-nums}.nbig{font-weight:600}.nsm{font-size:12px;color:var(--muted)}
     .mb{display:inline-flex;align-items:center;gap:5px}
     .ms{height:4px;border-radius:2px;min-width:2px}
     .empty{text-align:center;padding:56px 20px;color:var(--muted);font-size:14px}
     .tbl-foot{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}
 
-    /* 연관키워드 분석 버튼 */
-    .btn-row-analyze{height:26px;padding:0 10px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:'Noto Sans KR',sans-serif;font-size:11px;cursor:pointer;transition:all .15s;white-space:nowrap}
-    .btn-row-analyze:hover{border-color:var(--accent);color:var(--accent)}
+    /* 연관키워드 테이블 로딩 셀 */
+    .cell-loading{color:var(--muted);font-size:11px}
+    .cell-spin{display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--border);border-top-color:var(--accent);animation:spin .6s linear infinite;vertical-align:middle;margin-right:3px}
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
     @media(max-width:640px){
@@ -150,22 +145,17 @@
 <header>
   <div class="logo"><div class="logo-dot"></div>키워드 전략 연구소</div>
   <div class="header-meta">
-    <div class="upd-badge">
-      <svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#00e5a0"/></svg>
-      업데이트 <span id="updatedAt">—</span>
-    </div>
+    <div class="upd-badge"><svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="4" fill="#00e5a0"/></svg>업데이트 <span id="updatedAt">—</span></div>
     <span id="totalCount">—</span>개 키워드
   </div>
 </header>
 <main>
 
-  <!-- 실시간 분석 -->
   <div class="panel">
     <div class="panel-hd open" id="liveToggle">
       <div class="panel-hl">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        실시간 키워드 분석
-        <span class="badge badge-live">즉시 조회 1~3초</span>
+        실시간 키워드 분석 <span class="badge badge-live">즉시 조회</span>
       </div>
       <span class="chevron open" id="liveChevron">▼</span>
     </div>
@@ -182,10 +172,7 @@
       <div class="res-wrap" id="resWrap">
         <div class="res-header">
           <div class="grade-big gb" id="resBigGrade">—</div>
-          <div>
-            <div class="ri-kw" id="resKw">—</div>
-            <div class="ri-sub">황금도 <strong id="resScore">—</strong></div>
-          </div>
+          <div><div class="ri-kw" id="resKw">—</div><div class="ri-sub">황금도 <strong id="resScore">—</strong></div></div>
         </div>
         <div class="res-cards" id="resCards"></div>
         <div class="note">✅ 검색광고 API 실제 검색량 · update_data.py 동일 계산</div>
@@ -193,7 +180,6 @@
     </div>
   </div>
 
-  <!-- 요약 카드 -->
   <div class="summary">
     <div class="card total"><div class="card-lbl">전체</div><div class="card-val" id="cntAll">—</div><div class="card-sub">키워드</div></div>
     <div class="card s"><div class="card-lbl">S 등급</div><div class="card-val" style="color:var(--s)" id="cntS">—</div><div class="card-sub">최우선 공략</div></div>
@@ -203,24 +189,20 @@
     <div class="card d"><div class="card-lbl">D 등급</div><div class="card-val" style="color:var(--d)" id="cntD">—</div><div class="card-sub">포화 상태</div></div>
   </div>
 
-  <!-- 테이블 모드 바 (연관키워드 모드일 때만 표시) -->
   <div class="mode-bar" id="modeBar" style="display:none">
     <div class="mode-info">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <span class="mode-kw" id="modeKw">—</span> 연관 키워드
-      <span class="nsm" id="modeCnt"></span>
+      <span class="mode-sub" id="modeSub"></span>
     </div>
     <button class="btn-back" id="backBtn">← 전체 키워드로</button>
   </div>
 
-  <!-- 컨트롤 (기본 모드) -->
   <div class="controls" id="mainControls">
     <div class="grade-tabs">
       <button class="gt on" data-g="ALL">전체</button>
-      <button class="gt" data-g="S">S</button>
-      <button class="gt" data-g="A">A</button>
-      <button class="gt" data-g="B">B</button>
-      <button class="gt" data-g="C">C</button>
+      <button class="gt" data-g="S">S</button><button class="gt" data-g="A">A</button>
+      <button class="gt" data-g="B">B</button><button class="gt" data-g="C">C</button>
       <button class="gt" data-g="D">D</button>
     </div>
     <div class="srch-wrap">
@@ -231,186 +213,188 @@
       <option value="grade">등급순</option>
       <option value="opportunity_score">황금도순</option>
       <option value="monthly_total">검색량순</option>
-      <option value="ratio">경쟁도순(낮은)</option>
+      <option value="ratio">경쟁도순</option>
       <option value="blog_total">블로그수순</option>
     </select>
     <div class="cnt-badge">표시 <strong id="dispCount">—</strong>개</div>
   </div>
 
-  <!-- 테이블 -->
   <div class="tbl-box">
     <div class="tbl-scroll">
-      <table id="mainTable">
-        <thead id="mainThead">
-          <tr>
-            <th>#</th>
-            <th data-col="keyword">키워드</th>
-            <th data-col="grade">등급</th>
-            <th data-col="opportunity_score" class="sorted">황금도 ▼</th>
-            <th data-col="monthly_total">월검색</th>
-            <th data-col="daily_avg">일평균</th>
-            <th data-col="mobile_share">모바일%</th>
-            <th data-col="ratio">경쟁비율</th>
-            <th data-col="blog_total">블로그</th>
-            <th data-col="cafe_total">카페</th>
-            <th data-col="news_total">뉴스</th>
-          </tr>
-        </thead>
+      <table>
+        <thead id="mainThead"><tr>
+          <th>#</th><th data-col="keyword">키워드</th><th data-col="grade">등급</th>
+          <th data-col="opportunity_score" class="sorted">황금도 ▼</th>
+          <th data-col="monthly_total">월검색</th><th data-col="daily_avg">일평균</th>
+          <th data-col="mobile_share">모바일%</th><th data-col="ratio">경쟁비율</th>
+          <th data-col="blog_total">블로그</th><th data-col="cafe_total">카페</th>
+          <th data-col="news_total">뉴스</th>
+        </tr></thead>
         <tbody id="tbody"></tbody>
       </table>
     </div>
     <div class="tbl-foot"><span id="footInfo">로딩 중…</span><span id="footUpd"></span></div>
   </div>
-
 </main>
 <script>
-const API_URL = 'https://bestwellth.org/api.php';
+const API = 'https://bestwellth.org/api.php';
 let allData=[], liveRows=[];
 let activeGrade='ALL', srchQ='', sortKey='opportunity_score', sortDir=-1, maxScore=1;
-let tableMode='main'; // 'main' | 'related'
-let relatedData=[];
-
+let tableMode='main';
 const fmt = n => Number(n).toLocaleString('ko-KR');
+const sleep = ms => new Promise(r=>setTimeout(r,ms));
 
 // 패널 토글
 document.getElementById('liveToggle').addEventListener('click',()=>{
   const bd=document.getElementById('liveBody'),ch=document.getElementById('liveChevron'),hd=document.getElementById('liveToggle');
-  const open=bd.classList.toggle('open'); ch.classList.toggle('open',open); hd.classList.toggle('open',open);
+  const o=bd.classList.toggle('open'); ch.classList.toggle('open',o); hd.classList.toggle('open',o);
 });
 
-// 분석하기
+// ── 분석하기 ──
 async function analyze() {
-  const kw=document.getElementById('kwInp').value.trim(); if(!kw) return;
+  const kw=document.getElementById('kwInp').value.trim(); if(!kw)return;
   const btn=document.getElementById('analyzeBtn'),loading=document.getElementById('loadingEl'),
         errBox=document.getElementById('errBox'),resWrap=document.getElementById('resWrap'),
         msg=document.getElementById('loadingMsg');
   btn.disabled=true; loading.classList.add('show'); errBox.classList.remove('show'); resWrap.classList.remove('show');
-
   try {
-    // 1. 단일 키워드 전체 분석
     msg.textContent='검색량·문서수 조회 중…';
-    const res = await fetch(`${API_URL}?keyword=${encodeURIComponent(kw)}&action=analyze`);
-    if(!res.ok) throw new Error(`서버 오류 (${res.status})`);
-    const d = await res.json();
-    if(d.error) throw new Error(d.error);
+    const r=await fetch(`${API}?keyword=${encodeURIComponent(kw)}&action=analyze`);
+    const d=await r.json(); if(d.error)throw new Error(d.error);
     showResult(d);
-
-    // 2. 연관 키워드 로드 → 테이블 교체
     msg.textContent='연관 키워드 조회 중…';
-    const res2 = await fetch(`${API_URL}?keyword=${encodeURIComponent(kw)}&action=related`);
-    const d2 = await res2.json();
-    if(d2.list && d2.list.length > 0) {
-      relatedData = d2.list;
-      showRelatedTable(kw, d2.list);
-    }
+    const r2=await fetch(`${API}?keyword=${encodeURIComponent(kw)}&action=related`);
+    const d2=await r2.json();
+    if(d2.list&&d2.list.length>0) showRelatedTable(kw, d2.list);
   } catch(e) {
-    errBox.innerHTML=`❌ ${e.message}`;
-    errBox.classList.add('show');
-  } finally {
-    btn.disabled=false; loading.classList.remove('show');
-  }
+    errBox.innerHTML=`❌ ${e.message}`; errBox.classList.add('show');
+  } finally { btn.disabled=false; loading.classList.remove('show'); }
 }
 
-// 결과 카드 표시
 function showResult(d) {
   const gc={S:'var(--s)',A:'var(--a)',B:'var(--b)',C:'var(--c)',D:'var(--d)'};
-  const bigEl=document.getElementById('resBigGrade');
-  bigEl.textContent=d.grade; bigEl.className=`grade-big gb gb-${d.grade}`;
+  const el=document.getElementById('resBigGrade');
+  el.textContent=d.grade; el.className=`grade-big gb gb-${d.grade}`;
   document.getElementById('resKw').textContent=d.keyword;
   document.getElementById('resScore').textContent=d.opportunity_score.toFixed(1);
   document.getElementById('resCards').innerHTML=`
     <div class="rc"><div class="rc-lbl">PC 검색량</div><div class="rc-val num">${fmt(d.pc_search)}</div><div class="rc-sub">월간</div></div>
     <div class="rc"><div class="rc-lbl">모바일 검색량</div><div class="rc-val num">${fmt(d.mobile_search)}</div><div class="rc-sub">월간</div></div>
-    <div class="rc"><div class="rc-lbl">월 총검색량</div><div class="rc-val num" style="color:${gc[d.grade]}">${fmt(d.monthly_total)}</div><div class="rc-sub">PC + 모바일</div></div>
+    <div class="rc"><div class="rc-lbl">월 총검색량</div><div class="rc-val num" style="color:${gc[d.grade]}">${fmt(d.monthly_total)}</div><div class="rc-sub">PC+모바일</div></div>
     <div class="rc"><div class="rc-lbl">블로그 문서</div><div class="rc-val num">${fmt(d.blog_total)}</div><div class="rc-sub">경쟁 문서수</div></div>
     <div class="rc"><div class="rc-lbl">카페 문서</div><div class="rc-val num">${fmt(d.cafe_total)}</div><div class="rc-sub"></div></div>
     <div class="rc"><div class="rc-lbl">뉴스 문서</div><div class="rc-val num">${fmt(d.news_total)}</div><div class="rc-sub"></div></div>
     <div class="rc"><div class="rc-lbl">경쟁 비율</div><div class="rc-val">${d.ratio.toFixed(2)}</div><div class="rc-sub">블로그÷검색량</div></div>
     <div class="rc"><div class="rc-lbl">일평균 검색</div><div class="rc-val num">${fmt(Math.round(d.daily_avg))}</div><div class="rc-sub"></div></div>
-    <div class="rc"><div class="rc-lbl">모바일 비율</div><div class="rc-val">${Math.round((d.mobile_share||0)*100)}%</div><div class="rc-sub"></div></div>
-  `;
+    <div class="rc"><div class="rc-lbl">모바일 비율</div><div class="rc-val">${Math.round((d.mobile_share||0)*100)}%</div><div class="rc-sub"></div></div>`;
   document.getElementById('resWrap').classList.add('show');
 }
 
-// 연관 키워드 테이블
+// ── 연관 키워드 테이블 ──
 function showRelatedTable(kw, list) {
   tableMode='related';
   document.getElementById('modeBar').style.display='flex';
   document.getElementById('modeKw').textContent=kw;
-  document.getElementById('modeCnt').textContent=`${list.length}개`;
+  document.getElementById('modeSub').textContent=`${list.length}개`;
   document.getElementById('mainControls').style.display='none';
 
-  // 헤더 변경
   document.getElementById('mainThead').innerHTML=`<tr>
-    <th>#</th>
-    <th>키워드</th>
-    <th>월검색</th>
-    <th class="sorted">PC ▼</th>
-    <th>모바일</th>
-    <th>일평균</th>
-    <th>모바일%</th>
-    <th>전체분석</th>
+    <th>#</th><th>키워드</th>
+    <th>등급</th><th>황금도</th>
+    <th>월검색</th><th>PC</th><th>모바일</th>
+    <th>경쟁비율</th><th>블로그</th><th>카페</th><th>뉴스</th>
   </tr>`;
 
-  document.getElementById('footInfo').textContent=`${list.length}개 연관 키워드`;
-  document.getElementById('tbody').innerHTML = list.map((d,i)=>{
-    const mp=Math.round((d.mobile_share||0)*100);
-    return `<tr>
+  document.getElementById('footInfo').textContent=`${list.length}개 연관 키워드 분석 중…`;
+
+  // 초기 행 렌더 (검색량만 있는 상태)
+  document.getElementById('tbody').innerHTML = list.map((d,i)=>`
+    <tr id="rrow-${i}">
       <td class="nsm">${i+1}</td>
       <td>${d.keyword}</td>
-      <td class="num nbig">${fmt(d.monthly_total)}</td>
-      <td class="num nsm">${fmt(d.pc_search)}</td>
-      <td class="num nsm">${fmt(d.mobile_search)}</td>
-      <td class="num nsm">${fmt(Math.round(d.daily_avg))}</td>
-      <td><div class="mb">
-        <div class="ms" style="width:${Math.round((100-mp)*.4)}px;background:#38bdf8;opacity:.6"></div>
-        <div class="ms" style="width:${Math.round(mp*.4)}px;background:#00e5a0;opacity:.8"></div>
-        <span class="nsm" style="min-width:28px;text-align:right">${mp}%</span>
-      </div></td>
-      <td><button class="btn-row-analyze" onclick="analyzeRow('${d.keyword.replace(/'/g,"\\'")}')">분석</button></td>
-    </tr>`;
-  }).join('');
+      <td id="rg-${i}"><span class="cell-loading"><span class="cell-spin"></span></span></td>
+      <td id="rs-${i}" class="cell-loading">—</td>
+      <td class="num nbig">${d.monthly_total>0?fmt(d.monthly_total):'<span class="nsm">—</span>'}</td>
+      <td class="num nsm">${d.pc_search>0?fmt(d.pc_search):'—'}</td>
+      <td class="num nsm">${d.mobile_search>0?fmt(d.mobile_search):'—'}</td>
+      <td id="rr-${i}" class="cell-loading">—</td>
+      <td id="rb-${i}" class="cell-loading">—</td>
+      <td id="rc-${i}" class="cell-loading">—</td>
+      <td id="rn-${i}" class="cell-loading">—</td>
+    </tr>`).join('');
+
+  // 순차 분석 시작
+  analyzeRelatedQueue(list);
 }
 
-// 연관 키워드 행 분석
-async function analyzeRow(kw) {
-  document.getElementById('kwInp').value=kw;
-  document.getElementById('liveBody').classList.add('open');
-  document.getElementById('liveChevron').classList.add('open');
-  document.getElementById('liveToggle').classList.add('open');
-  window.scrollTo({top:0,behavior:'smooth'});
-  await analyze();
+async function analyzeRelatedQueue(list) {
+  let done=0;
+  for(let i=0;i<list.length;i++){
+    if(tableMode!=='related') break; // 모드 변경 시 중단
+    try {
+      const r=await fetch(`${API}?keyword=${encodeURIComponent(list[i].keyword)}&action=analyze`);
+      const d=await r.json();
+      if(!d.error) updateRelatedRow(i, d, list.length);
+    } catch(e){}
+    done++;
+    document.getElementById('footInfo').textContent=`${done}/${list.length}개 분석 완료…`;
+    await sleep(300); // API 과부하 방지
+  }
+  document.getElementById('footInfo').textContent=`${list.length}개 연관 키워드 분석 완료`;
 }
 
-// 전체 키워드로 복귀
+function updateRelatedRow(i, d, total) {
+  const gc={S:'var(--s)',A:'var(--a)',B:'var(--b)',C:'var(--c)',D:'var(--d)'};
+  const gEl=document.getElementById(`rg-${i}`);
+  const sEl=document.getElementById(`rs-${i}`);
+  const rEl=document.getElementById(`rr-${i}`);
+  const bEl=document.getElementById(`rb-${i}`);
+  const cEl=document.getElementById(`rc-${i}`);
+  const nEl=document.getElementById(`rn-${i}`);
+  const row=document.getElementById(`rrow-${i}`);
+  if(!gEl) return;
+
+  gEl.innerHTML=`<span class="gb gb-${d.grade}">${d.grade}</span>`;
+  sEl.innerHTML=`<span style="font-weight:700;color:${gc[d.grade]}">${d.opportunity_score.toFixed(1)}</span>`;
+  sEl.className='';
+
+  // 검색량이 있으면 월검색/PC/모바일도 업데이트
+  if(d.monthly_total>0){
+    const cells=row.querySelectorAll('td');
+    if(cells[4]) cells[4].innerHTML=`<span class="num nbig">${fmt(d.monthly_total)}</span>`;
+    if(cells[5]) cells[5].innerHTML=`<span class="num nsm">${fmt(d.pc_search)}</span>`;
+    if(cells[6]) cells[6].innerHTML=`<span class="num nsm">${fmt(d.mobile_search)}</span>`;
+  }
+
+  rEl.innerHTML=`<span class="num nsm">${d.ratio.toFixed(2)}</span>`; rEl.className='';
+  bEl.innerHTML=`<span class="num nsm">${fmt(d.blog_total)}</span>`; bEl.className='';
+  cEl.innerHTML=`<span class="num nsm">${fmt(d.cafe_total)}</span>`; cEl.className='';
+  nEl.innerHTML=`<span class="num nsm">${fmt(d.news_total)}</span>`; nEl.className='';
+}
+
+// 전체로 복귀
 document.getElementById('backBtn').addEventListener('click',()=>{
   tableMode='main';
   document.getElementById('modeBar').style.display='none';
   document.getElementById('mainControls').style.display='flex';
   document.getElementById('mainThead').innerHTML=`<tr>
-    <th>#</th>
-    <th data-col="keyword">키워드</th>
-    <th data-col="grade">등급</th>
+    <th>#</th><th data-col="keyword">키워드</th><th data-col="grade">등급</th>
     <th data-col="opportunity_score" class="sorted">황금도 ▼</th>
-    <th data-col="monthly_total">월검색</th>
-    <th data-col="daily_avg">일평균</th>
-    <th data-col="mobile_share">모바일%</th>
-    <th data-col="ratio">경쟁비율</th>
-    <th data-col="blog_total">블로그</th>
-    <th data-col="cafe_total">카페</th>
-    <th data-col="news_total">뉴스</th>
-  </tr>`;
+    <th data-col="monthly_total">월검색</th><th data-col="daily_avg">일평균</th>
+    <th data-col="mobile_share">모바일%</th><th data-col="ratio">경쟁비율</th>
+    <th data-col="blog_total">블로그</th><th data-col="cafe_total">카페</th>
+    <th data-col="news_total">뉴스</th></tr>`;
   render();
 });
 
 document.getElementById('analyzeBtn').addEventListener('click', analyze);
-document.getElementById('kwInp').addEventListener('keydown', e=>{ if(e.key==='Enter') analyze(); });
+document.getElementById('kwInp').addEventListener('keydown', e=>{ if(e.key==='Enter')analyze(); });
 
-// data.json 로드
+// ── data.json ──
 async function loadData() {
   try {
-    const res=await fetch('data.json?t='+Date.now());
-    allData=await res.json();
+    const r=await fetch('data.json?t='+Date.now());
+    allData=await r.json();
     maxScore=Math.max(...allData.map(d=>d.opportunity_score));
     const g={S:0,A:0,B:0,C:0,D:0};
     allData.forEach(d=>g[d.grade]++);
@@ -423,9 +407,7 @@ async function loadData() {
       document.getElementById('footUpd').textContent=`최종 업데이트 ${allData[0].updated_at.slice(0,16).replace('T',' ')} KST`;
     }
     render();
-  } catch {
-    document.getElementById('tbody').innerHTML=`<tr><td colspan="11"><div class="empty">데이터를 불러오지 못했습니다</div></td></tr>`;
-  }
+  } catch{ document.getElementById('tbody').innerHTML=`<tr><td colspan="11"><div class="empty">데이터를 불러오지 못했습니다</div></td></tr>`; }
 }
 
 function getFiltered(){
@@ -435,12 +417,12 @@ function getFiltered(){
 }
 function getSorted(arr){
   const gr={S:0,A:1,B:2,C:3,D:4};
-  if(sortKey==='grade') return [...arr].sort((a,b)=>(gr[a.grade]-gr[b.grade])||(b.opportunity_score-a.opportunity_score));
-  if(sortKey==='ratio') return [...arr].sort((a,b)=>a.ratio-b.ratio);
-  return [...arr].sort((a,b)=>sortDir*(b[sortKey]-a[sortKey]));
+  if(sortKey==='grade')return[...arr].sort((a,b)=>(gr[a.grade]-gr[b.grade])||(b.opportunity_score-a.opportunity_score));
+  if(sortKey==='ratio')return[...arr].sort((a,b)=>a.ratio-b.ratio);
+  return[...arr].sort((a,b)=>sortDir*(b[sortKey]-a[sortKey]));
 }
 function render(){
-  if(tableMode!=='main') return;
+  if(tableMode!=='main')return;
   const rows=getSorted(getFiltered());
   document.getElementById('dispCount').textContent=rows.length;
   document.getElementById('footInfo').textContent=`${rows.length}개 키워드 표시 중`;
@@ -476,7 +458,7 @@ document.querySelector('.grade-tabs').addEventListener('click',e=>{
 document.getElementById('srchInp').addEventListener('input',e=>{srchQ=e.target.value.trim();render();});
 document.getElementById('sortSel').addEventListener('change',e=>{sortKey=e.target.value;sortDir=-1;render();});
 document.querySelector('thead').addEventListener('click',e=>{
-  if(tableMode!=='main') return;
+  if(tableMode!=='main')return;
   const th=e.target.closest('th[data-col]');if(!th)return;
   const col=th.dataset.col;
   if(sortKey===col)sortDir*=-1;else{sortKey=col;sortDir=-1;}
