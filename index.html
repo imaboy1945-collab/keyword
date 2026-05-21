@@ -281,7 +281,7 @@ function showResult(d) {
   document.getElementById('resCards').innerHTML=`
     <div class="rc"><div class="rc-lbl">PC 검색량</div><div class="rc-val num">${fmt(d.pc_search)}</div><div class="rc-sub">월간</div></div>
     <div class="rc"><div class="rc-lbl">모바일 검색량</div><div class="rc-val num">${fmt(d.mobile_search)}</div><div class="rc-sub">월간</div></div>
-    <div class="rc"><div class="rc-lbl">월 총검색량</div><div class="rc-val num" style="color:${gc[d.grade]}">${d.estimated?'<span style="font-size:14px;color:var(--accent2)">~</span>':''}${fmt(d.monthly_total)}</div><div class="rc-sub">${d.estimated?'데이터랩 추정':'PC+모바일'}</div></div>
+    <div class="rc"><div class="rc-lbl">월 총검색량</div><div class="rc-val num" style="color:${gc[d.grade]}">${fmt(d.monthly_total)}</div><div class="rc-sub">PC+모바일</div></div>
     <div class="rc"><div class="rc-lbl">블로그 문서</div><div class="rc-val num">${fmt(d.blog_total)}</div><div class="rc-sub">경쟁 문서수</div></div>
     <div class="rc"><div class="rc-lbl">카페 문서</div><div class="rc-val num">${fmt(d.cafe_total)}</div><div class="rc-sub"></div></div>
     <div class="rc"><div class="rc-lbl">뉴스 문서</div><div class="rc-val num">${fmt(d.news_total)}</div><div class="rc-sub"></div></div>
@@ -406,8 +406,8 @@ function renderRelatedRows() {
       <td class="nsm">${i+1}</td>
       <td style="font-weight:500">${d.keyword}</td>
       <td>${d._done && d.grade ? `<span class="gb gb-${d.grade}">${d.grade}</span>` : spin}</td>
-      <td>${d._done && d.score != null ? `<span style="font-weight:700;color:${GC[d.grade]||'var(--muted)'}">${(+d.opportunity_score).toFixed(1)}</span>` : (d._done ? na : spin)}</td>
-      <td class="num nbig">${d.monthly_total > 0 ? (d.estimated ? '<span style="color:var(--accent2)">~</span>' : '') + fmt(d.monthly_total) : na}</td>
+      <td>${d._done && d.opportunity_score != null ? `<span style="font-weight:700;color:${GC[d.grade]||'var(--muted)'}">${(+d.opportunity_score).toFixed(1)}</span>` : (d._done ? na : spin)}</td>
+      <td class="num nbig">${d.monthly_total > 0 ? fmt(d.monthly_total) : na}</td>
       <td class="num nsm">${d.pc_search    > 0 ? fmt(d.pc_search)    : '—'}</td>
       <td class="num nsm">${d.mobile_search > 0 ? fmt(d.mobile_search) : '—'}</td>
       <td class="num nsm">${d._done && d.ratio  != null ? (+d.ratio).toFixed(2) : (d._done ? na : spin)}</td>
