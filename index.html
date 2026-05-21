@@ -397,7 +397,7 @@ async function triggerWorkflow(keyword) {
   const res = await fetch(`${GH}/repos/${OWNER}/${REPO}/actions/workflows/${WF}/dispatches`, {
     method: 'POST',
     headers: { ...ghHeaders(), 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ref: 'main', inputs: { keyword } })
+    body: JSON.stringify({ ref: 'main', inputs: { live_keyword: keyword } })
   });
   if (!res.ok) {
     const e = await res.json().catch(() => ({}));
