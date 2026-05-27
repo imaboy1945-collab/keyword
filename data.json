@@ -9,12 +9,12 @@
     "daily_avg": 64153.33,
     "mobile_share": 0.992,
     "grade": "S",
-    "opportunity_score": 1363.397,
+    "opportunity_score": 1362.464,
     "ratio": 0.02,
-    "blog_total": 40742,
-    "cafe_total": 14955,
-    "news_total": 5389,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 40799,
+    "cafe_total": 14883,
+    "news_total": 5391,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 2,
@@ -26,12 +26,12 @@
     "daily_avg": 20283.33,
     "mobile_share": 0.833,
     "grade": "S",
-    "opportunity_score": 924.963,
+    "opportunity_score": 925.392,
     "ratio": 0.03,
-    "blog_total": 16542,
-    "cafe_total": 5584,
-    "news_total": 17162,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 16551,
+    "cafe_total": 5527,
+    "news_total": 17166,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 3,
@@ -43,12 +43,12 @@
     "daily_avg": 1067360.0,
     "mobile_share": 0.929,
     "grade": "S",
-    "opportunity_score": 820.296,
+    "opportunity_score": 818.224,
     "ratio": 0.03,
-    "blog_total": 1050885,
-    "cafe_total": 338798,
-    "news_total": 658623,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 1054776,
+    "cafe_total": 336662,
+    "news_total": 659380,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 4,
@@ -60,12 +60,12 @@
     "daily_avg": 40350.0,
     "mobile_share": 0.956,
     "grade": "S",
-    "opportunity_score": 796.857,
+    "opportunity_score": 795.794,
     "ratio": 0.03,
-    "blog_total": 41549,
-    "cafe_total": 5535,
-    "news_total": 35751,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 41637,
+    "cafe_total": 5454,
+    "news_total": 35791,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 5,
@@ -77,12 +77,12 @@
     "daily_avg": 23410.0,
     "mobile_share": 0.954,
     "grade": "S",
-    "opportunity_score": 271.473,
+    "opportunity_score": 271.48,
     "ratio": 0.07,
-    "blog_total": 52492,
-    "cafe_total": 29613,
-    "news_total": 116883,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 52493,
+    "cafe_total": 29599,
+    "news_total": 116892,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 6,
@@ -94,32 +94,15 @@
     "daily_avg": 11590.0,
     "mobile_share": 0.964,
     "grade": "S",
-    "opportunity_score": 195.734,
+    "opportunity_score": 195.49,
     "ratio": 0.14,
-    "blog_total": 49637,
-    "cafe_total": 20987,
-    "news_total": 11153,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 49765,
+    "cafe_total": 20828,
+    "news_total": 11160,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 7,
-    "keyword": "HLB주가",
-    "seed": "주식정보",
-    "pc_search": 16100,
-    "mobile_search": 310500,
-    "monthly_total": 326600,
-    "daily_avg": 10886.67,
-    "mobile_share": 0.951,
-    "grade": "S",
-    "opportunity_score": 143.888,
-    "ratio": 0.19,
-    "blog_total": 61349,
-    "cafe_total": 18535,
-    "news_total": 39121,
-    "updated_at": "2026-05-27T09:46:13+09:00"
-  },
-  {
-    "no": 8,
     "keyword": "KOTC",
     "seed": "주식정보",
     "pc_search": 6410,
@@ -128,12 +111,29 @@
     "daily_avg": 867.0,
     "mobile_share": 0.754,
     "grade": "S",
-    "opportunity_score": 143.799,
+    "opportunity_score": 143.873,
     "ratio": 0.2,
-    "blog_total": 5274,
-    "cafe_total": 1647,
+    "blog_total": 5273,
+    "cafe_total": 1641,
     "news_total": 894,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
+  },
+  {
+    "no": 8,
+    "keyword": "HLB주가",
+    "seed": "주식정보",
+    "pc_search": 16100,
+    "mobile_search": 310500,
+    "monthly_total": 326600,
+    "daily_avg": 10886.67,
+    "mobile_share": 0.951,
+    "grade": "S",
+    "opportunity_score": 143.864,
+    "ratio": 0.19,
+    "blog_total": 61397,
+    "cafe_total": 18417,
+    "news_total": 39153,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 9,
@@ -145,12 +145,12 @@
     "daily_avg": 38290.0,
     "mobile_share": 0.97,
     "grade": "S",
-    "opportunity_score": 127.889,
+    "opportunity_score": 127.884,
     "ratio": 0.1,
-    "blog_total": 120054,
-    "cafe_total": 51648,
-    "news_total": 806342,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 120117,
+    "cafe_total": 51445,
+    "news_total": 806442,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 10,
@@ -162,12 +162,12 @@
     "daily_avg": 2405.0,
     "mobile_share": 0.973,
     "grade": "S",
-    "opportunity_score": 114.491,
+    "opportunity_score": 114.537,
     "ratio": 0.23,
-    "blog_total": 16461,
-    "cafe_total": 7952,
+    "blog_total": 16455,
+    "cafe_total": 7945,
     "news_total": 8809,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 11,
@@ -179,12 +179,12 @@
     "daily_avg": 562886.67,
     "mobile_share": 0.774,
     "grade": "S",
-    "opportunity_score": 112.728,
+    "opportunity_score": 112.745,
     "ratio": 0.22,
-    "blog_total": 3688094,
-    "cafe_total": 2385158,
-    "news_total": 2352026,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 3691062,
+    "cafe_total": 2374156,
+    "news_total": 2352793,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 12,
@@ -196,12 +196,12 @@
     "daily_avg": 11420.0,
     "mobile_share": 0.744,
     "grade": "S",
-    "opportunity_score": 93.947,
+    "opportunity_score": 93.811,
     "ratio": 0.31,
-    "blog_total": 105252,
-    "cafe_total": 33317,
-    "news_total": 23226,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 105605,
+    "cafe_total": 32804,
+    "news_total": 23238,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 13,
@@ -213,12 +213,12 @@
     "daily_avg": 133073.33,
     "mobile_share": 0.908,
     "grade": "S",
-    "opportunity_score": 90.929,
+    "opportunity_score": 90.81,
     "ratio": 0.28,
-    "blog_total": 1107260,
-    "cafe_total": 495005,
-    "news_total": 914849,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 1109660,
+    "cafe_total": 493438,
+    "news_total": 915233,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 14,
@@ -230,12 +230,12 @@
     "daily_avg": 571.33,
     "mobile_share": 0.904,
     "grade": "S",
-    "opportunity_score": 75.972,
+    "opportunity_score": 76.095,
     "ratio": 0.24,
-    "blog_total": 4131,
-    "cafe_total": 2650,
-    "news_total": 12309,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 4132,
+    "cafe_total": 2612,
+    "news_total": 12310,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 15,
@@ -247,12 +247,12 @@
     "daily_avg": 79230.0,
     "mobile_share": 0.95,
     "grade": "S",
-    "opportunity_score": 69.296,
-    "ratio": 0.35,
-    "blog_total": 843516,
-    "cafe_total": 400725,
-    "news_total": 797935,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 69.27,
+    "ratio": 0.36,
+    "blog_total": 844510,
+    "cafe_total": 398906,
+    "news_total": 798308,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 16,
@@ -264,12 +264,12 @@
     "daily_avg": 1131.67,
     "mobile_share": 0.795,
     "grade": "S",
-    "opportunity_score": 65.026,
+    "opportunity_score": 65.014,
     "ratio": 0.42,
-    "blog_total": 14336,
-    "cafe_total": 6767,
+    "blog_total": 14341,
+    "cafe_total": 6762,
     "news_total": 3494,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 17,
@@ -281,12 +281,12 @@
     "daily_avg": 2177.0,
     "mobile_share": 0.848,
     "grade": "S",
-    "opportunity_score": 58.854,
+    "opportunity_score": 58.598,
     "ratio": 0.47,
-    "blog_total": 30745,
-    "cafe_total": 8786,
-    "news_total": 15848,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 30908,
+    "cafe_total": 8763,
+    "news_total": 15881,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 18,
@@ -298,12 +298,12 @@
     "daily_avg": 3191.67,
     "mobile_share": 0.905,
     "grade": "S",
-    "opportunity_score": 54.03,
+    "opportunity_score": 53.987,
     "ratio": 0.47,
-    "blog_total": 45197,
-    "cafe_total": 24995,
-    "news_total": 25637,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 45288,
+    "cafe_total": 24859,
+    "news_total": 25650,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 19,
@@ -315,12 +315,12 @@
     "daily_avg": 526.67,
     "mobile_share": 0.968,
     "grade": "S",
-    "opportunity_score": 33.306,
+    "opportunity_score": 33.314,
     "ratio": 0.39,
-    "blog_total": 6209,
-    "cafe_total": 15113,
+    "blog_total": 6210,
+    "cafe_total": 15100,
     "news_total": 21572,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 20,
@@ -332,12 +332,12 @@
     "daily_avg": 2652.0,
     "mobile_share": 0.979,
     "grade": "S",
-    "opportunity_score": 25.325,
+    "opportunity_score": 25.321,
     "ratio": 0.26,
-    "blog_total": 21067,
-    "cafe_total": 5962,
-    "news_total": 407818,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 21064,
+    "cafe_total": 5949,
+    "news_total": 407942,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 21,
@@ -349,12 +349,12 @@
     "daily_avg": 1704.33,
     "mobile_share": 0.81,
     "grade": "A",
-    "opportunity_score": 52.477,
+    "opportunity_score": 52.332,
     "ratio": 0.51,
-    "blog_total": 26168,
-    "cafe_total": 8648,
-    "news_total": 16414,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 26260,
+    "cafe_total": 8637,
+    "news_total": 16424,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 22,
@@ -366,12 +366,12 @@
     "daily_avg": 2720.0,
     "mobile_share": 0.246,
     "grade": "A",
-    "opportunity_score": 48.444,
+    "opportunity_score": 48.497,
     "ratio": 0.55,
-    "blog_total": 45127,
-    "cafe_total": 28484,
-    "news_total": 5257,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 45167,
+    "cafe_total": 28191,
+    "news_total": 5263,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 23,
@@ -383,12 +383,12 @@
     "daily_avg": 497.33,
     "mobile_share": 0.891,
     "grade": "A",
-    "opportunity_score": 47.897,
+    "opportunity_score": 47.819,
     "ratio": 0.63,
-    "blog_total": 9453,
-    "cafe_total": 2226,
+    "blog_total": 9469,
+    "cafe_total": 2229,
     "news_total": 756,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 24,
@@ -400,12 +400,12 @@
     "daily_avg": 29983.33,
     "mobile_share": 0.906,
     "grade": "A",
-    "opportunity_score": 46.167,
+    "opportunity_score": 46.085,
     "ratio": 0.65,
-    "blog_total": 580359,
-    "cafe_total": 108023,
-    "news_total": 156433,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 582263,
+    "cafe_total": 105742,
+    "news_total": 156671,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 25,
@@ -417,12 +417,12 @@
     "daily_avg": 825.0,
     "mobile_share": 0.707,
     "grade": "A",
-    "opportunity_score": 44.087,
+    "opportunity_score": 44.089,
     "ratio": 0.69,
-    "blog_total": 17015,
-    "cafe_total": 4381,
+    "blog_total": 17056,
+    "cafe_total": 4261,
     "news_total": 824,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 26,
@@ -434,12 +434,12 @@
     "daily_avg": 2890.0,
     "mobile_share": 0.603,
     "grade": "A",
-    "opportunity_score": 42.839,
+    "opportunity_score": 42.836,
     "ratio": 0.51,
-    "blog_total": 44263,
-    "cafe_total": 51725,
-    "news_total": 25474,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 44281,
+    "cafe_total": 51689,
+    "news_total": 25476,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 27,
@@ -451,12 +451,12 @@
     "daily_avg": 14460.0,
     "mobile_share": 0.972,
     "grade": "A",
-    "opportunity_score": 33.642,
-    "ratio": 0.76,
-    "blog_total": 331832,
-    "cafe_total": 190378,
-    "news_total": 156808,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 33.626,
+    "ratio": 0.77,
+    "blog_total": 332120,
+    "cafe_total": 190100,
+    "news_total": 156825,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 28,
@@ -468,12 +468,12 @@
     "daily_avg": 1512.33,
     "mobile_share": 0.855,
     "grade": "A",
-    "opportunity_score": 30.998,
-    "ratio": 0.69,
-    "blog_total": 31489,
-    "cafe_total": 48455,
-    "news_total": 1696,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 30.931,
+    "ratio": 0.7,
+    "blog_total": 31605,
+    "cafe_total": 48428,
+    "news_total": 1697,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 29,
@@ -485,12 +485,12 @@
     "daily_avg": 42546.67,
     "mobile_share": 0.973,
     "grade": "A",
-    "opportunity_score": 30.289,
+    "opportunity_score": 30.223,
     "ratio": 0.92,
-    "blog_total": 1172037,
-    "cafe_total": 405785,
-    "news_total": 453087,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 1175847,
+    "cafe_total": 403426,
+    "news_total": 453539,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 30,
@@ -502,12 +502,12 @@
     "daily_avg": 4650.0,
     "mobile_share": 0.868,
     "grade": "A",
-    "opportunity_score": 28.282,
+    "opportunity_score": 28.245,
     "ratio": 1.03,
-    "blog_total": 143915,
-    "cafe_total": 32238,
-    "news_total": 46078,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 144306,
+    "cafe_total": 31688,
+    "news_total": 46163,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 31,
@@ -519,12 +519,12 @@
     "daily_avg": 1870.0,
     "mobile_share": 0.818,
     "grade": "A",
-    "opportunity_score": 27.467,
+    "opportunity_score": 27.459,
     "ratio": 0.95,
-    "blog_total": 53330,
-    "cafe_total": 26919,
-    "news_total": 26646,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 53377,
+    "cafe_total": 26841,
+    "news_total": 26648,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 32,
@@ -536,12 +536,12 @@
     "daily_avg": 350.33,
     "mobile_share": 0.95,
     "grade": "A",
-    "opportunity_score": 27.337,
+    "opportunity_score": 27.334,
     "ratio": 0.87,
-    "blog_total": 9184,
-    "cafe_total": 7097,
+    "blog_total": 9188,
+    "cafe_total": 7089,
     "news_total": 5737,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 33,
@@ -553,12 +553,12 @@
     "daily_avg": 951.67,
     "mobile_share": 0.665,
     "grade": "A",
-    "opportunity_score": 25.03,
+    "opportunity_score": 25.02,
     "ratio": 0.85,
-    "blog_total": 24134,
-    "cafe_total": 39279,
+    "blog_total": 24170,
+    "cafe_total": 39219,
     "news_total": 698,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 34,
@@ -570,32 +570,15 @@
     "daily_avg": 1429.0,
     "mobile_share": 0.875,
     "grade": "A",
-    "opportunity_score": 21.583,
+    "opportunity_score": 21.545,
     "ratio": 1.38,
-    "blog_total": 59021,
-    "cafe_total": 15359,
-    "news_total": 9071,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 59142,
+    "cafe_total": 15341,
+    "news_total": 9078,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 35,
-    "keyword": "로봇ETF",
-    "seed": "주식정보",
-    "pc_search": 25700,
-    "mobile_search": 43300,
-    "monthly_total": 69000,
-    "daily_avg": 2300.0,
-    "mobile_share": 0.628,
-    "grade": "A",
-    "opportunity_score": 19.987,
-    "ratio": 1.49,
-    "blog_total": 103052,
-    "cafe_total": 25302,
-    "news_total": 15838,
-    "updated_at": "2026-05-27T09:46:13+09:00"
-  },
-  {
-    "no": 36,
     "keyword": "특수문자",
     "seed": "주식정보",
     "pc_search": 32800,
@@ -604,12 +587,29 @@
     "daily_avg": 3826.67,
     "mobile_share": 0.714,
     "grade": "A",
-    "opportunity_score": 1.777,
+    "opportunity_score": 1.776,
     "ratio": 1.45,
-    "blog_total": 166767,
-    "cafe_total": 5644390,
-    "news_total": 57193,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 166853,
+    "cafe_total": 5645265,
+    "news_total": 57208,
+    "updated_at": "2026-05-28T08:40:00+09:00"
+  },
+  {
+    "no": 36,
+    "keyword": "로봇ETF",
+    "seed": "주식정보",
+    "pc_search": 25700,
+    "mobile_search": 43300,
+    "monthly_total": 69000,
+    "daily_avg": 2300.0,
+    "mobile_share": 0.628,
+    "grade": "B",
+    "opportunity_score": 19.944,
+    "ratio": 1.5,
+    "blog_total": 103600,
+    "cafe_total": 24428,
+    "news_total": 15862,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 37,
@@ -621,12 +621,12 @@
     "daily_avg": 35493.33,
     "mobile_share": 0.944,
     "grade": "B",
-    "opportunity_score": 17.678,
-    "ratio": 1.59,
-    "blog_total": 1695948,
-    "cafe_total": 656903,
-    "news_total": 409532,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 17.662,
+    "ratio": 1.6,
+    "blog_total": 1698566,
+    "cafe_total": 654704,
+    "news_total": 409641,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 38,
@@ -638,12 +638,12 @@
     "daily_avg": 725.0,
     "mobile_share": 0.998,
     "grade": "B",
-    "opportunity_score": 17.124,
+    "opportunity_score": 17.104,
     "ratio": 1.72,
-    "blog_total": 37424,
-    "cafe_total": 12519,
+    "blog_total": 37480,
+    "cafe_total": 12497,
     "news_total": 2663,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 39,
@@ -655,12 +655,12 @@
     "daily_avg": 14866.67,
     "mobile_share": 0.965,
     "grade": "B",
-    "opportunity_score": 14.796,
+    "opportunity_score": 14.786,
     "ratio": 1.54,
-    "blog_total": 687549,
-    "cafe_total": 418894,
-    "news_total": 852934,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 688250,
+    "cafe_total": 418725,
+    "news_total": 853337,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 40,
@@ -672,12 +672,12 @@
     "daily_avg": 1274.67,
     "mobile_share": 0.764,
     "grade": "B",
-    "opportunity_score": 13.562,
-    "ratio": 2.23,
-    "blog_total": 85450,
-    "cafe_total": 15115,
-    "news_total": 16229,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 13.537,
+    "ratio": 2.24,
+    "blog_total": 85613,
+    "cafe_total": 15094,
+    "news_total": 16332,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 41,
@@ -689,12 +689,12 @@
     "daily_avg": 2066.67,
     "mobile_share": 0.827,
     "grade": "B",
-    "opportunity_score": 13.151,
-    "ratio": 2.27,
-    "blog_total": 140946,
-    "cafe_total": 26393,
-    "news_total": 34855,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 13.142,
+    "ratio": 2.28,
+    "blog_total": 141179,
+    "cafe_total": 25993,
+    "news_total": 34908,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 42,
@@ -706,12 +706,12 @@
     "daily_avg": 674.33,
     "mobile_share": 0.816,
     "grade": "B",
-    "opportunity_score": 12.365,
+    "opportunity_score": 12.351,
     "ratio": 2.41,
-    "blog_total": 48765,
-    "cafe_total": 12648,
-    "news_total": 6718,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 48846,
+    "cafe_total": 12596,
+    "news_total": 6723,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 43,
@@ -723,12 +723,12 @@
     "daily_avg": 390.67,
     "mobile_share": 0.764,
     "grade": "B",
-    "opportunity_score": 11.573,
+    "opportunity_score": 11.575,
     "ratio": 2.29,
-    "blog_total": 26855,
-    "cafe_total": 6195,
-    "news_total": 23662,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 26891,
+    "cafe_total": 6072,
+    "news_total": 23670,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 44,
@@ -740,12 +740,12 @@
     "daily_avg": 528.33,
     "mobile_share": 0.877,
     "grade": "B",
-    "opportunity_score": 11.451,
+    "opportunity_score": 11.445,
     "ratio": 2.53,
-    "blog_total": 40126,
-    "cafe_total": 12188,
-    "news_total": 8727,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 40164,
+    "cafe_total": 12150,
+    "news_total": 8730,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 45,
@@ -757,12 +757,12 @@
     "daily_avg": 1580.33,
     "mobile_share": 0.953,
     "grade": "B",
-    "opportunity_score": 10.229,
-    "ratio": 2.46,
-    "blog_total": 116747,
-    "cafe_total": 57949,
-    "news_total": 87341,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 10.218,
+    "ratio": 2.47,
+    "blog_total": 117039,
+    "cafe_total": 57589,
+    "news_total": 87360,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 46,
@@ -774,12 +774,12 @@
     "daily_avg": 8363.0,
     "mobile_share": 0.986,
     "grade": "B",
-    "opportunity_score": 9.629,
-    "ratio": 2.7,
-    "blog_total": 678367,
-    "cafe_total": 310618,
-    "news_total": 407025,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 9.626,
+    "ratio": 2.71,
+    "blog_total": 679316,
+    "cafe_total": 308746,
+    "news_total": 407222,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 47,
@@ -791,12 +791,12 @@
     "daily_avg": 4986.33,
     "mobile_share": 0.988,
     "grade": "B",
-    "opportunity_score": 8.826,
-    "ratio": 3.29,
-    "blog_total": 492759,
-    "cafe_total": 163116,
-    "news_total": 75530,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 8.807,
+    "ratio": 3.3,
+    "blog_total": 494317,
+    "cafe_total": 162127,
+    "news_total": 75562,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 48,
@@ -808,12 +808,12 @@
     "daily_avg": 1010.0,
     "mobile_share": 0.637,
     "grade": "B",
-    "opportunity_score": 7.338,
-    "ratio": 3.75,
-    "blog_total": 113775,
-    "cafe_total": 35454,
-    "news_total": 57312,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 7.321,
+    "ratio": 3.77,
+    "blog_total": 114082,
+    "cafe_total": 35483,
+    "news_total": 57334,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 49,
@@ -825,12 +825,12 @@
     "daily_avg": 563.67,
     "mobile_share": 0.326,
     "grade": "B",
-    "opportunity_score": 7.272,
+    "opportunity_score": 7.271,
     "ratio": 3.54,
-    "blog_total": 59807,
-    "cafe_total": 49161,
+    "blog_total": 59885,
+    "cafe_total": 48963,
     "news_total": 2498,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 50,
@@ -842,12 +842,12 @@
     "daily_avg": 658.0,
     "mobile_share": 0.841,
     "grade": "B",
-    "opportunity_score": 7.043,
-    "ratio": 2.64,
-    "blog_total": 52200,
-    "cafe_total": 70413,
-    "news_total": 82940,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 7.041,
+    "ratio": 2.65,
+    "blog_total": 52218,
+    "cafe_total": 70417,
+    "news_total": 82947,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 51,
@@ -861,10 +861,10 @@
     "grade": "B",
     "opportunity_score": 1.791,
     "ratio": 2.47,
-    "blog_total": 24506,
-    "cafe_total": 17339,
-    "news_total": 772044,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 24523,
+    "cafe_total": 17202,
+    "news_total": 772324,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 52,
@@ -876,12 +876,12 @@
     "daily_avg": 1720.33,
     "mobile_share": 0.853,
     "grade": "C",
-    "opportunity_score": 6.841,
-    "ratio": 4.18,
-    "blog_total": 215629,
-    "cafe_total": 87172,
-    "news_total": 26611,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 6.833,
+    "ratio": 4.19,
+    "blog_total": 216019,
+    "cafe_total": 86943,
+    "news_total": 26632,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 53,
@@ -893,12 +893,12 @@
     "daily_avg": 512.0,
     "mobile_share": 0.846,
     "grade": "C",
-    "opportunity_score": 6.151,
+    "opportunity_score": 6.15,
     "ratio": 4.59,
-    "blog_total": 70455,
-    "cafe_total": 33723,
+    "blog_total": 70495,
+    "cafe_total": 33640,
     "news_total": 4927,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 54,
@@ -910,12 +910,12 @@
     "daily_avg": 937.67,
     "mobile_share": 0.814,
     "grade": "C",
-    "opportunity_score": 5.603,
+    "opportunity_score": 5.602,
     "ratio": 5.1,
-    "blog_total": 143488,
-    "cafe_total": 37790,
-    "news_total": 53222,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 143536,
+    "cafe_total": 37693,
+    "news_total": 53227,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 55,
@@ -927,12 +927,12 @@
     "daily_avg": 11403.33,
     "mobile_share": 0.935,
     "grade": "C",
-    "opportunity_score": 5.495,
-    "ratio": 4.76,
-    "blog_total": 1629352,
-    "cafe_total": 588307,
-    "news_total": 1200576,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 5.485,
+    "ratio": 4.78,
+    "blog_total": 1633938,
+    "cafe_total": 584759,
+    "news_total": 1201436,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 56,
@@ -944,12 +944,12 @@
     "daily_avg": 725.33,
     "mobile_share": 0.795,
     "grade": "C",
-    "opportunity_score": 5.461,
+    "opportunity_score": 5.455,
     "ratio": 5.15,
-    "blog_total": 111978,
-    "cafe_total": 27899,
-    "news_total": 55409,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 112159,
+    "cafe_total": 27768,
+    "news_total": 55434,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 57,
@@ -961,12 +961,12 @@
     "daily_avg": 339.33,
     "mobile_share": 0.966,
     "grade": "C",
-    "opportunity_score": 4.934,
-    "ratio": 5.6,
-    "blog_total": 57005,
-    "cafe_total": 21402,
-    "news_total": 21426,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 4.93,
+    "ratio": 5.61,
+    "blog_total": 57084,
+    "cafe_total": 21321,
+    "news_total": 21433,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 58,
@@ -978,12 +978,12 @@
     "daily_avg": 2543.33,
     "mobile_share": 0.839,
     "grade": "C",
-    "opportunity_score": 4.83,
-    "ratio": 6.08,
-    "blog_total": 463740,
-    "cafe_total": 163079,
-    "news_total": 28898,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 4.826,
+    "ratio": 6.09,
+    "blog_total": 464611,
+    "cafe_total": 161866,
+    "news_total": 28912,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 59,
@@ -995,12 +995,12 @@
     "daily_avg": 11140.0,
     "mobile_share": 0.967,
     "grade": "C",
-    "opportunity_score": 4.585,
-    "ratio": 5.86,
-    "blog_total": 1958635,
-    "cafe_total": 783261,
-    "news_total": 984234,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 4.579,
+    "ratio": 5.87,
+    "blog_total": 1963345,
+    "cafe_total": 779123,
+    "news_total": 984786,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 60,
@@ -1012,12 +1012,12 @@
     "daily_avg": 2595.67,
     "mobile_share": 0.928,
     "grade": "C",
-    "opportunity_score": 4.516,
+    "opportunity_score": 4.512,
     "ratio": 5.83,
-    "blog_total": 453633,
-    "cafe_total": 194279,
-    "news_total": 266020,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 454275,
+    "cafe_total": 193602,
+    "news_total": 266090,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 61,
@@ -1029,12 +1029,12 @@
     "daily_avg": 389.33,
     "mobile_share": 0.761,
     "grade": "C",
-    "opportunity_score": 4.504,
-    "ratio": 6.53,
-    "blog_total": 76274,
-    "cafe_total": 28180,
+    "opportunity_score": 4.508,
+    "ratio": 6.54,
+    "blog_total": 76381,
+    "cafe_total": 27667,
     "news_total": 1534,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 62,
@@ -1046,12 +1046,12 @@
     "daily_avg": 528.33,
     "mobile_share": 0.965,
     "grade": "C",
-    "opportunity_score": 4.383,
-    "ratio": 6.25,
-    "blog_total": 99077,
-    "cafe_total": 51978,
-    "news_total": 16326,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 4.376,
+    "ratio": 6.26,
+    "blog_total": 99276,
+    "cafe_total": 51936,
+    "news_total": 16336,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 63,
@@ -1064,11 +1064,11 @@
     "mobile_share": 0.711,
     "grade": "C",
     "opportunity_score": 4.354,
-    "ratio": 6.44,
-    "blog_total": 1831328,
-    "cafe_total": 657749,
-    "news_total": 579709,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 6.46,
+    "blog_total": 1836706,
+    "cafe_total": 640782,
+    "news_total": 580662,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 64,
@@ -1080,12 +1080,12 @@
     "daily_avg": 823.33,
     "mobile_share": 0.502,
     "grade": "C",
-    "opportunity_score": 4.335,
-    "ratio": 6.65,
-    "blog_total": 164147,
-    "cafe_total": 57227,
-    "news_total": 28669,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 4.333,
+    "ratio": 6.66,
+    "blog_total": 164424,
+    "cafe_total": 56720,
+    "news_total": 28694,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 65,
@@ -1097,32 +1097,15 @@
     "daily_avg": 349.0,
     "mobile_share": 0.67,
     "grade": "C",
-    "opportunity_score": 4.283,
+    "opportunity_score": 4.282,
     "ratio": 6.16,
-    "blog_total": 64480,
-    "cafe_total": 21485,
-    "news_total": 47393,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 64547,
+    "cafe_total": 21367,
+    "news_total": 47426,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 66,
-    "keyword": "바이오ETF",
-    "seed": "주식정보",
-    "pc_search": 8050,
-    "mobile_search": 13800,
-    "monthly_total": 21850,
-    "daily_avg": 728.33,
-    "mobile_share": 0.632,
-    "grade": "C",
-    "opportunity_score": 4.201,
-    "ratio": 6.9,
-    "blog_total": 150811,
-    "cafe_total": 47299,
-    "news_total": 30027,
-    "updated_at": "2026-05-27T09:46:13+09:00"
-  },
-  {
-    "no": 67,
     "keyword": "2차전지관련주",
     "seed": "주식정보",
     "pc_search": 7330,
@@ -1131,12 +1114,29 @@
     "daily_avg": 1837.67,
     "mobile_share": 0.867,
     "grade": "C",
-    "opportunity_score": 4.186,
-    "ratio": 6.86,
-    "blog_total": 378155,
-    "cafe_total": 150751,
-    "news_total": 40489,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 4.192,
+    "ratio": 6.87,
+    "blog_total": 378481,
+    "cafe_total": 148085,
+    "news_total": 40496,
+    "updated_at": "2026-05-28T08:40:00+09:00"
+  },
+  {
+    "no": 67,
+    "keyword": "바이오ETF",
+    "seed": "주식정보",
+    "pc_search": 8050,
+    "mobile_search": 13800,
+    "monthly_total": 21850,
+    "daily_avg": 728.33,
+    "mobile_share": 0.632,
+    "grade": "C",
+    "opportunity_score": 4.19,
+    "ratio": 6.93,
+    "blog_total": 151453,
+    "cafe_total": 46781,
+    "news_total": 30077,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 68,
@@ -1148,12 +1148,12 @@
     "daily_avg": 2073.33,
     "mobile_share": 0.775,
     "grade": "C",
-    "opportunity_score": 3.754,
-    "ratio": 7.51,
-    "blog_total": 467309,
-    "cafe_total": 157283,
-    "news_total": 149534,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 3.751,
+    "ratio": 7.53,
+    "blog_total": 468097,
+    "cafe_total": 156178,
+    "news_total": 149593,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 69,
@@ -1165,12 +1165,12 @@
     "daily_avg": 770.0,
     "mobile_share": 0.957,
     "grade": "C",
-    "opportunity_score": 3.572,
-    "ratio": 7.86,
-    "blog_total": 181676,
-    "cafe_total": 92143,
+    "opportunity_score": 3.571,
+    "ratio": 7.87,
+    "blog_total": 181741,
+    "cafe_total": 91990,
     "news_total": 8294,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 70,
@@ -1183,11 +1183,11 @@
     "mobile_share": 0.835,
     "grade": "C",
     "opportunity_score": 1.562,
-    "ratio": 6.78,
-    "blog_total": 79545,
-    "cafe_total": 36612,
-    "news_total": 790073,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 6.77,
+    "blog_total": 79462,
+    "cafe_total": 36565,
+    "news_total": 790174,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 71,
@@ -1199,12 +1199,12 @@
     "daily_avg": 353.33,
     "mobile_share": 0.962,
     "grade": "D",
-    "opportunity_score": 3.53,
-    "ratio": 8.04,
-    "blog_total": 85249,
-    "cafe_total": 36214,
-    "news_total": 10858,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 3.525,
+    "ratio": 8.06,
+    "blog_total": 85470,
+    "cafe_total": 35985,
+    "news_total": 10861,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 72,
@@ -1216,12 +1216,12 @@
     "daily_avg": 786.33,
     "mobile_share": 0.81,
     "grade": "D",
-    "opportunity_score": 3.265,
-    "ratio": 8.19,
-    "blog_total": 193196,
-    "cafe_total": 96761,
-    "news_total": 68894,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 3.264,
+    "ratio": 8.2,
+    "blog_total": 193461,
+    "cafe_total": 96092,
+    "news_total": 68939,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 73,
@@ -1234,11 +1234,11 @@
     "mobile_share": 0.844,
     "grade": "D",
     "opportunity_score": 2.967,
-    "ratio": 10.47,
-    "blog_total": 257905,
-    "cafe_total": 34121,
-    "news_total": 34720,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 10.48,
+    "blog_total": 258238,
+    "cafe_total": 33277,
+    "news_total": 34733,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 74,
@@ -1250,12 +1250,12 @@
     "daily_avg": 610.0,
     "mobile_share": 0.858,
     "grade": "D",
-    "opportunity_score": 2.92,
-    "ratio": 9.15,
-    "blog_total": 167470,
-    "cafe_total": 75678,
-    "news_total": 74776,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 2.919,
+    "ratio": 9.16,
+    "blog_total": 167621,
+    "cafe_total": 75494,
+    "news_total": 74801,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 75,
@@ -1267,12 +1267,12 @@
     "daily_avg": 374.67,
     "mobile_share": 0.705,
     "grade": "D",
-    "opportunity_score": 2.73,
-    "ratio": 8.91,
-    "blog_total": 100100,
-    "cafe_total": 43694,
-    "news_total": 109286,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 2.727,
+    "ratio": 8.92,
+    "blog_total": 100280,
+    "cafe_total": 43627,
+    "news_total": 109318,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 76,
@@ -1284,12 +1284,12 @@
     "daily_avg": 1010.0,
     "mobile_share": 0.858,
     "grade": "D",
-    "opportunity_score": 2.646,
-    "ratio": 10.66,
-    "blog_total": 323021,
-    "cafe_total": 100724,
-    "news_total": 117295,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 2.647,
+    "ratio": 10.68,
+    "blog_total": 323487,
+    "cafe_total": 99032,
+    "news_total": 117312,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 77,
@@ -1302,11 +1302,11 @@
     "mobile_share": 0.938,
     "grade": "D",
     "opportunity_score": 2.41,
-    "ratio": 8.67,
-    "blog_total": 5290022,
-    "cafe_total": 3132859,
-    "news_total": 10237334,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 8.68,
+    "blog_total": 5293188,
+    "cafe_total": 3129300,
+    "news_total": 10240082,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 78,
@@ -1318,12 +1318,12 @@
     "daily_avg": 1227.33,
     "mobile_share": 0.809,
     "grade": "D",
-    "opportunity_score": 2.394,
-    "ratio": 12.41,
-    "blog_total": 457092,
-    "cafe_total": 128626,
-    "news_total": 52809,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 2.392,
+    "ratio": 12.46,
+    "blog_total": 458665,
+    "cafe_total": 125229,
+    "news_total": 52865,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 79,
@@ -1336,11 +1336,11 @@
     "mobile_share": 0.848,
     "grade": "D",
     "opportunity_score": 2.344,
-    "ratio": 9.94,
-    "blog_total": 141906,
-    "cafe_total": 66234,
-    "news_total": 189299,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 9.95,
+    "blog_total": 141929,
+    "cafe_total": 66160,
+    "news_total": 189336,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 80,
@@ -1352,12 +1352,12 @@
     "daily_avg": 580.33,
     "mobile_share": 0.844,
     "grade": "D",
-    "opportunity_score": 2.228,
+    "opportunity_score": 2.229,
     "ratio": 12.99,
-    "blog_total": 226093,
-    "cafe_total": 91397,
-    "news_total": 12066,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "blog_total": 226192,
+    "cafe_total": 90866,
+    "news_total": 12067,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 81,
@@ -1370,11 +1370,11 @@
     "mobile_share": 0.848,
     "grade": "D",
     "opportunity_score": 2.025,
-    "ratio": 13.3,
-    "blog_total": 703143,
-    "cafe_total": 345109,
-    "news_total": 229566,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 13.32,
+    "blog_total": 703739,
+    "cafe_total": 344199,
+    "news_total": 229788,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 82,
@@ -1387,11 +1387,11 @@
     "mobile_share": 0.739,
     "grade": "D",
     "opportunity_score": 2.009,
-    "ratio": 12.72,
-    "blog_total": 380526,
-    "cafe_total": 231612,
-    "news_total": 173313,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 12.73,
+    "blog_total": 380767,
+    "cafe_total": 231180,
+    "news_total": 173329,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 83,
@@ -1403,12 +1403,12 @@
     "daily_avg": 2551.0,
     "mobile_share": 0.97,
     "grade": "D",
-    "opportunity_score": 1.906,
-    "ratio": 14.49,
-    "blog_total": 1108796,
-    "cafe_total": 400954,
-    "news_total": 446596,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 1.905,
+    "ratio": 14.52,
+    "blog_total": 1111197,
+    "cafe_total": 396605,
+    "news_total": 446750,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 84,
@@ -1420,12 +1420,12 @@
     "daily_avg": 6990.0,
     "mobile_share": 0.932,
     "grade": "D",
-    "opportunity_score": 1.859,
-    "ratio": 14.39,
-    "blog_total": 3018146,
-    "cafe_total": 1081016,
-    "news_total": 1813115,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 1.858,
+    "ratio": 14.42,
+    "blog_total": 3023024,
+    "cafe_total": 1072850,
+    "news_total": 1813861,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 85,
@@ -1438,11 +1438,11 @@
     "mobile_share": 0.733,
     "grade": "D",
     "opportunity_score": 1.637,
-    "ratio": 18.75,
-    "blog_total": 162040,
-    "cafe_total": 28334,
-    "news_total": 19717,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 18.83,
+    "blog_total": 162726,
+    "cafe_total": 26447,
+    "news_total": 19722,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 86,
@@ -1455,11 +1455,11 @@
     "mobile_share": 0.588,
     "grade": "D",
     "opportunity_score": 1.147,
-    "ratio": 18.75,
-    "blog_total": 232866,
-    "cafe_total": 295338,
-    "news_total": 123934,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 18.79,
+    "blog_total": 233367,
+    "cafe_total": 293726,
+    "news_total": 123972,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 87,
@@ -1472,11 +1472,11 @@
     "mobile_share": 0.834,
     "grade": "D",
     "opportunity_score": 1.061,
-    "ratio": 26.6,
-    "blog_total": 286164,
-    "cafe_total": 116814,
-    "news_total": 55118,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 26.64,
+    "blog_total": 286637,
+    "cafe_total": 115618,
+    "news_total": 55134,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 88,
@@ -1488,12 +1488,12 @@
     "daily_avg": 333.67,
     "mobile_share": 0.133,
     "grade": "D",
-    "opportunity_score": 1.017,
-    "ratio": 26.94,
-    "blog_total": 269671,
-    "cafe_total": 113692,
-    "news_total": 93513,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 1.016,
+    "ratio": 26.96,
+    "blog_total": 269825,
+    "cafe_total": 113695,
+    "news_total": 93521,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 89,
@@ -1505,12 +1505,12 @@
     "daily_avg": 687.67,
     "mobile_share": 0.911,
     "grade": "D",
-    "opportunity_score": 0.998,
-    "ratio": 26.8,
-    "blog_total": 552970,
-    "cafe_total": 337383,
-    "news_total": 91352,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 0.997,
+    "ratio": 26.83,
+    "blog_total": 553572,
+    "cafe_total": 337156,
+    "news_total": 91370,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 90,
@@ -1523,11 +1523,11 @@
     "mobile_share": 0.839,
     "grade": "D",
     "opportunity_score": 0.954,
-    "ratio": 30.77,
-    "blog_total": 641599,
-    "cafe_total": 179620,
-    "news_total": 119627,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 30.8,
+    "blog_total": 642268,
+    "cafe_total": 177453,
+    "news_total": 119691,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 91,
@@ -1539,12 +1539,12 @@
     "daily_avg": 471.67,
     "mobile_share": 0.735,
     "grade": "D",
-    "opportunity_score": 0.941,
-    "ratio": 31.96,
-    "blog_total": 452234,
-    "cafe_total": 109048,
-    "news_total": 52939,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 0.943,
+    "ratio": 32.0,
+    "blog_total": 452739,
+    "cafe_total": 105831,
+    "news_total": 52944,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 92,
@@ -1556,12 +1556,12 @@
     "daily_avg": 368.33,
     "mobile_share": 0.691,
     "grade": "D",
-    "opportunity_score": 0.917,
-    "ratio": 32.53,
-    "blog_total": 359455,
-    "cafe_total": 84967,
-    "news_total": 62507,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 0.916,
+    "ratio": 32.63,
+    "blog_total": 360589,
+    "cafe_total": 82366,
+    "news_total": 62601,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 93,
@@ -1573,12 +1573,12 @@
     "daily_avg": 573.0,
     "mobile_share": 0.692,
     "grade": "D",
-    "opportunity_score": 0.894,
-    "ratio": 23.96,
-    "blog_total": 411868,
-    "cafe_total": 291685,
-    "news_total": 636134,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 0.893,
+    "ratio": 23.98,
+    "blog_total": 412193,
+    "cafe_total": 291464,
+    "news_total": 636287,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 94,
@@ -1591,11 +1591,11 @@
     "mobile_share": 0.91,
     "grade": "D",
     "opportunity_score": 0.827,
-    "ratio": 38.08,
-    "blog_total": 1620064,
-    "cafe_total": 225270,
-    "news_total": 82064,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 38.1,
+    "blog_total": 1620616,
+    "cafe_total": 222612,
+    "news_total": 82083,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 95,
@@ -1608,11 +1608,11 @@
     "mobile_share": 0.886,
     "grade": "D",
     "opportunity_score": 0.797,
-    "ratio": 38.4,
-    "blog_total": 675781,
-    "cafe_total": 155486,
-    "news_total": 29401,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 38.44,
+    "blog_total": 676486,
+    "cafe_total": 154259,
+    "news_total": 29410,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 96,
@@ -1624,12 +1624,12 @@
     "daily_avg": 290.0,
     "mobile_share": 0.77,
     "grade": "D",
-    "opportunity_score": 0.713,
-    "ratio": 39.0,
-    "blog_total": 339300,
-    "cafe_total": 117300,
-    "news_total": 130602,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 0.714,
+    "ratio": 39.03,
+    "blog_total": 339585,
+    "cafe_total": 115941,
+    "news_total": 130627,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 97,
@@ -1641,12 +1641,12 @@
     "daily_avg": 484.0,
     "mobile_share": 0.764,
     "grade": "D",
-    "opportunity_score": 0.648,
-    "ratio": 43.21,
-    "blog_total": 627338,
-    "cafe_total": 169737,
-    "news_total": 302100,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 0.647,
+    "ratio": 43.4,
+    "blog_total": 630199,
+    "cafe_total": 163616,
+    "news_total": 302628,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 98,
@@ -1658,12 +1658,12 @@
     "daily_avg": 408.33,
     "mobile_share": 0.849,
     "grade": "D",
-    "opportunity_score": 0.634,
-    "ratio": 44.97,
-    "blog_total": 550911,
-    "cafe_total": 207385,
-    "news_total": 103796,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 0.633,
+    "ratio": 45.06,
+    "blog_total": 551971,
+    "cafe_total": 205265,
+    "news_total": 103811,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 99,
@@ -1676,11 +1676,11 @@
     "mobile_share": 0.795,
     "grade": "D",
     "opportunity_score": 0.598,
-    "ratio": 39.61,
-    "blog_total": 340682,
-    "cafe_total": 336251,
-    "news_total": 104329,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 39.7,
+    "blog_total": 341407,
+    "cafe_total": 333813,
+    "news_total": 104344,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 100,
@@ -1693,11 +1693,11 @@
     "mobile_share": 0.729,
     "grade": "D",
     "opportunity_score": 0.499,
-    "ratio": 46.36,
-    "blog_total": 2531284,
-    "cafe_total": 1425983,
-    "news_total": 3071216,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 46.4,
+    "blog_total": 2533513,
+    "cafe_total": 1420980,
+    "news_total": 3072639,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 101,
@@ -1710,11 +1710,11 @@
     "mobile_share": 0.905,
     "grade": "D",
     "opportunity_score": 0.387,
-    "ratio": 69.53,
-    "blog_total": 2019917,
-    "cafe_total": 795267,
-    "news_total": 1004635,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 69.61,
+    "blog_total": 2022131,
+    "cafe_total": 789072,
+    "news_total": 1005007,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 102,
@@ -1727,11 +1727,11 @@
     "mobile_share": 0.71,
     "grade": "D",
     "opportunity_score": 0.382,
-    "ratio": 67.56,
-    "blog_total": 655285,
-    "cafe_total": 394453,
-    "news_total": 260952,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 67.59,
+    "blog_total": 655594,
+    "cafe_total": 394446,
+    "news_total": 261063,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 103,
@@ -1744,11 +1744,11 @@
     "mobile_share": 0.975,
     "grade": "D",
     "opportunity_score": 0.372,
-    "ratio": 81.84,
-    "blog_total": 826539,
-    "cafe_total": 205457,
-    "news_total": 33945,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 82.02,
+    "blog_total": 828355,
+    "cafe_total": 199944,
+    "news_total": 33949,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 104,
@@ -1761,11 +1761,11 @@
     "mobile_share": 0.839,
     "grade": "D",
     "opportunity_score": 0.298,
-    "ratio": 94.12,
-    "blog_total": 1761965,
-    "cafe_total": 680259,
-    "news_total": 472892,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 94.33,
+    "blog_total": 1765859,
+    "cafe_total": 673884,
+    "news_total": 473081,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 105,
@@ -1777,12 +1777,12 @@
     "daily_avg": 333.0,
     "mobile_share": 0.773,
     "grade": "D",
-    "opportunity_score": 0.257,
-    "ratio": 110.41,
-    "blog_total": 1103004,
-    "cafe_total": 301267,
-    "news_total": 448092,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "opportunity_score": 0.256,
+    "ratio": 110.51,
+    "blog_total": 1104019,
+    "cafe_total": 299183,
+    "news_total": 448223,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 106,
@@ -1795,11 +1795,11 @@
     "mobile_share": 0.953,
     "grade": "D",
     "opportunity_score": 0.246,
-    "ratio": 116.94,
-    "blog_total": 4443635,
-    "cafe_total": 1554418,
-    "news_total": 755647,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 117.09,
+    "blog_total": 4449476,
+    "cafe_total": 1537659,
+    "news_total": 755846,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 107,
@@ -1812,11 +1812,11 @@
     "mobile_share": 0.924,
     "grade": "D",
     "opportunity_score": 0.218,
-    "ratio": 127.69,
-    "blog_total": 1159399,
-    "cafe_total": 324655,
-    "news_total": 562374,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 127.85,
+    "blog_total": 1160897,
+    "cafe_total": 319753,
+    "news_total": 562560,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 108,
@@ -1829,11 +1829,11 @@
     "mobile_share": 0.801,
     "grade": "D",
     "opportunity_score": 0.198,
-    "ratio": 145.88,
-    "blog_total": 1480701,
-    "cafe_total": 422358,
-    "news_total": 391835,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 146.37,
+    "blog_total": 1485636,
+    "cafe_total": 416084,
+    "news_total": 392358,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 109,
@@ -1846,11 +1846,11 @@
     "mobile_share": 0.803,
     "grade": "D",
     "opportunity_score": 0.192,
-    "ratio": 131.28,
-    "blog_total": 1390298,
-    "cafe_total": 701259,
-    "news_total": 1009580,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 131.49,
+    "blog_total": 1392459,
+    "cafe_total": 698228,
+    "news_total": 1009892,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 110,
@@ -1863,11 +1863,11 @@
     "mobile_share": 0.913,
     "grade": "D",
     "opportunity_score": 0.186,
-    "ratio": 142.9,
-    "blog_total": 3395316,
-    "cafe_total": 1192968,
-    "news_total": 2173528,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 143.05,
+    "blog_total": 3398919,
+    "cafe_total": 1187985,
+    "news_total": 2174326,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 111,
@@ -1880,11 +1880,11 @@
     "mobile_share": 0.721,
     "grade": "D",
     "opportunity_score": 0.173,
-    "ratio": 130.43,
-    "blog_total": 1646088,
-    "cafe_total": 1356488,
-    "news_total": 1535671,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 130.68,
+    "blog_total": 1649129,
+    "cafe_total": 1349982,
+    "news_total": 1536227,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 112,
@@ -1897,11 +1897,11 @@
     "mobile_share": 0.835,
     "grade": "D",
     "opportunity_score": 0.16,
-    "ratio": 175.63,
-    "blog_total": 4352209,
-    "cafe_total": 1493912,
-    "news_total": 1423401,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 175.78,
+    "blog_total": 4355706,
+    "cafe_total": 1487340,
+    "news_total": 1423409,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 113,
@@ -1914,11 +1914,11 @@
     "mobile_share": 0.847,
     "grade": "D",
     "opportunity_score": 0.155,
-    "ratio": 175.31,
-    "blog_total": 3434289,
-    "cafe_total": 1233385,
-    "news_total": 1786755,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 175.57,
+    "blog_total": 3439404,
+    "cafe_total": 1225036,
+    "news_total": 1787373,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 114,
@@ -1931,11 +1931,11 @@
     "mobile_share": 0.728,
     "grade": "D",
     "opportunity_score": 0.128,
-    "ratio": 214.02,
-    "blog_total": 2551096,
-    "cafe_total": 765409,
-    "news_total": 1415174,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 214.31,
+    "blog_total": 2554619,
+    "cafe_total": 758407,
+    "news_total": 1415736,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 115,
@@ -1948,11 +1948,11 @@
     "mobile_share": 0.52,
     "grade": "D",
     "opportunity_score": 0.118,
-    "ratio": 224.25,
-    "blog_total": 2493710,
-    "cafe_total": 1314310,
-    "news_total": 958451,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 224.57,
+    "blog_total": 2497194,
+    "cafe_total": 1310210,
+    "news_total": 958752,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 116,
@@ -1965,11 +1965,11 @@
     "mobile_share": 0.704,
     "grade": "D",
     "opportunity_score": 0.107,
-    "ratio": 246.39,
-    "blog_total": 3604628,
-    "cafe_total": 2272051,
-    "news_total": 771947,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 246.67,
+    "blog_total": 3608758,
+    "cafe_total": 2267822,
+    "news_total": 772030,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 117,
@@ -1982,11 +1982,11 @@
     "mobile_share": 0.654,
     "grade": "D",
     "opportunity_score": 0.09,
-    "ratio": 296.74,
-    "blog_total": 3504502,
-    "cafe_total": 1909707,
-    "news_total": 919361,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 296.63,
+    "blog_total": 3503184,
+    "cafe_total": 1906586,
+    "news_total": 919719,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 118,
@@ -1999,11 +1999,11 @@
     "mobile_share": 0.708,
     "grade": "D",
     "opportunity_score": 0.038,
-    "ratio": 375.77,
-    "blog_total": 5944624,
-    "cafe_total": 21640680,
-    "news_total": 1875017,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 375.95,
+    "blog_total": 5947479,
+    "cafe_total": 21643221,
+    "news_total": 1875640,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 119,
@@ -2016,11 +2016,11 @@
     "mobile_share": 0.89,
     "grade": "D",
     "opportunity_score": 0.033,
-    "ratio": 902.75,
-    "blog_total": 30828759,
-    "cafe_total": 8657440,
-    "news_total": 1010259,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 902.98,
+    "blog_total": 30836831,
+    "cafe_total": 8655286,
+    "news_total": 1010486,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   },
   {
     "no": 120,
@@ -2033,10 +2033,10 @@
     "mobile_share": 0.742,
     "grade": "D",
     "opportunity_score": 0.017,
-    "ratio": 1384.93,
-    "blog_total": 14984906,
-    "cafe_total": 6771581,
-    "news_total": 16479151,
-    "updated_at": "2026-05-27T09:46:13+09:00"
+    "ratio": 1386.04,
+    "blog_total": 14996966,
+    "cafe_total": 6740253,
+    "news_total": 16483923,
+    "updated_at": "2026-05-28T08:40:00+09:00"
   }
 ]
